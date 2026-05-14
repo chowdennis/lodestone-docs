@@ -70,7 +70,7 @@ Both Fireflies and Gong serve the same purpose in Lodestone — bringing call tr
 | Primary use case | General meeting transcription | Revenue-focused call intelligence |
 | Best for | Broad meeting coverage (internal + external) | Customer-facing sales and CS calls |
 | Access scope | Any meeting in your Fireflies instance | Accounts you select during setup |
-| Setup complexity | Simple OAuth connection | Requires account selection during setup |
+| Setup complexity | Connect with a single login step | Requires account selection during setup |
 
 Both integrations are discovery-only — they bring transcripts in, they do not sync delivery status or any other data back to the source system.
 
