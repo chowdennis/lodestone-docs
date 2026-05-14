@@ -112,6 +112,14 @@ A few principles shape how Lodestone behaves across every module:
 
 ---
 
+## The Dashboard
+
+When you log in to Lodestone, the Dashboard is the first thing you see. It provides a view of recent activity across your workspace — recently updated Features, Documents, and other planning objects — so you can orient yourself before navigating to a specific module.
+
+The Dashboard is a read-only view and does not require any configuration.
+
+---
+
 ## How the Module Docs Are Organized
 
 Each Lodestone module has four documentation pages:

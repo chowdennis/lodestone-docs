@@ -27,6 +27,22 @@ When you accept an Extract — an AI-identified idea surfaced from a meeting tra
 
 ---
 
+## Importing Features from CSV
+
+If you have a list of Features in a spreadsheet, you can import them directly into the backlog using a CSV file.
+
+1. Navigate to the Features module from the left-hand navigation.
+2. Select the import option from the backlog toolbar.
+3. Upload your CSV file.
+4. In the field mapping step, match each column in your CSV to the corresponding Lodestone field — Name, Description, Status, or evaluation inputs.
+5. Confirm the mapping. Features are added to your backlog immediately.
+
+> **Tip:** The only required mapping is Feature Name. Description is optional but recommended — Features imported with a description are ready for AI document generation without additional editing.
+
+> **Note:** CSV import creates new Features only — it does not update existing ones. Importing a file with a name that already exists in your backlog will create a duplicate.
+
+---
+
 ## Editing and Enriching a Feature
 
 To open a Feature's detail view, click its name anywhere it appears in the backlog.
@@ -110,6 +126,23 @@ Lodestone can generate a range of written artifacts directly from a Feature. See
 5. Review and edit the output — all generated content is fully editable.
 
 > **Tip:** The quality of AI-generated documents is directly tied to the richness of your Feature Description. A one-sentence description produces a thin document. A well-written paragraph produces a much more useful draft.
+
+---
+
+## Viewing and Managing Quotes on a Feature
+
+When a quote from an Extract or imported transcript is associated with a Feature, it appears in the **Quotes** section of the Feature Detail page. Quotes link product decisions back to real customer conversations.
+
+Each quote displays:
+- The quote text
+- **Company name**, **speaker name**, and **revenue** (where available from the source)
+- A source badge indicating its origin (Gong, Fireflies, Manual, or Intel Report)
+
+### Editing a quote
+Click directly on any quote field to edit the text, company name, or speaker in place.
+
+### Deleting a quote
+Click the delete icon on a quote to remove it from the Feature. Deletion is permanent — the quote is removed from this Feature's quote library and cannot be recovered.
 
 ---
 

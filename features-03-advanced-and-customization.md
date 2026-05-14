@@ -9,7 +9,7 @@ Beyond the built-in frameworks (RICE, ICE, WSJF, etc.), Lodestone allows you to 
 
 ### Creating a custom framework
 
-1. Go to Settings > Modules > Feature Evaluation Criteria.
+1. Go to Settings > Modules, then select the **Features** sub-tab.
 2. Choose the option to create a custom framework.
 3. Define the individual input fields (e.g. "Strategic Alignment", "Customer Impact", "Tech Risk").
 4. Set the data type for each field (numeric, scale, boolean, etc.).
@@ -32,7 +32,7 @@ The default status stages (Not Started, In Progress, Completed) are a starting p
 
 ### Configuring status stages
 
-1. Go to Settings > Modules > Feature Status Stages.
+1. Go to Settings > Modules, then select the **Features** sub-tab.
 2. Rename existing stages or add new ones (e.g. "In Discovery", "In Review", "Blocked", "Shipped").
 3. Save. Changes apply immediately across the entire platform.
 

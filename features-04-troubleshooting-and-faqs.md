@@ -42,11 +42,11 @@ Two things to try:
 
 Yes. Deleting a Feature is permanent — it is removed from any Roadmaps, Releases, or Strategies it belonged to, and its associated Documents are deleted as well. There is no undo, so use with care.
 
-Yes. Lodestone supports custom evaluation criteria. You can define your own input fields, data types, and calculation formula in Settings > Modules > Feature Evaluation Criteria. Your custom score then appears in the backlog alongside or instead of the built-in frameworks.
+Yes. Lodestone supports custom evaluation criteria. You can define your own input fields, data types, and calculation formula in Settings > Modules under the **Features** sub-tab. Your custom score then appears in the backlog alongside or instead of the built-in frameworks.
 
 ### Can I change the status stage names?
 
-Yes. Go to Settings > Modules > Feature Status Stages. You can rename existing stages and add new ones. Changes are global and take effect immediately across all Features, Releases, and any other view that shows status.
+Yes. Go to Settings > Modules, then select the **Features** sub-tab. You can rename existing stages and add new ones. Changes are global and take effect immediately across all Features, Releases, and any other view that shows status.
 
 ### Are evaluation scores used automatically anywhere, or are they just for reference?
 

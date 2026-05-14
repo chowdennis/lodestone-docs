@@ -55,7 +55,9 @@ The most common cause is a missing or vague Organization Description. Go to Sett
 
 ### A team member can't access certain Settings options
 
-Check their role. Builders cannot update the organization name, description, or logo; assign roles; or connect Gong. If they need these capabilities, an Admin can promote them to Admin from Settings > Team.
+Check their role. In Settings, Builder restrictions are visually enforced — unavailable fields and sections appear greyed out and non-interactive, and an Admin-required notice is displayed. Builders cannot change the organization name, description, or logo; assign roles; or connect Gong. The Features sub-tab under Settings > Modules is hidden entirely for Builders.
+
+If the team member needs these capabilities, an Admin can promote them to Admin from Settings > Team.
 
 ### Features have moved to the wrong status after a Settings change
 

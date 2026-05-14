@@ -63,6 +63,8 @@ The search bar filters your current Extract list in real time by Feature name, d
 
 Once a transcript has been analyzed, the generated Extracts appear in your review queue. Each Extract shows a suggested Feature Name, Description, and any associated quotes pulled from the conversation. A **source badge** indicates where the Extract came from (Gong, Fireflies, Manual, or Intel Report).
 
+Quotes may also display **company name**, **speaker name**, and **revenue information** when that data is available from the source. To remove an individual quote from an Extract, click the delete icon on the quote — deletion is permanent.
+
 For each Extract, you have two options:
 
 ### Add to Backlog

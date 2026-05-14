@@ -83,7 +83,7 @@ Removed members immediately lose access to the workspace. Their previously creat
 
 ## Configuring Feature Status Stages
 
-1. Go to Settings > Modules > Feature Status Stages.
+1. Go to Settings > Modules, then select the **Features** sub-tab.
 2. To **rename** a stage, click its name and edit it directly.
 3. To **add** a new stage, use the Add Stage option and enter a name.
 4. To **delete** a stage, select the delete option next to it.
@@ -96,7 +96,7 @@ Status stage changes apply immediately across the entire platform — the backlo
 
 ## Configuring Feature Evaluation Criteria
 
-1. Go to Settings > Modules > Feature Evaluation Criteria.
+1. Go to Settings > Modules, then select the **Features** sub-tab.
 2. Select a built-in framework (Value/Effort, RICE, ICE, WSJF, etc.), or choose to create a custom framework.
 3. If creating a custom framework:
    - Define each input field and its data type
@@ -125,6 +125,30 @@ Integration setup and configuration is covered in detail in the Integrations mod
 2. Find the integration you want to connect or configure.
 
 Currently available: Fireflies, Gong (Admin only to connect), and JIRA.
+
+---
+
+## Setting Up Multi-Factor Authentication
+
+Multi-factor authentication (MFA) is a personal account setting — it applies to your individual login, not to the organization. MFA is available to all users regardless of role.
+
+To access MFA settings, navigate to **Account > Multi-Factor Authentication** (this is separate from org-level Settings).
+
+### TOTP (Authenticator App)
+
+1. Select **Authenticator App**.
+2. Scan the QR code displayed on screen with your authenticator app (such as Google Authenticator, Authy, or 1Password).
+3. Enter the verification code from your app to confirm setup.
+
+Once set up, you will be prompted to enter a code from your authenticator app on each login.
+
+### SMS
+
+1. Select **SMS**.
+2. Enter your mobile phone number.
+3. Enter the verification code sent to your phone to confirm setup.
+
+Once set up, you will receive a text message with a verification code on each login.
 
 ---
 

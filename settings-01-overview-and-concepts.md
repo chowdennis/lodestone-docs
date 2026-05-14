@@ -19,7 +19,7 @@ Settings is organized into four sections:
 |---|---|
 | Organization | Workspace identity, description, logo, and archival |
 | Team | Member invitations, role assignments, and access management |
-| Modules | Feature status stages, evaluation frameworks, and strategy defaults |
+| Modules | Strategy defaults, evaluation frameworks, feature status stages, and financial forecast defaults — organized into sub-tabs (Strategy, Features, Financial Forecast) |
 | Integrations | Connections to Fireflies, Gong, and JIRA |
 
 ---
@@ -38,6 +38,8 @@ Lodestone has two roles: **Admin** and **Builder**. Admins can do everything in 
 | Invite and remove team members | ✓ | ✓ |
 
 There must always be at least one Admin in a workspace — the last Admin cannot be removed or demoted.
+
+In Settings, Builder restrictions are visually enforced: unavailable fields and sections appear greyed out and non-interactive, with an Admin-required notice displayed. The Features sub-tab under Settings > Modules is hidden entirely for Builders.
 
 ---
 
