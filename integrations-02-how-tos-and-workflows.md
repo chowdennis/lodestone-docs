@@ -14,6 +14,17 @@ The Fireflies integration allows meeting transcripts to be imported directly int
 
 Once connected, any meeting in your Fireflies instance is available for import into Extracts. See the Extracts module guide for how to use this in practice.
 
+### Configuring Fireflies auto-sync
+
+After connecting, you can configure Lodestone to pull new Fireflies transcripts automatically:
+
+1. In the Fireflies integration settings, enable **Automatic Sync**.
+2. Choose a **Sync Interval**: every 12 hours, 24 hours, or weekly.
+3. Set a **Lookback Window** — how many days back Lodestone should look for new transcripts on each sync cycle (1–90 days).
+4. Save. Lodestone will now pull new transcripts from Fireflies on your chosen schedule and queue them for analysis in Extracts automatically.
+
+> **Tip:** A 24-hour interval with a 7-day lookback is a good default for most teams — you get daily updates without capturing stale meetings.
+
 ---
 
 ## Connecting Gong
@@ -29,6 +40,15 @@ The Gong integration works similarly to Fireflies — it brings call transcripts
 > **Tip:** Be deliberate about which accounts you select during setup. Selecting too broadly brings in calls with low product signal. Focusing on customer-facing roles produces the most actionable Extracts.
 
 To change which accounts are included after initial setup, return to Settings > Integrations and update the Gong configuration.
+
+### Configuring Gong auto-sync
+
+After connecting, you can configure Lodestone to pull new Gong transcripts automatically:
+
+1. In the Gong integration settings, enable **Automatic Sync**.
+2. Choose a **Sync Interval**: every 12 hours, 24 hours, or weekly.
+3. Set a **Lookback Window** — how many days back Lodestone should look for new calls on each sync cycle (1–90 days).
+4. Save. Lodestone will now pull new Gong transcripts on your chosen schedule and queue them for analysis in Extracts automatically.
 
 ---
 

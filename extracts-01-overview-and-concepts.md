@@ -70,11 +70,26 @@ This separation keeps discovery clean and distinct from planning.
 
 ---
 
+## Source Badges
+
+Each Extract displays a **source badge** indicating where it came from. This makes it easy to see at a glance whether an idea was surfaced from a customer call, a sales conversation, or a competitive analysis:
+
+| Badge | Source |
+|---|---|
+| Gong | Transcript imported from a Gong call |
+| Fireflies | Transcript imported from a Fireflies meeting |
+| Manual | Transcript uploaded directly by a team member |
+| Intel Report | Extracted from a Competitive Intelligence report |
+
+Source context is preserved when an Extract is promoted to a Feature — the source information carries over into the Feature's quote library.
+
+---
+
 ## Supported Inputs
 
-Extracts currently works with **meeting transcripts in text format**. Audio and video files are out of scope — these are handled upstream by recording platforms like Fireflies, which can produce transcripts that are then brought into Lodestone.
+Extracts works with **meeting transcripts in text format** and **Competitive Intelligence reports**. Audio and video files are out of scope — these are handled upstream by recording platforms like Fireflies or Gong, which produce transcripts that are then brought into Lodestone.
 
-Transcripts can be uploaded manually into the Extracts module, or imported directly via the Fireflies integration.
+Transcripts can be uploaded manually, imported directly via the Fireflies or Gong integrations, or fed from a completed Competitive Intelligence report via the Extract Features from Report action in the Intel module.
 
 ---
 

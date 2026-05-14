@@ -74,6 +74,17 @@ Documents live on the Feature Detail page, which you access by clicking a Featur
 
 Documents are living artifacts — they're meant to be updated as a Feature evolves, not written once and forgotten. That said, if you choose to regenerate a Document with AI, be aware that regeneration immediately overwrites the existing content with no warning and no recovery path. If you've made edits worth keeping, copy them before regenerating.
 
+## The Rich Text Editor
+
+All Document types use a **rich text editor** with a formatting toolbar. You can apply formatting directly to document content:
+
+- **Bold**, *italic*, and other inline styles
+- Headings and subheadings
+- Bullet and numbered lists
+- And more
+
+This means Documents are not just plain text — they can be structured and formatted for direct sharing without additional cleanup. Formatting is preserved when exporting to PDF.
+
 ---
 
 ## How Documents Relate to Features
@@ -86,7 +97,9 @@ Documents are living artifacts — they're meant to be updated as a Feature evol
 
 ## Exporting Documents
 
-All Documents can be exported as PDFs. The Opportunity Canvas has an additional export option — it can be exported as a single PowerPoint slide. Opportunity Canvases also appear automatically as an appendix when you export a Roadmap as a PPT presentation.
+All Documents can be exported as **PDFs** or **Markdown files (.md)**. The Markdown export is useful for pasting document content into Notion, Confluence, GitHub, or any other Markdown-friendly tool.
+
+The Opportunity Canvas has an additional export option — it can be exported as a single **PowerPoint slide**. Opportunity Canvases also appear automatically as an appendix when you export a Roadmap as a PPT presentation.
 
 Exports are designed to be immediately shareable and presentation-ready, without requiring any additional formatting work.
 

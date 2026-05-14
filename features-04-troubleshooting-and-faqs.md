@@ -71,7 +71,7 @@ A few things to check:
 
 ### A Feature's status isn't updating when I change it in a Release
 
-> ⚠️ **[NEEDS REVIEW]** *Confirm expected sync behavior and any known edge cases with status updates between Releases and the backlog. Include JIRA sync implications if relevant.*
+This should not happen — status is a single value on the Feature and updates everywhere simultaneously. If you change a Feature's status in a Release, it updates in the backlog instantly, and vice versa. If you are seeing a discrepancy, try refreshing the page. If the issue persists, check whether a JIRA sync conflict is causing an override — review your status mapping in Settings > Integrations > JIRA.
 
 ### I'm seeing stale or incorrect evaluation scores
 

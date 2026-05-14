@@ -48,30 +48,14 @@ This approach works especially well when you're running a discovery sprint or sy
 
 ## Planned Integrations
 
-Beyond Fireflies, Lodestone plans to support direct transcript ingestion from:
+Beyond Fireflies and Gong, Lodestone plans to support direct transcript ingestion from:
 
 - Salesforce
-- Gong
 - Zendesk
 - Freshdesk
 - Other CRM and support systems
 
-When these integrations ship, Extracts will expand from a PM-driven workflow into an organization-wide listening system — automatically ingesting signals from sales, support, and customer success without requiring any manual upload.
-
-> ⚠️ **[NEEDS REVIEW]** *Confirm the current status of any CRM integrations beyond Fireflies — particularly Gong, which may already be in progress.*
-
----
-
-## Future Capabilities
-
-Several enhancements to the Extracts module are planned but not yet available:
-
-- **Direct Quotes as a first-class object** — surfacing verbatim quotes from transcripts with customer name, company, and ARR/MRR metadata attached
-- **Applying quotes to existing Features** — linking new evidence from a transcript to a Feature already in your backlog, rather than always creating a new one
-- **Problems and Opportunities as distinct objects** — separating problem discovery from solution definition, so Extracts can surface a problem without immediately implying a solution Feature
-- **Auto-generating Documents on promotion** — automatically kicking off a Document (e.g. an Opportunity Canvas) when an Extract is accepted into the backlog
-
-These changes would make Extracts the foundation of a continuous discovery system rather than a one-off analysis tool.
+When these integrations ship, Extracts will expand further into an organization-wide listening system — automatically ingesting signals from sales, support, and customer success without requiring any manual upload.
 
 ---
 

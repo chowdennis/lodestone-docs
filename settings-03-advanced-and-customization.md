@@ -76,6 +76,21 @@ Since there must always be at least one Admin, make sure more than one person ho
 
 ---
 
+## Financial Forecast Defaults
+
+The Financial Forecast module has a set of org-level defaults that apply to all new financial models created in the workspace. These are configured from within the Financial Forecast module (via its Compare view or Settings link), not from the main Settings module.
+
+| Setting | Default | What it does |
+|---|---|---|
+| Discount Rate | 12% | Rate used to calculate NPV in all new models |
+| Labor Rate | $15,000/month | Default cost per engineer for effort-based assumptions |
+| Fiscal Year Start | January (month 1) | Affects how metrics are reported relative to your fiscal year |
+| Launch Month / Year | Current year, month 1 | Default launch date used when no per-assumption start month is set |
+
+Changing org-level defaults does not retroactively update existing models — they apply only to new models. Individual models can always override the org defaults at the model level.
+
+---
+
 ## Settings Propagation: What Changes What
 
 A quick reference for understanding the ripple effects of Settings changes:

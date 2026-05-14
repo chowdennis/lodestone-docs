@@ -11,7 +11,7 @@ Any workspace member can connect and configure integrations — it is not restri
 
 ### Which integrations are currently live?
 
-Three integrations are live: Fireflies, Gong, and JIRA.
+Four integrations are live: Fireflies, Gong, JIRA, and the Lodestone REST API (via API keys). Fireflies and Gong both support configurable auto-sync.
 
 ### Does the JIRA integration support JIRA Server?
 

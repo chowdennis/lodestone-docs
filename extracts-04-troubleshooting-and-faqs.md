@@ -7,7 +7,7 @@
 
 ### What file format does my transcript need to be in?
 
-Transcripts must be uploaded as files — there is no paste field. Audio and video files are not supported; these need to be transcribed first by a recording platform (such as Fireflies or Gong) before being brought into Lodestone.
+Transcripts must be uploaded as files — there is no paste field. Audio and video files are not supported; these need to be transcribed first by a recording platform (such as Fireflies or Gong) before being brought into Lodestone. Competitive Intelligence reports can also be sent to Extracts using the Extract Features from Report action in the Intel module — no file upload required for those.
 
 ### How long does analysis take after I upload a transcript?
 

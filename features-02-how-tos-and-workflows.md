@@ -36,7 +36,10 @@ From the Feature Detail page you can:
 - Edit the Feature Name and Description
 - Update the Feature's Status
 - Enter evaluation scores (Value, Effort, or whichever framework your team uses)
-- Generate and manage Documents for this Feature
+- Generate and manage Documents for this Feature (PRD, Opportunity Canvas, User Stories, and more)
+- Build a **Financial Forecast** for this Feature — modeling expected costs, revenue impact, and ROI
+
+The Feature Detail page is organized into tabs. The first tab contains the core Feature information and Documents. The second tab, **Financial Forecast**, is where you create and manage financial models.
 
 There's no required sequence — enrich a Feature however and whenever it makes sense.
 

@@ -87,7 +87,7 @@ Generate internal notes first, export or copy them, then generate again with the
 
 ## Exporting a Release
 
-Releases can be exported in two formats:
+Releases can be exported in three formats:
 
 ### PNG
 A static image of the Kanban board in its current state. Useful for quick sharing in emails, Slack, or documents.
@@ -95,9 +95,12 @@ A static image of the Kanban board in its current state. Useful for quick sharin
 ### PPT
 A PowerPoint version of the board. Useful when incorporating the Release view into a larger presentation.
 
+### Markdown (.md)
+A text-based export of the Release, formatted as a Markdown document. Useful for pasting into Notion, Confluence, GitHub, or any tool that accepts Markdown.
+
 Both the **Actual** and **Forecast** views can be exported — make sure you're in the correct mode before exporting.
 
-> **Note:** Release exports do not include AI-generated text or speaker notes. The export is a clean visual of the board as-is.
+> **Note:** Release PNG and PPT exports do not include AI-generated text or speaker notes. The export is a clean visual of the board as-is.
 
 ---
 

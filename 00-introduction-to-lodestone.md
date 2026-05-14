@@ -45,16 +45,18 @@ A user knows Lodestone is working for them when:
 
 ## The Planning Stack
 
-Lodestone is organized around six core objects that reflect how product work actually unfolds in the real world:
+Lodestone is organized around core objects that reflect how product work actually unfolds in the real world:
 
 | Object | What it does |
 |---|---|
-| **Extracts** | Raw ideas surfaced from meeting transcripts using AI |
+| **Extracts** | Raw ideas surfaced from meeting transcripts and competitive reports using AI |
 | **Features** | Concrete initiatives a product team may pursue |
 | **Documents** | Written artifacts that explain and justify Features |
 | **Roadmaps** | Narrative plans that explain WHAT is being built and WHY |
 | **Releases** | Progress views that communicate WHEN things are happening |
 | **Strategy** | Long-term investment decisions that force tradeoffs over time |
+| **Competitive Intelligence** | AI-generated competitor tracking and market analysis |
+| **Financial Forecast** | Financial modeling (NPV, ROI, IRR) for individual Features |
 
 This stack is **not prescriptive**. Users may start at any point depending on their needs. A PM might begin by uploading a customer call transcript, or they might start by sketching out a roadmap. Lodestone accommodates both.
 
@@ -123,4 +125,4 @@ If you're new to Lodestone, start with the Overview & Concepts page for whicheve
 
 ---
 
-*This is version 1 of the Lodestone introduction documentation, based on the Lodestone knowledge base from early 2025, updated with confirmed platform behavior.*
+*This documentation covers the current Lodestone platform, updated to reflect all modules including Competitive Intelligence, Financial Forecast, and the Lodestone API.*

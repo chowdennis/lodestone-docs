@@ -37,8 +37,9 @@ All Documents are editable at any time, regardless of how they were created.
 
 1. Open the Feature Detail page.
 2. Find the Document you want to edit in the Documents section.
-3. Click into the document to open the editor.
-4. Make your changes directly.
+3. Click into the document to open the rich text editor.
+4. Use the formatting toolbar to apply bold, italic, headings, lists, and other formatting.
+5. Edit content directly in the editor.
 
 There is no publish or approval step — edits are saved as you work.
 
@@ -60,6 +61,17 @@ If you've updated a Feature Description and want to refresh a Document's content
 2. Find the Document you want to export.
 3. Click the Export option and select PDF.
 4. The PDF downloads immediately, ready to share.
+
+---
+
+## Exporting a Document as Markdown
+
+1. Open the Feature Detail page.
+2. Find the Document you want to export.
+3. Click the Export option and select Markdown (or the `.md` button).
+4. A `.md` file downloads, containing the document content in Markdown format.
+
+Markdown exports are useful for pasting into Notion, Confluence, GitHub, or any other Markdown-friendly tool.
 
 ---
 

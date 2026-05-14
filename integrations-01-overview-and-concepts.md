@@ -50,15 +50,18 @@ The goal is to remove double-entry while keeping product intent and context cent
 
 ## Live Integrations
 
-Lodestone currently has three live integrations:
+Lodestone currently has four live integrations:
 
 | Integration | Purpose | Module |
 |---|---|---|
-| Fireflies | Transcript ingestion | Extracts |
-| Gong | Transcript ingestion | Extracts |
+| Fireflies | Transcript ingestion with configurable auto-sync | Extracts |
+| Gong | Transcript ingestion with configurable auto-sync | Extracts |
 | JIRA | Delivery synchronization | Features, Releases |
+| Lodestone API | Programmatic access for external tools and AI assistants | All modules |
 
-Each serves a distinct purpose. Fireflies and Gong are discovery integrations — they bring signal in. JIRA is a delivery integration — it keeps Feature and status data in sync with your engineering workflow.
+Fireflies and Gong are discovery integrations — they bring signal in. JIRA is a delivery integration — it keeps Feature and status data in sync with your engineering workflow. The Lodestone API enables external tools, automation, and AI assistants to read and write Lodestone data.
+
+Both Fireflies and Gong support **automatic sync** — Lodestone can pull new transcripts on a configurable schedule (every 12 hours, 24 hours, or weekly) rather than requiring a manual import each time.
 
 ---
 

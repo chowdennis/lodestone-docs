@@ -96,7 +96,7 @@ Archiving removes the Roadmap from your active list but preserves it for referen
 
 ## Exporting a Roadmap
 
-Roadmaps can be exported in three formats:
+Roadmaps can be exported in four formats:
 
 ### PNG — single view
 A static image of the full sunburst. Useful for dropping into emails, documents, or slides you're assembling manually.
@@ -106,6 +106,9 @@ A single PowerPoint slide containing the sunburst. Useful when you want to inclu
 
 ### PPT — full presentation
 A complete PowerPoint deck that walks through the entire plan. Lodestone generates a slide for every item at every level of the hierarchy, deconstructing the sunburst step by step. Opportunity Canvases for Features in the Roadmap are collected automatically and appended as an appendix.
+
+### Markdown (.md)
+A text-based export of the full Roadmap hierarchy, formatted as a Markdown document. Useful for pasting into Notion, Confluence, GitHub, or any other tool that accepts Markdown. The export reflects the current hierarchy exactly as structured in Lodestone.
 
 ---
 

@@ -105,7 +105,9 @@ Archiving removes the Strategy from your active list but preserves it for refere
 
 ## Exporting a Strategy
 
-Strategies are exported as PPT slide decks. Each slide represents one time interval, showing a snapshot of the growth cube at that point.
+Strategies can be exported as a PPT slide deck or as Markdown.
+
+### PPT export
 
 1. Open the Strategy you want to export.
 2. Select the export option.
@@ -117,6 +119,10 @@ Strategies are exported as PPT slide decks. Each slide represents one time inter
 5. Generate the export.
 
 The resulting PPT includes one slide per interval. Bottom-up strategies also include a list of the Features selected for each interval per dimension.
+
+### Markdown (.md) export
+
+Click the Markdown export button (`.md`) in the export toolbar to download the Strategy as a structured Markdown document. Each time interval and its values are represented as text, suitable for pasting into Notion, Confluence, GitHub, or any Markdown-friendly tool.
 
 ---
 
