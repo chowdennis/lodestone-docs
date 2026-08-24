@@ -81,4 +81,42 @@ An Admin needs to log in and unarchive from Settings > Organization. Builder acc
 
 ---
 
+## Trial & Subscription Questions
+
+### How long is the free trial?
+
+Lodestone trials last 31 days from the date you sign up.
+
+### Where can I see how many days are left in my trial?
+
+The sidebar shows a **Trial account** card with a live countdown and a progress bar. The count is calculated from the exact moment your trial expires, not your sign-up date, so it is always accurate to the day.
+
+### What happens when the trial expires?
+
+If your trial expires without an active subscription, the app content blurs and a paywall appears. You can still access the upgrade flow and enter an access code from the paywall overlay. Your data is not deleted.
+
+### Can I still access Lodestone if my trial has ended?
+
+Only through the paywall — you can upgrade to a paid plan or apply an access code from that screen. Once payment is confirmed or a valid code is applied, full access is restored immediately.
+
+### What does an access code do?
+
+An access code extends your trial by a specified number of days from the time you apply it. If your trial has not yet expired, the extension starts from the current expiry date. If your trial has already expired, the extension starts from today.
+
+---
+
+## Common Trial Issues
+
+### The sidebar shows the wrong number of days left
+
+If the days-left count looks wrong, try a hard refresh (Cmd+Shift+R or Ctrl+Shift+R). The countdown is calculated server-side from your trial expiry date each time the page loads — it cannot drift or show stale data unless the page hasn't been refreshed.
+
+### My trial should be active but the paywall appeared
+
+Check whether your trial expiry date has passed. The paywall appears as soon as the trial expires with no active subscription. If you believe this is an error, contact support with your account email — an access code can extend your access immediately while the issue is investigated.
+
+### I applied an access code but the paywall is still showing
+
+After applying a code, the page redirects to your account page with a confirmation. If the paywall reappears after navigating away, try signing out and back in to refresh your session. If the issue persists, contact support — the code may not have been applied correctly.
+
 *This is version 1 of the Settings documentation, based on the Lodestone knowledge base from early 2025, updated with confirmed platform behavior.*
