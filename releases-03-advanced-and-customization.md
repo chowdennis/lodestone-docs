@@ -82,7 +82,8 @@ For teams using JIRA, the Release board effectively becomes a live view of deliv
 | Primary question | WHAT and WHY | WHEN and HOW IS IT GOING |
 | Time orientation | Forward-looking | Current state + near-term |
 | Visual format | Sunburst chart | Kanban board |
-| AI content in export | Yes | No |
+| AI content in export | Yes (PPT) | No |
+| HTML shareable export | Yes | Yes |
 | Typical audience | Leadership, sales, customers | CS, ops, team, stakeholders |
 | Updated cadence | When priorities shift | Regularly as work progresses |
 

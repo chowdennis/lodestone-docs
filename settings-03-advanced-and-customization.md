@@ -3,6 +3,28 @@
 
 ---
 
+## Designing Your Object Type Taxonomy
+
+The Taxonomy settings determine what kinds of objects exist in your workspace. Done well, a clear type taxonomy reduces ambiguity, makes the Backlog easier to filter, and enables meaningful hierarchy in Roadmaps. Done poorly, it adds friction without adding clarity.
+
+### Keep the type list short
+
+Each additional type is a decision your team must make for every item added to the Backlog. Two to four types is a comfortable range for most teams. More than five types is usually a sign that you're trying to replicate a delivery tool like JIRA inside Lodestone — a model that doesn't fit how Lodestone works.
+
+### Choose prefixes that are self-evident
+
+Prefixes appear in typed IDs and in the Type column. Choose abbreviations that are immediately recognizable to anyone on your team — FEAT for Feature, EPIC for Epic, BUG for Bug. Avoid abbreviations that overlap or could be confused.
+
+### Use the top-tier type to reflect your actual hierarchy
+
+The top-tier type should represent the highest level of planning intent in your Backlog. For most teams, this is a strategic grouping like Epic or Initiative. Items of the top-tier type can serve as parents in Roadmap hierarchies without disappearing from the Backlog.
+
+### Be conservative with parent/child constraints
+
+Parent/child type constraints are a power feature — they prevent hierarchy violations — but they add complexity when items need to be retyped. Only configure constraints if your team has a stable, agreed-upon hierarchy model. If your taxonomy is still evolving, leave constraints unconfigured and revisit once patterns stabilize.
+
+---
+
 ## The Organization Description: Your Most Impactful Setting
 
 Of all the Settings available, the Organization Description has the broadest impact on day-to-day usage. It feeds into every AI-generated Document across the platform — PRDs, Opportunity Canvases, User Stories, social posts, customer emails, and more.

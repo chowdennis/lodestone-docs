@@ -1,4 +1,4 @@
-# Lodestone API — Troubleshooting & FAQs
+# Lodestone API & MCP — Troubleshooting & FAQs
 *Common authentication issues, scope errors, and answers to frequent questions*
 
 ---

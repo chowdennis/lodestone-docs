@@ -1,11 +1,11 @@
-# Lodestone API — How-tos & Workflows
+# Lodestone API & MCP — How-tos & Workflows
 *Step-by-step guides for generating keys and connecting external tools*
 
 ---
 
 ## Generating an API Key
 
-1. Go to **Settings > Integrations**.
+1. Go to **Settings > API & MCP**.
 2. Scroll to the **API Access** section.
 3. Click **Generate API Key**.
 4. Give the key a name — something that identifies the tool or person it's for (e.g. "ChatGPT Integration", "Custom Claude Agent").
@@ -21,7 +21,7 @@
 
 If a key is compromised, no longer needed, or you want to rotate it:
 
-1. Go to **Settings > Integrations**.
+1. Go to **Settings > API & MCP**.
 2. Scroll to the **API Access** section.
 3. Click **Revoke** next to the key you want to remove.
 4. Confirm. The key is immediately invalidated — any requests using it will return `401 Unauthorized`.

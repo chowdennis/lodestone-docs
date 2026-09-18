@@ -1,15 +1,15 @@
-# Features — How-tos & Workflows
-*Step-by-step guides for the most common Feature workflows*
+# Backlog — How-tos & Workflows
+*Step-by-step guides for the most common Backlog workflows*
 
 ---
 
 ## Creating a Feature
 
-### Option A: Directly in the Feature Backlog
+### Option A: Directly in the Backlog
 
-The most straightforward way to add a Feature is directly from the backlog.
+The most straightforward way to add a Feature is directly from the Backlog.
 
-1. Navigate to the Features module from the left-hand navigation.
+1. Navigate to the Backlog from the left-hand navigation.
 2. Click the Add Feature button (or equivalent entry point in the backlog).
 3. Enter a Feature Name. This is the only required field — you can save immediately and add more detail later.
 4. Optionally add a Description. The more context you provide, the better any AI-generated documents will be.
@@ -17,7 +17,7 @@ The most straightforward way to add a Feature is directly from the backlog.
 
 ### Option B: From a Roadmap
 
-If you're building out a Roadmap and a new idea comes to mind, you can type it directly into the Roadmap entry field. When you do, Lodestone automatically adds it to the Feature backlog as well. No extra step required.
+If you're building out a Roadmap and a new idea comes to mind, you can type it directly into the Roadmap entry field. When you do, Lodestone automatically adds it to the Backlog as well. No extra step required.
 
 ### Option C: From an Extract
 
@@ -29,10 +29,10 @@ When you accept an Extract — an AI-identified idea surfaced from a meeting tra
 
 ## Importing Features from CSV
 
-If you have a list of Features in a spreadsheet, you can import them directly into the backlog using a CSV file.
+If you have a list of Features in a spreadsheet, you can import them directly into the Backlog using a CSV file.
 
-1. Navigate to the Features module from the left-hand navigation.
-2. Select the import option from the backlog toolbar.
+1. Navigate to the Backlog from the left-hand navigation.
+2. Select the import option from the Backlog toolbar.
 3. Upload your CSV file.
 4. In the field mapping step, match each column in your CSV to the corresponding Lodestone field — Name, Description, Status, or evaluation inputs.
 5. Confirm the mapping. Features are added to your backlog immediately.
@@ -54,6 +54,7 @@ From the Feature Detail page you can:
 - Enter evaluation scores (Value, Effort, or whichever framework your team uses)
 - Generate and manage Documents for this Feature (PRD, Opportunity Canvas, User Stories, and more)
 - Build a **Financial Forecast** for this Feature — modeling expected costs, revenue impact, and ROI
+- Link parent objects (including Goals) using the **Parents** field in the sidebar
 
 The Feature Detail page is organized into tabs. The first tab contains the core Feature information and Documents. The second tab, **Financial Forecast**, is where you create and manage financial models.
 
@@ -61,11 +62,32 @@ There's no required sequence — enrich a Feature however and whenever it makes 
 
 ---
 
+## Linking a Parent Object
+
+The **Parents** field in the Backlog item detail sidebar lets you connect any item to a parent in the object hierarchy — including a Goal.
+
+**To add a parent:**
+
+1. Open the item detail page by clicking the item's name in the Backlog.
+2. Find the **Parents** field in the sidebar.
+3. Click the search field that appears and type to search for the parent object by name.
+4. Select the parent from the results. It appears as a chip showing the typed ID and name.
+
+You can add multiple parents if the item contributes to more than one Goal or parent object.
+
+**To remove a parent:**
+
+Click the × on any parent chip. The connection is removed immediately.
+
+> **Note:** If your organization has configured parent/child type constraints in Settings > Taxonomy, the search picker filters to only show objects of types that are allowed as parents for this item's type. If you see fewer results than expected, this is why.
+
+---
+
 ## Updating Feature Status
 
 Feature status can be updated in several places:
 
-- From the Feature Backlog — inline status change
+- From the Backlog — inline status change
 - From the Feature Detail page
 - From a Release board — drag the Feature card to a new column
 
@@ -86,7 +108,7 @@ Evaluation fields appear on the Feature Detail page. Which fields are shown depe
 3. Enter values for each scoring input (e.g. Reach, Impact, Confidence, Effort for RICE).
 4. Lodestone calculates the composite score automatically.
 
-Scores appear in the Feature Backlog, where you can sort and compare Features by their evaluation results.
+Scores appear in the Backlog, where you can sort and compare Features by their evaluation results.
 
 ### Changing your evaluation framework
 
@@ -154,4 +176,4 @@ Deleting a Feature is permanent. When a Feature is deleted, it is removed from a
 
 ---
 
-*Next: Advanced Features & Customization — templates, evaluation frameworks, and power-user options.*
+*Next: Advanced & Customization — object types, evaluation frameworks, and power-user options.*

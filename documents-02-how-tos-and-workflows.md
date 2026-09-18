@@ -55,23 +55,35 @@ If you've updated a Feature Description and want to refresh a Document's content
 
 ---
 
-## Exporting a Document as PDF
+## Exporting a Document
+
+Each Document has an **Export** button with three format options: PDF, Markdown, and HTML. Use whichever format fits your destination.
+
+### PDF
 
 1. Open the Feature Detail page.
 2. Find the Document you want to export.
-3. Click the Export option and select PDF.
+3. Click the **Export** button and select **PDF**.
 4. The PDF downloads immediately, ready to share.
 
----
-
-## Exporting a Document as Markdown
+### Markdown
 
 1. Open the Feature Detail page.
 2. Find the Document you want to export.
-3. Click the Export option and select Markdown (or the `.md` button).
+3. Click the **Export** button and select **Markdown**.
 4. A `.md` file downloads, containing the document content in Markdown format.
 
 Markdown exports are useful for pasting into Notion, Confluence, GitHub, or any other Markdown-friendly tool.
+
+### HTML (shareable link)
+
+1. Open the Feature Detail page.
+2. Find the Document you want to export.
+3. Click the **Export** button and select **HTML**.
+4. Lodestone generates a responsive HTML snapshot and returns a shareable `/share/...` link.
+5. Copy the link and share it with anyone — the recipient can view the document in a browser without logging in to Lodestone.
+
+Unlike PDF and Markdown, the HTML export does not download a file — it produces a URL. Each time you click HTML export, a new snapshot is generated and a new URL is returned. Previous links remain valid.
 
 ---
 

@@ -50,13 +50,14 @@ Lodestone is organized around core objects that reflect how product work actuall
 | Object | What it does |
 |---|---|
 | **Extracts** | Raw ideas surfaced from meeting transcripts and competitive reports using AI |
-| **Features** | Concrete initiatives a product team may pursue |
+| **Backlog** | Concrete initiatives a product team may pursue, organized by type (Features, Epics, Bugs, etc.) |
 | **Documents** | Written artifacts that explain and justify Features |
 | **Roadmaps** | Narrative plans that explain WHAT is being built and WHY |
 | **Releases** | Progress views that communicate WHEN things are happening |
 | **Strategy** | Long-term investment decisions that force tradeoffs over time |
 | **Competitive Intelligence** | AI-generated competitor tracking and market analysis |
 | **Financial Forecast** | Financial modeling (NPV, ROI, IRR) for individual Features |
+| **Bento Grids** | Visual release summaries designed for sharing with stakeholders and customer-facing teams |
 
 This stack is **not prescriptive**. Users may start at any point depending on their needs. A PM might begin by uploading a customer call transcript, or they might start by sketching out a roadmap. Lodestone accommodates both.
 
@@ -114,9 +115,19 @@ A few principles shape how Lodestone behaves across every module:
 
 ## The Dashboard
 
-When you log in to Lodestone, the Dashboard is the first thing you see. It provides a view of recent activity across your workspace — recently updated Features, Documents, and other planning objects — so you can orient yourself before navigating to a specific module.
+When you log in to Lodestone, the Dashboard is the first thing you see. Called the **Command Deck**, it organizes recent workspace activity into five columns — Collecting Data, Processing Data, Making Plans, Aligning Plans, and Executing Plans — reflecting the full product lifecycle at a glance.
 
-The Dashboard is a read-only view and does not require any configuration.
+New items (objects created or updated since your last visit) are highlighted automatically. The columns can be reordered by drag-and-drop to match your workflow.
+
+See the Dashboard module documentation for full details.
+
+---
+
+## Copilot
+
+Copilot is Lodestone's built-in AI assistant, accessible from the **Copilot** button in the left-hand navigation on every page. It answers questions about the platform and product management best practices, and can take actions in your workspace — creating features, building roadmaps, generating documents — when you ask it to.
+
+See the Copilot module documentation for full details.
 
 ---
 
@@ -133,4 +144,4 @@ If you're new to Lodestone, start with the Overview & Concepts page for whicheve
 
 ---
 
-*This documentation covers the current Lodestone platform, updated to reflect all modules including Competitive Intelligence, Financial Forecast, and the Lodestone API.*
+*This documentation covers the current Lodestone platform, updated to reflect all modules including Competitive Intelligence, Financial Forecast, Bento Grids, and the Lodestone API.*

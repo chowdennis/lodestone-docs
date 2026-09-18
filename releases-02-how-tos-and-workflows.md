@@ -98,9 +98,14 @@ A PowerPoint version of the board. Useful when incorporating the Release view in
 ### Markdown (.md)
 A text-based export of the Release, formatted as a Markdown document. Useful for pasting into Notion, Confluence, GitHub, or any tool that accepts Markdown.
 
+### HTML (shareable link)
+Generates a responsive, server-rendered HTML snapshot of your Release board and returns a shareable link. Like Roadmap HTML exports, this produces a `/share/...` URL rather than downloading a file — anyone with the link can view the Release in a browser without logging in to Lodestone.
+
+To generate, click the **Export as HTML** button in the Release toolbar. Each generation produces a new URL; previous links remain valid.
+
 Both the **Actual** and **Forecast** views can be exported — make sure you're in the correct mode before exporting.
 
-> **Note:** Release PNG and PPT exports do not include AI-generated text or speaker notes. The export is a clean visual of the board as-is.
+> **Note:** Release PNG, PPT, and Markdown exports do not include AI-generated text or speaker notes. The export is a clean visual of the board as-is.
 
 ---
 

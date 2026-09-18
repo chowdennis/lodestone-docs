@@ -110,6 +110,11 @@ A complete PowerPoint deck that walks through the entire plan. Lodestone generat
 ### Markdown (.md)
 A text-based export of the full Roadmap hierarchy, formatted as a Markdown document. Useful for pasting into Notion, Confluence, GitHub, or any other tool that accepts Markdown. The export reflects the current hierarchy exactly as structured in Lodestone.
 
+### HTML (shareable link)
+Generates a responsive, server-rendered HTML snapshot of your Roadmap and returns a shareable link. Unlike the other export formats, this does not download a file — it produces a `/share/...` URL you can copy and send to anyone. The recipient can view the Roadmap in a browser without logging in to Lodestone.
+
+To generate an HTML export, click the **Export as HTML** button in the Roadmap toolbar. Once generated, the link is displayed alongside a **Copy Link** button. You can regenerate a new snapshot at any time — each generation produces a new URL.
+
 ---
 
 ## Adding AI-Generated Content to Exports

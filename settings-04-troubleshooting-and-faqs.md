@@ -45,6 +45,26 @@ It's a default, not a constraint. The workspace default pre-selects an approach 
 
 Yes. Any member can invite new members. However, only Admins can assign or change roles — Builders cannot promote someone to Admin or demote an Admin to Builder.
 
+### Who can create and delete object types in Taxonomy?
+
+Only Admins can create, rename, or delete object types in Settings > Taxonomy. All members can assign types to items and change an item's type from the Backlog.
+
+### Can I rename an object type prefix after items have been assigned to it?
+
+No. Prefixes are locked once items have been assigned to the type, because changing the prefix would alter existing typed IDs (e.g. FEAT-001 → NEWFEAT-001). Typed IDs are designed to be stable references. If you need a different prefix, create a new type with the correct prefix and reassign items to it.
+
+### What happens to items when I delete an object type?
+
+You must reassign all items currently using the type before deletion is allowed. The delete dialog shows the count of affected items and asks you to select a replacement type. Items are moved to the replacement type, and the original type is then removed.
+
+### Can passkeys replace my password?
+
+Passkeys are an additional sign-in option, not a replacement. Your password remains active. You can sign in with either method — use whichever is more convenient for your device and context.
+
+### Can I set up a passkey on multiple devices?
+
+Yes. You can register as many passkeys as you like from Account > Passkeys — one per device is the typical pattern. Each passkey is specific to the device it was created on.
+
 ---
 
 ## Common Issues
@@ -70,6 +90,10 @@ You've likely switched evaluation frameworks. Previously entered scores aren't d
 ### I can't remove the last Admin from the workspace
 
 This is a safeguard — there must always be at least one Admin. To remove the current Admin, first promote another member to Admin, then remove or demote the original.
+
+### A Builder is trying to create or delete an object type in Taxonomy but can't
+
+Creating, renaming, and deleting object types in Settings > Taxonomy is restricted to Admins. Builders can assign types to items and change an item's type from the Backlog, but they cannot modify the type list itself. Have an Admin make the change from Settings > Taxonomy.
 
 ### A Builder is trying to connect the Gong integration but can't
 

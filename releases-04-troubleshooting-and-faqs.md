@@ -39,7 +39,7 @@ Yes. Export whichever view is currently active — make sure you're in the corre
 
 ### Do Release PPT exports include AI-generated content?
 
-No. Release exports — both PNG and PPT — are clean visuals of the board with no AI-generated text or speaker notes. What you see on the board is what you get in the export.
+No. Release exports — PNG, PPT, and HTML — are clean visuals of the board with no AI-generated text or speaker notes. What you see on the board is what you get in the export.
 
 ### Can Release Notes be exported?
 

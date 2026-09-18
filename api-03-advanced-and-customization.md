@@ -1,4 +1,4 @@
-# Lodestone API — Advanced Features & Customization
+# Lodestone API & MCP — Advanced Features & Customization
 *Scope strategy, multi-key management, and designing effective AI assistants*
 
 ---

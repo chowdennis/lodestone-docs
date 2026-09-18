@@ -124,6 +124,10 @@ The resulting PPT includes one slide per interval. Bottom-up strategies also inc
 
 Click the Markdown export button (`.md`) in the export toolbar to download the Strategy as a structured Markdown document. Each time interval and its values are represented as text, suitable for pasting into Notion, Confluence, GitHub, or any Markdown-friendly tool.
 
+### HTML (shareable link)
+
+Click **Export as HTML** in the export toolbar to generate a responsive, server-rendered HTML snapshot of your Strategy and receive a shareable `/share/...` URL. Anyone with the link can view the Strategy in a browser without logging in to Lodestone. Each generation produces a new URL.
+
 ---
 
 *Next: Advanced Features & Customization — top-down vs bottom-up in depth, axis design, and getting the most from exports.*

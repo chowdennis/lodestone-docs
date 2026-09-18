@@ -117,6 +117,40 @@ This sets the default approach when creating a new Strategy. It can be overridde
 
 ---
 
+## Configuring Object Types (Taxonomy)
+
+*Admin only.*
+
+The Taxonomy tab lets you define the object types available in your workspace — such as Epics, Bugs, or Tasks — in addition to the built-in Feature type.
+
+### Creating a new object type
+
+1. Go to Settings > Taxonomy.
+2. Click **Add Type**.
+3. Enter a **Name** (e.g. "Epic") and a **Prefix** of 2–8 uppercase letters (e.g. "EPIC"). The prefix is used to generate typed IDs like EPIC-001.
+4. Optionally configure **Allowed Parent Types** and **Allowed Child Types** to define valid hierarchy relationships for this type.
+5. Save. The new type is immediately available for assignment in the Backlog.
+
+> **Note:** The prefix cannot be changed after items have been assigned this type, as doing so would invalidate existing typed IDs. Choose prefixes deliberately.
+
+### Renaming an object type
+
+Type names can be updated at any time from Settings > Taxonomy without affecting typed IDs — the prefix and sequential counter remain stable regardless of the display name.
+
+### Deleting an object type
+
+Deleting a type requires reassigning all items currently using it. The delete dialog lists the number of items affected and prompts you to choose a replacement type. Items are reassigned before the type is removed.
+
+### Setting the top-tier type
+
+The top-tier type represents the highest level in your hierarchy. To change it:
+
+1. Go to Settings > Taxonomy.
+2. Use the **Top-Tier Type** selector to choose the type that should sit at the top of your object hierarchy.
+3. Save.
+
+---
+
 ## Managing Integrations
 
 Integration setup and configuration is covered in detail in the Integrations module guide. To access integration settings:
@@ -149,6 +183,34 @@ Once set up, you will be prompted to enter a code from your authenticator app on
 3. Enter the verification code sent to your phone to confirm setup.
 
 Once set up, you will receive a text message with a verification code on each login.
+
+---
+
+## Setting Up Passkeys
+
+Passkeys are a personal account setting — they apply to your individual login and are available to all users regardless of role. A passkey lets you sign in using your device's biometric sensor (fingerprint, face), PIN, or a hardware security key — no password required.
+
+To access passkey settings, navigate to **Account > Passkeys** (separate from org-level Settings).
+
+### Registering a passkey
+
+1. Go to **Account > Passkeys**.
+2. Optionally enter a name for the passkey (e.g. "MacBook Touch ID") to identify it later.
+3. Click **Add Passkey**.
+4. Follow your device's prompt to complete registration using your fingerprint, face, or PIN.
+
+Once registered, you can sign in to Lodestone using the passkey instead of your password. When you next sign in from the same device, a "Continue with Passkey" button appears on the login page.
+
+### Setting up a passkey from the login prompt
+
+After signing in, Lodestone may show a one-time prompt to set up a passkey. You can click **Set up passkey** to register immediately, **Maybe later** to be prompted again next time, or **Don't ask again** to permanently dismiss the prompt.
+
+### Removing a passkey
+
+1. Go to **Account > Passkeys**.
+2. Click the delete icon next to the passkey you want to remove.
+
+Removing a passkey does not affect your password or other sign-in methods.
 
 ---
 

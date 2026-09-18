@@ -1,4 +1,4 @@
-# Lodestone API — Overview & Concepts
+# Lodestone API & MCP — Overview & Concepts
 *What it is, what it enables, and how it fits into your workflow*
 
 ---
@@ -68,11 +68,21 @@ Choose the minimum scopes needed for the tool you're connecting. A read-only AI 
 
 ---
 
+## MCP Server
+
+In addition to the REST API, Lodestone exposes an **MCP (Model Context Protocol) server** that allows AI agents and LLM environments to connect to Lodestone using the emerging MCP standard.
+
+The MCP server URL for your workspace is shown in **Settings > API & MCP**. You can connect MCP-compatible AI tools (such as Claude Desktop or Claude Code) directly to this URL to give them native Lodestone access — querying, creating, and updating objects using natural language without writing custom API code.
+
+MCP connectivity is authenticated using the same API keys used for REST API access.
+
+---
+
 ## How API Keys Work
 
 - Each key is associated with a specific organization in Lodestone
 - The full key value is shown **only once** — at the moment of creation. Copy it immediately.
-- Keys do not expire by default, but can be revoked at any time from Settings > Integrations
+- Keys do not expire by default, but can be revoked at any time from Settings > API & MCP
 - Only one active key is shown in the main integrations panel at a time, but multiple keys can exist per organization
 
 > **Security note:** Treat your API key like a password. Do not share it publicly, embed it in client-side code, or commit it to a repository. If a key is compromised, revoke it immediately and generate a new one.

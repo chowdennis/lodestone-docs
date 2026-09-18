@@ -33,12 +33,13 @@ Nothing — Features are unaffected by archiving. They remain in your Feature ba
 
 Yes. Roadmap names can be edited at any time.
 
-### What's the difference between the four export formats?
+### What's the difference between the five export formats?
 
 - **PNG single view** — a static image of the sunburst, for embedding in emails or documents
 - **PPT single view** — a single PowerPoint slide with the sunburst, for adding to an existing deck
 - **PPT full presentation** — a complete deck with a slide for every item at every level, plus an Opportunity Canvas appendix
 - **Markdown (.md)** — a text export of the full hierarchy, for pasting into Notion, Confluence, GitHub, or any Markdown-friendly tool
+- **HTML (shareable link)** — a server-rendered, responsive snapshot published to a `/share/...` URL; no login required to view
 
 ### Does the full PPT export include every level of the hierarchy?
 

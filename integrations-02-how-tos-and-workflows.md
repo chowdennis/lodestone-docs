@@ -1,5 +1,5 @@
 # Integrations — How-tos & Workflows
-*Step-by-step guides for connecting and configuring Fireflies, Gong, and JIRA*
+*Step-by-step guides for connecting and configuring Fireflies, Gong, JIRA, and Asana*
 
 ---
 
@@ -24,6 +24,66 @@ After connecting, you can configure Lodestone to pull new Fireflies transcripts 
 4. Save. Lodestone will now pull new transcripts from Fireflies on your chosen schedule and queue them for analysis in Extracts automatically.
 
 > **Tip:** A 24-hour interval with a 7-day lookback is a good default for most teams — you get daily updates without capturing stale meetings.
+
+---
+
+## Connecting Fathom
+
+The Fathom integration imports meeting transcripts and AI-generated meeting notes directly into the Extracts module.
+
+1. Go to Settings > Integrations.
+2. Find the Fathom integration and select Connect.
+3. Enter your Fathom API key. You can generate an API key from your Fathom account settings.
+4. Lodestone verifies the connection. Once confirmed, it is saved automatically.
+
+### Configuring Fathom auto-sync
+
+After connecting, you can configure Lodestone to pull new Fathom transcripts automatically:
+
+1. In the Fathom integration settings, enable **Automatic Sync**.
+2. Choose a **Sync Interval**: every 12 hours, 24 hours, or weekly.
+3. Set a **Lookback Window** — how many days back Lodestone should look for new transcripts on each sync cycle (1–90 days).
+4. Save. Lodestone will now pull new Fathom transcripts on your chosen schedule and queue them for analysis in Extracts automatically.
+
+---
+
+## Connecting Granola
+
+The Granola integration imports your Granola meeting notes into the Extracts module for AI analysis.
+
+1. Go to Settings > Integrations.
+2. Find the Granola integration and select Connect.
+3. Enter your Granola API key. You can find your API key in your Granola account settings.
+4. Lodestone verifies the connection and saves it automatically.
+
+### Configuring Granola auto-sync
+
+After connecting:
+
+1. In the Granola integration settings, enable **Automatic Sync**.
+2. Choose a **Sync Interval**: every 12 hours, 24 hours, or weekly.
+3. Set a **Lookback Window** for how far back to look on each sync cycle.
+4. Save.
+
+---
+
+## Connecting tl;dv
+
+The tl;dv integration imports recorded meeting transcripts from tl;dv into the Extracts module.
+
+1. Go to Settings > Integrations.
+2. Find the tl;dv integration and select Connect. (tl;dv may also appear in the Add Integration modal — look for it there if it's not visible in your main integrations list.)
+3. Enter your tl;dv API key.
+4. Lodestone verifies the connection and saves it automatically.
+
+### Configuring tl;dv auto-sync
+
+After connecting:
+
+1. In the tl;dv integration settings, enable **Automatic Sync**.
+2. Choose a **Sync Interval**: every 12 hours, 24 hours, or weekly.
+3. Set a **Lookback Window** for how far back to look on each sync cycle.
+4. Save.
 
 ---
 
@@ -125,6 +185,40 @@ If automatic sync or webhooks aren't configured, or you want to force an immedia
 
 ---
 
+## Connecting Asana
+
+The Asana integration lets you push Backlog items to Asana as tasks and keeps status updates flowing back into Lodestone automatically.
+
+### Step 1: Generate a Personal Access Token in Asana
+
+1. Sign in to your Asana account.
+2. Go to your Asana profile settings and navigate to the **Apps** or **Developer** section.
+3. Create a new **Personal Access Token**. Give it a name like "Lodestone Integration".
+4. Copy the token — you'll need it in the next step.
+
+### Step 2: Connect the integration
+
+1. Go to Settings > Integrations in Lodestone.
+2. Find the Asana integration and select Connect.
+3. Paste your Personal Access Token.
+4. Lodestone validates the token and fetches your accessible Asana projects.
+5. Select the Asana project you want to sync Backlog items to.
+6. Save. The integration is now active.
+
+### Step 3: Push a Backlog item to Asana
+
+Once connected, a **Push to Asana** button appears on each Backlog item detail page.
+
+1. Open any Backlog item by clicking its name.
+2. Click **Push to Asana**.
+3. Lodestone creates a new task in your connected Asana project.
+
+If the item has already been pushed, the button shows the linked Asana task ID instead of creating a new one.
+
+> **Note:** Pushing to Asana creates a task from the Backlog item's name and description. Subsequent status updates from Asana sync back to Lodestone automatically — you do not need to push again after the initial sync.
+
+---
+
 ## Disconnecting an Integration
 
 To disconnect any integration:
@@ -136,4 +230,4 @@ Disconnecting stops all future syncing but preserves existing data in Lodestone.
 
 ---
 
-*Next: Advanced Features & Customization — sync strategy, status mapping best practices, and managing multiple JIRA projects.*
+*Next: Advanced Features & Customization — sync strategy, status mapping best practices, and managing multiple projects.*

@@ -50,18 +50,25 @@ The goal is to remove double-entry while keeping product intent and context cent
 
 ## Live Integrations
 
-Lodestone currently has four live integrations:
+Lodestone currently has eight live integrations:
 
 | Integration | Purpose | Module |
 |---|---|---|
 | Fireflies | Transcript ingestion with configurable auto-sync | Extracts |
-| Gong | Transcript ingestion with configurable auto-sync | Extracts |
+| Gong | Transcript ingestion with configurable auto-sync + CRM metadata enrichment | Extracts |
+| Fathom | Transcript ingestion with configurable auto-sync | Extracts |
+| Granola | Meeting notes ingestion with configurable auto-sync | Extracts |
+| tl;dv | Transcript ingestion with configurable auto-sync | Extracts |
 | JIRA | Delivery synchronization | Features, Releases |
-| Lodestone API | Programmatic access for external tools and AI assistants | All modules |
+| Asana | Delivery synchronization | Backlog |
+| Lodestone API & MCP | Programmatic access and AI agent connectivity | All modules |
 
-Fireflies and Gong are discovery integrations — they bring signal in. JIRA is a delivery integration — it keeps Feature and status data in sync with your engineering workflow. The Lodestone API enables external tools, automation, and AI assistants to read and write Lodestone data.
+Fireflies, Gong, Fathom, Granola, and tl;dv are discovery integrations — they bring signal in. JIRA and Asana are delivery integrations — they keep Backlog item and status data in sync with your engineering workflow. The Lodestone API & MCP enables external tools, automation, and AI assistants (including custom Claude and ChatGPT configurations) to read and write Lodestone data.
 
-Both Fireflies and Gong support **automatic sync** — Lodestone can pull new transcripts on a configurable schedule (every 12 hours, 24 hours, or weekly) rather than requiring a manual import each time.
+All five transcript integrations support **automatic sync** — Lodestone can pull new transcripts and meeting notes on a configurable schedule (every 12 hours, 24 hours, or weekly) rather than requiring a manual import each time.
+
+### Gong CRM Enrichment
+In addition to transcript ingestion, the Gong integration enriches extracted features with CRM context. When a Gong call is imported, Lodestone automatically attaches metadata from the associated Gong account — such as company name and revenue data — to the extracted features as context. This surfaces customer business context alongside the product signal, helping you distinguish high-value signals from noise.
 
 ---
 
@@ -83,11 +90,10 @@ Lodestone is actively expanding its integration surface. Integrations in progres
 These will expand transcript ingestion and customer signal into Extracts, with the ability to attach customer metadata (company name, contact, ARR/MRR) to ideas surfaced from conversations.
 
 ### Delivery and ticketing systems
-- Asana
 - Azure DevOps
 
-These will bring the same delivery synchronization currently available with JIRA to teams using other tools.
+These will bring the same delivery synchronization currently available with JIRA and Asana to teams using other tools.
 
 ---
 
-*Next: How-tos & Workflows — step-by-step guides for connecting Fireflies, Gong, and JIRA.*
+*Next: How-tos & Workflows — step-by-step guides for connecting Fireflies, Gong, JIRA, and Asana.*

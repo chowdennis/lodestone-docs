@@ -61,18 +61,47 @@ Most teams use Epic or Story. Choosing the right level depends on how granularly
 
 ---
 
-## Discovery Integrations: Fireflies vs Gong
+## Asana Sync Behavior
 
-Both Fireflies and Gong serve the same purpose in Lodestone — bringing call transcripts into the Extracts module for AI analysis. The choice between them depends on what your team already uses.
+The Asana integration operates at the individual item level — each Backlog item you push to Asana becomes its own Asana task. Unlike JIRA, there is no workspace-wide continuous sync: you initiate the connection per item by clicking Push to Asana on the item detail page.
 
-| | Fireflies | Gong |
+Once a Backlog item is linked to an Asana task:
+
+- **Status updates from Asana sync back to Lodestone automatically** — when the Asana task status changes (e.g. moves to Complete), the Lodestone Backlog item's status updates accordingly
+- **The link is permanent for that item** — the Asana task ID is stored on the Backlog item; disconnecting and reconnecting the integration does not break existing item links
+- The mapping between Asana task statuses and Lodestone status stages follows the status mapping configuration in Settings > Integrations
+
+### Asana vs. JIRA: choosing between them
+
+Both integrations keep Backlog item status in sync with a delivery tool, but they work differently:
+
+| | Asana | JIRA |
 |---|---|---|
-| Primary use case | General meeting transcription | Revenue-focused call intelligence |
-| Best for | Broad meeting coverage (internal + external) | Customer-facing sales and CS calls |
-| Access scope | Any meeting in your Fireflies instance | Accounts you select during setup |
-| Setup complexity | Connect with a single login step | Requires account selection during setup |
+| Sync scope | Per-item push | Workspace-wide automatic sync |
+| Setup complexity | Low — Personal Access Token + project selection | Higher — API key, object level, status mapping, optional webhooks |
+| Real-time sync | Status updates from Asana are polled automatically | Webhooks + polling available |
+| Best for | Teams using Asana for task management | Teams using JIRA for engineering workflows |
 
-Both integrations are discovery-only — they bring transcripts in, they do not sync delivery status or any other data back to the source system.
+You can run both integrations simultaneously if your team uses both tools.
+
+---
+
+## Discovery Integrations: Choosing the Right One
+
+Lodestone supports five transcript integrations, all of which bring meeting content into the Extracts module for AI analysis. The choice between them depends on what your team already uses — you can connect multiple.
+
+| Integration | Primary use case | Best for | CRM enrichment |
+|---|---|---|---|
+| **Fireflies** | General meeting transcription | Broad meeting coverage (internal + external) | No |
+| **Gong** | Revenue-focused call intelligence | Customer-facing sales and CS calls | Yes — attaches company and revenue context |
+| **Fathom** | Meeting notes and transcript capture | Teams using Fathom for automated notes | No |
+| **Granola** | AI meeting notes | Teams using Granola for note-taking | No |
+| **tl;dv** | Meeting recordings with transcript capture | Teams using tl;dv for call recording | No |
+
+All five integrations are discovery-only — they bring transcripts and notes in; they do not sync any data back to the source system.
+
+### Gong's additional value: CRM enrichment
+Gong is the only transcript integration that also enriches extracted features with CRM context. When Lodestone imports a Gong call, it automatically attaches company metadata from the associated Gong account to the extracted features. This means you can see not just what was said, but who said it — and whether that company represents high-value revenue. This makes Gong the strongest choice for teams where ARR/opportunity data should influence prioritization decisions.
 
 ---
 
@@ -83,6 +112,7 @@ Integrations expand what Lodestone can see, but they don't change how Lodestone 
 - **Releases** benefit most from JIRA sync — Feature status updates flow into Release boards automatically, making them live views of delivery progress without manual updates
 - **Extracts** benefit most from Fireflies and Gong — transcripts flow in without manual upload, and the AI surfaces ideas directly from customer conversations
 - **Features** are the integration anchor point for JIRA — every sync, link, and status update operates at the Feature level
+- **Asana** benefits most from targeted use — push the Backlog items your team is actively tracking in Asana, and let status flow back automatically without manual updates in both systems
 - **Documents, Roadmaps, Strategies, and Auctions** are not synced with any external system — they remain Lodestone-native artifacts
 
 ---
@@ -92,6 +122,7 @@ Integrations expand what Lodestone can see, but they don't change how Lodestone 
 Disconnecting any integration stops all future syncing but preserves existing data in Lodestone:
 
 - **JIRA disconnect** — Features and their status history remain in Lodestone; future JIRA changes no longer flow through; existing JIRA links are preserved but inactive
+- **Asana disconnect** — existing Asana task links on Backlog items are preserved but inactive; status updates from Asana stop flowing until reconnected
 - **Fireflies/Gong disconnect** — previously imported transcripts and their generated Extracts (if still in the queue) are unaffected; future imports are no longer available until reconnected
 
 Reconnecting an integration restores sync behavior. You may need to reconfigure status mapping if it was reset during disconnection.

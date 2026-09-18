@@ -1,5 +1,5 @@
-# Features — Overview & Concepts
-*What they are, why they matter, and how they fit into Lodestone*
+# Backlog — Overview & Concepts
+*What features are, why they matter, and how they fit into Lodestone*
 
 ---
 
@@ -15,7 +15,7 @@ A Feature can represent just about anything:
 - Infrastructure work or internal tooling
 - Experiments
 
-> **Key idea:** Lodestone intentionally avoids rigid distinctions like "Bug vs Feature vs Task." Everything is a Feature — meaning is expressed through metadata, tags, and context rather than type labels.
+> **Key idea:** Features are the built-in object type in Lodestone. Teams can define additional types — Epics, Bugs, Tasks, or whatever fits their workflow — from Settings > Taxonomy. See [Object Types](#object-types) below for details.
 
 ---
 
@@ -35,11 +35,11 @@ Features are designed to be:
 
 ## Key Concepts
 
-### The Feature Backlog
+### The Backlog
 
-The Feature Backlog is your central list of all Features in Lodestone. Think of it as your idea inventory — everything your team is considering, regardless of where it sits in the planning lifecycle.
+The Backlog is your central list of all Features (and any other object types your team has defined) in Lodestone. Think of it as your idea inventory — everything your team is considering, regardless of where it sits in the planning lifecycle.
 
-From the backlog you can create, search, filter, and open any Feature to see its full details and associated documents.
+From the Backlog you can create, search, filter, and open any item to see its full details and associated documents.
 
 ### Feature Fields
 
@@ -56,7 +56,7 @@ Features have a small set of fields, intentionally kept simple:
 
 Every Feature has a status that reflects where it sits in your team's workflow. The default stages are Not Started, In Progress, and Completed — but you can rename these and add new ones in Settings to match how your team actually works.
 
-Status is important because it propagates automatically. When you update a Feature's status, that change is reflected everywhere the Feature appears — in Releases, the backlog, and any other view.
+Status is important because it propagates automatically. When you update a Feature's status, that change is reflected everywhere the Feature appears — in Releases, the Backlog, and any other view.
 
 ### Feature Evaluation
 
@@ -65,6 +65,16 @@ Lodestone supports a wide range of prioritization frameworks, including Value/Ef
 The intent behind evaluation is deliberate: scores are decision aids, not decision makers. They give you something concrete to discuss with stakeholders and help surface relative priorities — but experienced PMs treat them as directional signals, not absolute rankings.
 
 > **A note on prioritization:** Less experienced PMs often rely heavily on scores. More experienced PMs use them as conversation fuel. Lodestone supports both approaches — it never enforces a score-based outcome.
+
+### Object Types
+
+Every item in the Backlog has an object type. The default type is **Feature**, but teams can define additional types — such as Epic, Bug, or Task — from Settings > Taxonomy. Each type has a short alphabetic prefix (e.g. FEAT, EPIC, BUG) used to generate a typed ID like FEAT-001 or EPIC-003.
+
+The **Type** column is visible in the Backlog table and shows the type name for each item. A colored Type badge also appears in the item detail header, and clicking it opens a dialog to change the type. Items created before your team configured custom types appear as "Untyped" until reassigned.
+
+You can filter the Backlog by type using the filter button — useful when you want to review only Bugs, only Epics, and so on.
+
+See the Advanced section for guidance on designing a type taxonomy, setting the top-tier type, and managing parent/child type constraints.
 
 ### Features as Shared Objects
 
@@ -103,4 +113,4 @@ It's worth being clear about what Features are not, because the name can be misl
 
 ---
 
-*Next: How-tos & Workflows — step-by-step guides for working with Features in Lodestone.*
+*Next: How-tos & Workflows — step-by-step guides for working with the Backlog in Lodestone.*

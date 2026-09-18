@@ -1,5 +1,41 @@
-# Features — Advanced Features & Customization
-*Custom evaluation frameworks, tags, hierarchy, and advanced configuration*
+# Backlog — Advanced & Customization
+*Object types, custom evaluation frameworks, tags, hierarchy, and advanced configuration*
+
+---
+
+## Object Types and Taxonomy
+
+Every item in the Backlog has an object type. The default type is **Feature**, and teams can define additional types — Epics, Bugs, Tasks, or any other label that fits their workflow — from Settings > Taxonomy.
+
+### How typed IDs work
+
+Each type has a short alphabetic prefix of 2–8 characters (e.g. FEAT, EPIC, BUG). When a type is assigned to an item, Lodestone generates a typed ID using that prefix and a sequential counter — for example, FEAT-001, EPIC-003, BUG-042. The typed ID appears in the item detail header alongside the status badge and is stable: it does not change if you later rename the type.
+
+### Type column in the Backlog
+
+The Backlog table includes a **Type** column showing the type name for each item. Clicking the type name opens a dialog where you can reassign the item to a different type. The dialog previews the typed ID the item will receive after the change.
+
+### Type-aware filtering
+
+The Backlog filter button includes an object type filter. Selecting one or more types limits the list to items of those types — useful when you want to review only Bugs, only Epics, or any specific combination.
+
+### Changing an item's type
+
+Type changes are available to all members from the Backlog table row and from the item detail header. If your organization has configured parent/child type constraints (see below), the dialog will warn you when a proposed change would violate a hierarchy constraint, and list the specific related items causing the conflict. You can resolve conflicts by reparenting or reassigning those items in the Roadmap module before retrying the type change.
+
+### Top-tier type
+
+Each organization can designate one type as the **top-tier type**. This setting is available to Admins under Settings > Taxonomy. The top-tier type represents the highest level in your object hierarchy — items of this type can serve as parents in Roadmap hierarchies without being converted to grouping labels.
+
+### Parent/child type constraints
+
+When creating or editing a type in Settings > Taxonomy, Admins can specify which types are allowed as parents and which are allowed as children. These constraints are enforced when items are assigned to a type — an item cannot be retyped if doing so would violate the hierarchy relationships it already participates in.
+
+### Linking parents directly from the item detail page
+
+Every Backlog item has a **Parents** field in its detail sidebar. You can add or remove parent objects directly from this field without going through the Roadmap module. The search picker respects your configured type constraints — if constraints are set, only objects of allowed parent types appear in the results.
+
+An item can have multiple parents. This is useful when the same object contributes to more than one Goal or initiative. Removing a parent connection from the detail page immediately breaks that hierarchical relationship and updates the downstream view in Goals & Objectives accordingly.
 
 ---
 
@@ -14,7 +50,7 @@ Beyond the built-in frameworks (RICE, ICE, WSJF, etc.), Lodestone allows you to 
 3. Define the individual input fields (e.g. "Strategic Alignment", "Customer Impact", "Tech Risk").
 4. Set the data type for each field (numeric, scale, boolean, etc.).
 5. Define the calculation formula that produces the composite score.
-6. Save. The custom fields and score will now appear in the Feature Backlog and on Feature Detail pages.
+6. Save. The custom fields and score will now appear in the Backlog and on Feature Detail pages.
 
 > **Design intent:** Custom evaluation criteria exist because no single framework fits every team. The goal is to give you something concrete and discussable — not to automate prioritization decisions.
 
@@ -22,7 +58,7 @@ Beyond the built-in frameworks (RICE, ICE, WSJF, etc.), Lodestone allows you to 
 
 You can switch evaluation frameworks at any time from Settings. Switching changes which fields are displayed — it does not delete previously entered data or change how Features are fundamentally described.
 
-Only one evaluation framework can be active at a time. If you switch frameworks, the new framework's fields replace the old ones in the backlog and Feature Detail views. Your previously entered scores are preserved and will reappear if you switch back to that framework.
+Only one evaluation framework can be active at a time. If you switch frameworks, the new framework's fields replace the old ones in the Backlog and Feature Detail views. Your previously entered scores are preserved and will reappear if you switch back to that framework.
 
 ---
 
@@ -38,7 +74,7 @@ The default status stages (Not Started, In Progress, Completed) are a starting p
 
 Status stages are global — they apply to all Features across all Roadmaps and Releases. There is currently no per-roadmap or per-release stage configuration.
 
-> **Propagation reminder:** Status changes update everywhere the Feature appears — backlog, releases, any view. Custom stages behave the same way as the defaults. Only admins can add or rename status stages.
+> **Propagation reminder:** Status changes update everywhere the Feature appears — Backlog, Releases, any view. Custom stages behave the same way as the defaults. Only admins can add or rename status stages.
 
 ---
 
@@ -60,19 +96,19 @@ Because tags are free-form, consistent naming across your team matters. A Featur
 
 ## Features in Roadmap Hierarchy
 
-Roadmaps give Features structural context through parent-child nesting. Understanding how this works helps you build cleaner roadmaps and keep your backlog organized.
+Roadmaps give Features structural context through parent-child nesting. Understanding how this works helps you build cleaner roadmaps and keep your Backlog organized.
 
 ### Dynamic object behavior
 
 When you add items to a Roadmap, all new items start life as Features. But when an item becomes a parent (i.e. something is nested beneath it), it transforms into a grouping label:
 
-- It disappears from the Feature backlog
+- It disappears from the Backlog
 - It becomes a tag applied to all its child Features
 - Child Features inherit their parent and grandparent items as tags
 
-This keeps your backlog focused on actionable Features while preserving the full hierarchy context through tags.
+This keeps your Backlog focused on actionable Features while preserving the full hierarchy context through tags.
 
-> **Example:** If you have a Roadmap with a Goal called "Accelerate Enterprise Growth" and nest three Features beneath it, those Features inherit "Accelerate Enterprise Growth" as a tag. The Goal itself disappears from the backlog — it's now a structural label, not an actionable item.
+> **Example:** If you have a Roadmap with a Goal called "Accelerate Enterprise Growth" and nest three Features beneath it, those Features inherit "Accelerate Enterprise Growth" as a tag. The Goal itself disappears from the Backlog — it's now a structural label, not an actionable item.
 
 ### Using features across multiple roadmaps
 

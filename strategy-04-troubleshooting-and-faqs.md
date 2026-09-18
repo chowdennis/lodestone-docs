@@ -39,7 +39,7 @@ No. The value/effort toggle is only available in bottom-up strategies, where cel
 
 ### What export formats are available for Strategy?
 
-Strategy exports as PPT or Markdown (.md). The PPT export produces one slide per time interval with a growth cube snapshot; bottom-up strategies also include a Feature list per interval per dimension. The Markdown export produces a structured text version of the strategy, suitable for Notion, Confluence, GitHub, or any Markdown-friendly tool.
+Strategy exports as PPT, Markdown (.md), or HTML (shareable link). The PPT export produces one slide per time interval with a growth cube snapshot; bottom-up strategies also include a Feature list per interval per dimension. The Markdown export produces a structured text version of the strategy, suitable for Notion, Confluence, GitHub, or any Markdown-friendly tool. The HTML export generates a responsive snapshot published to a `/share/...` URL that anyone can view in a browser without logging in.
 
 ### What happens to Features if I archive a Strategy?
 

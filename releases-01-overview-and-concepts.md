@@ -56,6 +56,7 @@ Each Release includes a built-in Release Notes generator. Select the Features yo
 | Roadmaps | Releases can be created directly from a Roadmap, automatically pulling in all its Features. Roadmaps define intent; Releases track execution. |
 | Settings | Status stages are configured globally in Settings and shared across all Releases. |
 | Integrations | JIRA status changes sync into Lodestone and update Feature status on Release boards automatically. |
+| Bento Grids | Release Notes from a Release can be used as the source for a Bento Grid — a visual, at-a-glance summary designed for stakeholder sharing. |
 
 ---
 

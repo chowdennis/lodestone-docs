@@ -68,10 +68,18 @@ Quotes may also display **company name**, **speaker name**, and **revenue inform
 For each Extract, you have two options:
 
 ### Add to Backlog
-Promotes the Extract to a Feature. The Feature Name and Description carry over automatically. The Extract is removed from the queue and replaced by a full Feature in your backlog.
+Promotes the Extract to a Backlog object. Clicking this option opens a confirmation dialog where you review each Extract before it is added.
+
+**AI type suggestion:** If your organization has configured object types in Settings > Taxonomy, Lodestone's AI automatically suggests which type each Extract should become (e.g. Feature, Bug, Epic). The suggestion appears as "✦ AI suggests: [type name]" next to each Extract in the dialog. The suggested type is pre-selected in the type dropdown — you can accept it or choose a different type before confirming.
+
+**AI goal match:** If the Extract's content semantically matches an existing Goal in your Goals & Objectives list, the dialog shows "✦ AI matched parent goal: [Goal name]" and pre-populates the goal selector. You can accept the match, choose a different goal, or leave it blank.
+
+Both suggestions are optional and fully overridable. If no object types are configured, the type selection step does not appear.
+
+The Extract is removed from the queue once added. The new Backlog object carries the Extract's name and description.
 
 ### Dismiss
-Permanently deletes the Extract. There is no undo — once dismissed, the Extract cannot be recovered. If an idea turns out to be important later, you'll need to create it manually as a Feature.
+Permanently deletes the Extract. There is no undo — once dismissed, the Extract cannot be recovered. If an idea turns out to be important later, you'll need to create it manually as a Backlog item.
 
 > **Tip:** It's fine to work through Extracts in batches rather than reviewing them immediately after each upload. Strong PMs often look for patterns across a set of Extracts from multiple sessions before deciding what to act on.
 
