@@ -14,7 +14,7 @@ const pageLabels = [
   "Troubleshooting & FAQs",
 ];
 
-function moduleGroup(prefix: string, label: string) {
+function moduleGroup(prefix, label) {
   return {
     text: label,
     collapsed: true,
