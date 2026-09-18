@@ -1,0 +1,156 @@
+/* Lodestone brand tokens — dark-only site (appearance: false) */
+/* gold: #C9A84C | dark: #0A0B0F | stone: #2A2D35 | cream: #F2EDD7 */
+
+:root {
+  /* Brand palette */
+  --vp-c-brand-1: #c9a84c;
+  --vp-c-brand-2: #d4af5e;
+  --vp-c-brand-3: #b8942f;
+  --vp-c-brand-soft: rgba(201, 168, 76, 0.14);
+
+  /* Backgrounds */
+  --vp-c-bg: #0a0b0f;
+  --vp-c-bg-alt: #13141a;
+  --vp-c-bg-elv: #1a1c23;
+  --vp-c-bg-soft: #16181f;
+
+  /* Text */
+  --vp-c-text-1: #f2edd7;
+  --vp-c-text-2: rgba(242, 237, 215, 0.72);
+  --vp-c-text-3: rgba(242, 237, 215, 0.48);
+
+  /* Borders */
+  --vp-c-divider: #2a2d35;
+  --vp-c-gutter: #000000;
+  --vp-c-border: #2a2d35;
+
+  /* Typography */
+  --vp-font-family-base: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --vp-font-family-mono: "SFMono-Regular", "Consolas", "Liberation Mono",
+    monospace;
+
+  /* Home hero */
+  --vp-home-hero-name-color: #c9a84c;
+  --vp-home-hero-name-font-size: 3.5rem;
+  --vp-home-hero-tagline-font-size: 1.25rem;
+}
+
+/* ------------------------------------------------------------------ */
+/* Navbar                                                              */
+/* ------------------------------------------------------------------ */
+
+.VPNav {
+  border-bottom: 1px solid var(--vp-c-divider);
+}
+
+/* ------------------------------------------------------------------ */
+/* Content headings                                                    */
+/* ------------------------------------------------------------------ */
+
+.vp-doc h1 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 2.25rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.2;
+}
+
+.vp-doc h2 {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  border-top: 1px solid var(--vp-c-divider);
+  padding-top: 1.25rem;
+  margin-top: 2.5rem;
+}
+
+/* ------------------------------------------------------------------ */
+/* Tables                                                              */
+/* ------------------------------------------------------------------ */
+
+.vp-doc table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.vp-doc th {
+  background: var(--vp-c-bg-soft);
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--vp-c-text-2);
+}
+
+.vp-doc td,
+.vp-doc th {
+  border: 1px solid var(--vp-c-divider);
+  padding: 0.6rem 1rem;
+}
+
+/* ------------------------------------------------------------------ */
+/* Links                                                               */
+/* ------------------------------------------------------------------ */
+
+.vp-doc a {
+  color: var(--vp-c-brand-1);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.vp-doc a:hover {
+  text-decoration: underline;
+}
+
+/* ------------------------------------------------------------------ */
+/* Sidebar active state                                                */
+/* ------------------------------------------------------------------ */
+
+.VPSidebarItem.is-active > .item .text {
+  color: var(--vp-c-brand-1);
+  font-weight: 600;
+}
+
+.VPSidebarItem.is-active > .item .indicator {
+  background: var(--vp-c-brand-1);
+}
+
+/* ------------------------------------------------------------------ */
+/* Home page hero                                                      */
+/* ------------------------------------------------------------------ */
+
+.VPHero .name {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-weight: 600;
+}
+
+.VPHero .tagline {
+  color: var(--vp-c-text-2);
+}
+
+/* ------------------------------------------------------------------ */
+/* Feature cards                                                       */
+/* ------------------------------------------------------------------ */
+
+.VPFeature .title {
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+/* ------------------------------------------------------------------ */
+/* Logo sizing                                                         */
+/* ------------------------------------------------------------------ */
+
+.VPNavBarTitle .logo {
+  height: 28px;
+  width: auto;
+}
+
+/* ------------------------------------------------------------------ */
+/* Code blocks                                                         */
+/* ------------------------------------------------------------------ */
+
+.vp-doc div[class*="language-"] {
+  border-radius: 8px;
+}

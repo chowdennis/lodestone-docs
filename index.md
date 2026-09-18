@@ -1,0 +1,99 @@
+---
+layout: home
+
+hero:
+  name: "Lodestone"
+  text: "Product Documentation"
+  tagline: Capture insights, build plans, and communicate clearly.
+  image:
+    src: /logo-light.png
+    alt: Lodestone
+  actions:
+    - theme: brand
+      text: Introduction
+      link: /00-introduction-to-lodestone
+    - theme: alt
+      text: Backlog →
+      link: /backlog-01-overview-and-concepts
+
+features:
+  - title: Dashboard
+    details: The Command Deck — your live workspace overview organized by the full product lifecycle.
+    link: /dashboard-01-overview-and-concepts
+    linkText: Read docs
+
+  - title: Backlog
+    details: Create and prioritize Features, Epics, and Bugs with RICE scoring and custom evaluation fields.
+    link: /backlog-01-overview-and-concepts
+    linkText: Read docs
+
+  - title: Roadmaps
+    details: Narrative plans that communicate WHAT you are building and WHY it matters to stakeholders.
+    link: /roadmaps-01-overview-and-concepts
+    linkText: Read docs
+
+  - title: Releases
+    details: Track WHEN things ship with progress views, release notes, and delivery status.
+    link: /releases-01-overview-and-concepts
+    linkText: Read docs
+
+  - title: Strategy
+    details: Long-term investment decisions with forced tradeoffs across three strategic dimensions.
+    link: /strategy-01-overview-and-concepts
+    linkText: Read docs
+
+  - title: Goals
+    details: Define OKR-style objectives and link them to features and roadmap items.
+    link: /goals-01-overview-and-concepts
+    linkText: Read docs
+
+  - title: Extracts
+    details: Surface product ideas automatically from meeting transcripts and uploaded documents using AI.
+    link: /extracts-01-overview-and-concepts
+    linkText: Read docs
+
+  - title: Documents
+    details: Written artifacts — PRDs, briefs, and specs — generated and refined alongside your features.
+    link: /documents-01-overview-and-concepts
+    linkText: Read docs
+
+  - title: Competitive Intelligence
+    details: AI-generated competitor tracking and market analysis to inform your product decisions.
+    link: /competitive-intel-01-overview-and-concepts
+    linkText: Read docs
+
+  - title: Feature Auctions
+    details: Stakeholder bidding sessions that surface true priorities through structured debate.
+    link: /feature-auctions-01-overview-and-concepts
+    linkText: Read docs
+
+  - title: Financial Forecast
+    details: NPV, ROI, and IRR modeling for individual features to build a financial case for your plan.
+    link: /financial-forecast-01-overview-and-concepts
+    linkText: Read docs
+
+  - title: Bento Grids
+    details: Visual release summaries designed for sharing with stakeholders and customer-facing teams.
+    link: /bento-grids-01-overview-and-concepts
+    linkText: Read docs
+
+  - title: Copilot
+    details: The built-in AI assistant — ask questions, take actions, and build plans in natural language.
+    link: /copilot-01-overview-and-concepts
+    linkText: Read docs
+
+  - title: Integrations
+    details: Connect Lodestone to JIRA, Slack, and other tools for two-way sync and workflow automation.
+    link: /integrations-01-overview-and-concepts
+    linkText: Read docs
+
+  - title: Settings
+    details: Manage your organization, team members, roles, billing, and workspace configuration.
+    link: /settings-01-overview-and-concepts
+    linkText: Read docs
+
+  - title: API
+    details: Programmatic access to your Lodestone data for custom integrations and automation.
+    link: /api-01-overview-and-concepts
+    linkText: Read docs
+---
