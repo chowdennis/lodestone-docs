@@ -33,10 +33,7 @@ export default defineConfig({
   appearance: false,
 
   head: [
-    [
-      "link",
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-    ],
+    ["link", { rel: "preconnect", href: "https://fonts.googleapis.com" }],
     [
       "link",
       {
@@ -69,9 +66,18 @@ export default defineConfig({
       { text: "Strategy", link: "/strategy-01-overview-and-concepts" },
       { text: "Extracts", link: "/extracts-01-overview-and-concepts" },
       { text: "Documents", link: "/documents-01-overview-and-concepts" },
-      { text: "Competitive Intel", link: "/competitive-intel-01-overview-and-concepts" },
-      { text: "Feature Auctions", link: "/feature-auctions-01-overview-and-concepts" },
-      { text: "Financial Forecast", link: "/financial-forecast-01-overview-and-concepts" },
+      {
+        text: "Competitive Intel",
+        link: "/competitive-intel-01-overview-and-concepts",
+      },
+      {
+        text: "Feature Auctions",
+        link: "/feature-auctions-01-overview-and-concepts",
+      },
+      {
+        text: "Financial Forecast",
+        link: "/financial-forecast-01-overview-and-concepts",
+      },
       { text: "Bento Grids", link: "/bento-grids-01-overview-and-concepts" },
       { text: "Copilot", link: "/copilot-01-overview-and-concepts" },
       { text: "Integrations", link: "/integrations-01-overview-and-concepts" },
