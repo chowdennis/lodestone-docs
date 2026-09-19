@@ -54,6 +54,11 @@
   border-bottom: 1px solid var(--vp-c-divider);
 }
 
+/* Hide empty hamburger menu on mobile */
+.VPNavBarHamburger {
+  display: none !important;
+}
+
 /* ------------------------------------------------------------------ */
 /* Content headings                                                    */
 /* ------------------------------------------------------------------ */
