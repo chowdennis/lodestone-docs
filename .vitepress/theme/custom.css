@@ -29,6 +29,17 @@
   --vp-font-family-mono: "SFMono-Regular", "Consolas", "Liberation Mono",
     monospace;
 
+  /* Alt button — override VitePress's light-gray default (#ebebef bg) */
+  --vp-button-alt-border: #2a2d35;
+  --vp-button-alt-text: #f2edd7;
+  --vp-button-alt-bg: #16181f;
+  --vp-button-alt-hover-border: #3a3d45;
+  --vp-button-alt-hover-text: #f2edd7;
+  --vp-button-alt-hover-bg: #1e2028;
+  --vp-button-alt-active-border: #2a2d35;
+  --vp-button-alt-active-text: #f2edd7;
+  --vp-button-alt-active-bg: #2a2d35;
+
   /* Home hero */
   --vp-home-hero-name-color: #c9a84c;
   --vp-home-hero-name-font-size: 3.5rem;
