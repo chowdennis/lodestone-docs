@@ -56,34 +56,7 @@ export default defineConfig({
     logo: { src: "/logo-dark.png", alt: "Lodestone" },
     siteTitle: false,
 
-    nav: [
-      { text: "Introduction", link: "/00-introduction-to-lodestone" },
-      { text: "Dashboard", link: "/dashboard-01-overview-and-concepts" },
-      { text: "Backlog", link: "/backlog-01-overview-and-concepts" },
-      { text: "Roadmaps", link: "/roadmaps-01-overview-and-concepts" },
-      { text: "Releases", link: "/releases-01-overview-and-concepts" },
-      { text: "Goals", link: "/goals-01-overview-and-concepts" },
-      { text: "Strategy", link: "/strategy-01-overview-and-concepts" },
-      { text: "Extracts", link: "/extracts-01-overview-and-concepts" },
-      { text: "Documents", link: "/documents-01-overview-and-concepts" },
-      {
-        text: "Competitive Intel",
-        link: "/competitive-intel-01-overview-and-concepts",
-      },
-      {
-        text: "Feature Auctions",
-        link: "/feature-auctions-01-overview-and-concepts",
-      },
-      {
-        text: "Financial Forecast",
-        link: "/financial-forecast-01-overview-and-concepts",
-      },
-      { text: "Bento Grids", link: "/bento-grids-01-overview-and-concepts" },
-      { text: "Copilot", link: "/copilot-01-overview-and-concepts" },
-      { text: "Integrations", link: "/integrations-01-overview-and-concepts" },
-      { text: "Settings", link: "/settings-01-overview-and-concepts" },
-      { text: "API", link: "/api-01-overview-and-concepts" },
-    ],
+    nav: [],
 
     sidebar: [
       {
