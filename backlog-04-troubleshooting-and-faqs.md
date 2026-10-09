@@ -38,9 +38,19 @@ Two things to try:
 - Add more context to the Feature Description — what problem does this solve? Who is it for? What does success look like?
 - Update your Organization Description in Settings — this adds industry and business context to every document generation.
 
+### Can I archive a Feature instead of deleting it?
+
+Yes. Archiving is the recommended approach when you want to remove a Feature from your active Backlog without permanently losing it. An archived Feature is hidden from the default Backlog view but retains all its data — name, description, documents, quotes, relationships — and can be restored at any time by changing its status to any active stage.
+
+To archive: open the Feature's status menu and select **Archived**. To view archived items: use the status filter and include **Archived**. To restore: change the archived Feature's status to any active stage.
+
 ### Can I delete a Feature?
 
-Yes. Deleting a Feature is permanent — it is removed from any Roadmaps, Releases, or Strategies it belonged to, and its associated Documents are deleted as well. There is no undo, so use with care.
+Yes. Deleting a Feature is permanent — it is removed from any Roadmaps, Releases, or Strategies it belonged to, and its associated Documents are deleted as well. There is no undo. Consider archiving first if there's any chance you'll want the Feature back.
+
+### What's the difference between archiving a Feature and deleting it?
+
+Archive is reversible: the Feature is hidden from the active Backlog but preserved with all its data. You can restore it at any time. Delete is permanent: the Feature and all its associated Documents are removed from the platform with no recovery path. Archive is the safer choice whenever you're uncertain.
 
 ### Can I create a custom evaluation framework?
 

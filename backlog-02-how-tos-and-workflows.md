@@ -168,11 +168,37 @@ Click the delete icon on a quote to remove it from the Feature. Deletion is perm
 
 ---
 
+## Archiving a Feature
+
+Archiving removes a Feature from your active Backlog without deleting it. The Feature is hidden from the default Backlog view but all its data — name, description, status, documents, quotes — is preserved and fully recoverable.
+
+**To archive a Feature:**
+1. Open the Feature's status menu from the Backlog row or the Feature Detail page.
+2. Select **Archived**.
+
+The Feature disappears from the default Backlog view immediately. It has not been deleted — it is in an archived state.
+
+To view archived Features, use the status filter and include **Archived** in your selection. Archived items appear alongside active items when the filter is active.
+
+---
+
+## Restoring an Archived Feature
+
+Restoring returns an archived Feature to its prior status (the status it had before being archived) and makes it visible in the Backlog again.
+
+**To restore a Feature:**
+1. Open the status filter and select **Archived** to surface archived Features.
+2. Open the Feature's status menu and select any active status — the Feature will be restored to that status.
+
+The Feature reappears in the default Backlog view and is fully active again.
+
+---
+
 ## Deleting a Feature
 
 Deleting a Feature is permanent. When a Feature is deleted, it is removed from any Roadmaps, Releases, or Strategies it belonged to. Associated Documents are deleted along with it.
 
-> **Warning:** There is no undo. If you delete a Feature by mistake, you will need to recreate it manually.
+> **Warning:** There is no undo. If you want to remove a Feature from your active view without losing it permanently, use Archive instead (see above).
 
 ---
 

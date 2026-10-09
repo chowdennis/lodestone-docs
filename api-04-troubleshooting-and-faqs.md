@@ -1,101 +1,53 @@
 # Lodestone API & MCP — Troubleshooting & FAQs
-*Common authentication issues, scope errors, and answers to frequent questions*
 
----
+## Authentication and authorization
 
-## Frequently Asked Questions
+### `401 Unauthorized`
 
-### Who can generate API keys?
+Check that the request includes `Authorization: Bearer <API key>`, the key is active, and the request is sent to `https://app.lodestone.pm/api/v1/`. API keys are scoped to an organization; the organization is inferred from the key.
 
-Any workspace member can generate API keys for their organization. Keys are scoped to an organization, not to an individual user — they provide access to the organization's data regardless of who created them.
+### `403 Forbidden`
 
-### How many API keys can I have?
+The credential is authenticated but lacks the operation's scope. Check the live OpenAPI document and key settings. Rotate to a credential with the appropriate least-privilege scope; existing keys may use temporary `features:read` / `features:write` compatibility aliases for some newer scopes. Alias usage is logged and should not be treated as a permanent contract.
 
-There is no enforced limit. You can generate multiple keys with different scopes for different purposes, and revoke them individually.
+### MCP cannot access the intended organization
 
-### Can I retrieve the full API key after it's been created?
+MCP uses Lodestone OAuth user sign-in, not an API key copied into the client. Call `list_organizations` and then `set_active_organization` for the organization to use in the session.
 
-No. The full key value is displayed **once** at the moment of creation. After you navigate away, only a masked prefix is shown. If you lose the key, revoke it and generate a new one.
+## Identifiers, routes, and payloads
 
-### Does an API key expire?
+### “Not found” for a typed ID
 
-API keys do not expire automatically. They remain valid until revoked. Revoking is immediate — any requests using a revoked key return `401 Unauthorized` at once.
+Resolve a typed ID or historical alias through `GET /api/v1/objects/resolve/{typedId}`. Object-specific routes expect the canonical UUID, not a display ID.
 
-### What happens to requests made with a revoked key?
+### “Not found” when querying an organization
 
-They are rejected immediately with a `401 Unauthorized` response. There is no grace period.
+Do not pass `organizationId` in requests. The API key supplies organization context. For MCP, select an organization in the session using `set_active_organization`.
 
-### Where do I find my Organization ID?
+### Which host and endpoint should I use?
 
-Look at the URL when logged into Lodestone. The Organization ID is the alphanumeric string between `/organizations/` and the next `/` in the URL:
+The production API base is `https://app.lodestone.pm/api/v1/`. The OpenAPI contract is at `https://app.lodestone.pm/api/v1/openapi`. Use `/objects` for configured backlog object types; the older `/features` path is not the current collection contract.
 
-```
-https://app.lodestonepm.com/organizations/YOUR_ORG_ID/features
-```
+## Lifecycle and compatibility
 
-### Is the API available on all subscription plans?
+### Can I delete an object through the API?
 
-Yes. The API is available to all Lodestone users — there are no plan or tier restrictions.
+The legacy `DELETE /api/v1/objects/{objectId}` operation remains available during a compatibility period, but is deprecated. Prefer `POST /api/v1/objects/{objectId}/archive`; archive is reversible and `POST .../restore` returns the object to its prior status. No delete removal date has been announced.
 
-### Can the API delete Features?
+### Why are my API and MCP capabilities different?
 
-No. The current API does not expose delete operations for Features or other objects. Deletion must be performed from the Lodestone UI.
+They are intentionally different product surfaces. MCP is a curated, user-authorized set of tools for AI-assisted workflows; the external API is a narrower integration contract. Consult the live OpenAPI specification for API coverage and the MCP client tool list for MCP coverage.
 
-### What is the base URL for all API requests?
+## Other common issues
 
-```
-https://app.lodestonepm.com/api/v1/
-```
+### `429 Too Many Requests`
 
-### Where is the full API reference?
+Reduce request frequency and retry with bounded exponential backoff. Avoid unbounded or synchronized retry loops.
 
-The OpenAPI specification is available at: `https://app.lodestonepm.com/api/v1/openapi`
+### OpenAPI import fails
 
----
+Confirm the importer can reach `https://app.lodestone.pm/api/v1/openapi`, supports the published OpenAPI version, and is configured for Bearer authentication. The live document is preferable to a stale downloaded copy.
 
-## Common Issues
+### A successful change is not visible in the UI
 
-### Requests return `401 Unauthorized`
-
-Check the following in order:
-
-1. Your request includes the `Authorization: Bearer YOUR_KEY` header
-2. The key has not been revoked — check Settings > Integrations to confirm it's still active
-3. The key is for the correct organization — keys are org-scoped and won't work for a different org's endpoints
-4. You're using the correct base URL (`https://app.lodestonepm.com/api/v1/`)
-
-### Requests return `403 Forbidden`
-
-This means your key doesn't have the scope required for the operation you're attempting. Check what scopes are needed for the endpoint (see the OpenAPI spec or the Scopes table in the Overview doc) and compare against the scopes assigned to your key. If the key is missing a scope, you'll need to revoke it and generate a new one with the correct scopes — scopes cannot be added to an existing key.
-
-### My AI assistant isn't finding the right Features or Roadmaps
-
-This is usually a context issue rather than an API issue. Check that:
-
-- The `organizationId` parameter is correct — this is required for most list endpoints
-- The assistant's instructions specify which organization to query (without this, the assistant may not know which org to use)
-- The data you're looking for actually exists in Lodestone and hasn't been archived
-
-### The OpenAPI spec import into ChatGPT isn't working
-
-Try the following:
-
-- Make sure you're importing from the URL `https://app.lodestonepm.com/api/v1/openapi` (not a local file)
-- Check that the GPT action is configured with Bearer token authentication
-- If ChatGPT shows an error during import, verify the URL is accessible and returns a valid JSON response
-
-### Requests return `429 Too Many Requests`
-
-You're hitting the rate limit. Add a delay between requests or spread batch operations over time. Implement exponential backoff in any automated script that retries failed requests.
-
-### Changes made via API aren't appearing in Lodestone
-
-API changes are applied immediately. If a change isn't appearing:
-
-- Refresh the page in Lodestone
-- Verify the API request returned a `200` or `201` success response (not an error that was silently ignored)
-- Check that you sent the write request to the correct endpoint with the correct `organizationId`
-
----
-
-*This is version 1 of the Lodestone API documentation, documenting confirmed platform behavior.*
+Confirm the response indicates success, refresh the relevant view, and check that the correct object ID and API-key organization were used. Never include secrets in logs or support messages.

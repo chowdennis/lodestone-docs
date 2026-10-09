@@ -82,7 +82,7 @@ One of the most important things to understand about Features is that they are r
 
 This means you never need to duplicate a Feature to represent it in different contexts. A Feature working its way through a quarterly release can also be part of your annual roadmap — it's the same object, appearing in both places.
 
-Because Features are shared across the platform, deletion has broad consequences. Deleting a Feature removes it from every Roadmap, Release, and Strategy it belonged to, and permanently deletes its associated Documents. There is no undo.
+Because Features are shared across the platform, deletion has broad consequences. Deleting a Feature removes it from every Roadmap, Release, and Strategy it belonged to, and permanently deletes its associated Documents. There is no undo. If you want to remove a Feature from active view without permanent deletion, use **Archive** instead — archived Features are hidden from the Backlog but can be restored at any time.
 
 ---
 

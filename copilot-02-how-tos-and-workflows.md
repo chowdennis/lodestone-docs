@@ -75,6 +75,33 @@ Copilot locates the feature in your backlog and triggers document generation. Th
 
 Copilot creates the object and returns a confirmation with a direct link.
 
+### Managing Goals
+
+> "List my goals"  
+> "Create a goal called Platform Reliability"  
+> "Update GOAL-3's description to say it focuses on EMEA expansion"  
+> "What's connected to GOAL-1?"
+
+Copilot can list, create, and update Goals. The downstream query ("What's connected to…") shows which objects, roadmaps, releases, and strategies are linked to a Goal — useful for quickly understanding a Goal's scope without navigating to the Goals module.
+
+### Managing Object Hierarchy
+
+> "Make FEAT-12 a child of GOAL-2"  
+> "Add EPIC-4 as a parent of FEAT-7"  
+> "Remove GOAL-1 as a parent of FEAT-5"
+
+Copilot can add and remove parent/child relationships between objects. It accepts typed IDs (like FEAT-12 or GOAL-2) and resolves them automatically — you don't need to find canonical IDs first. It will confirm whether the relationship was added or removed and describe the resulting hierarchy.
+
+### Archiving and Restoring Objects
+
+> "Archive the SSO feature"  
+> "Archive FEAT-33"  
+> "Restore FEAT-42"
+
+Archiving hides an object from the active Backlog without deleting it. The object is preserved and can be restored at any time. Copilot will confirm whether the operation changed the object's state.
+
+Copilot does not permanently delete objects — if you ask it to delete something, it will ask if you meant to archive it instead.
+
 ---
 
 ## Chaining Actions in One Conversation

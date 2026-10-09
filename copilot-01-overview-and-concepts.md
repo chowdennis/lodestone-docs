@@ -67,6 +67,12 @@ In Agentic mode, Copilot uses tools connected to your workspace to carry out the
 | Create a Strategy | "Create a strategy called Platform 2027" |
 | List Strategies | "Show me my strategies" |
 | Generate documents | "Generate a PRD for the SSO feature" |
+| List or create Goals | "List my goals" / "Create a goal called Platform Stability" |
+| Update a Goal | "Update the description of GOAL-3 to say it covers EMEA expansion" |
+| View Goal downstream impact | "What's connected to GOAL-1?" |
+| Add or remove a parent link | "Make FEAT-12 a child of GOAL-2" / "Remove GOAL-1 as a parent of FEAT-5" |
+| Archive an object | "Archive the SSO feature" |
+| Restore an archived object | "Restore FEAT-42" |
 
 ---
 
@@ -75,7 +81,7 @@ In Agentic mode, Copilot uses tools connected to your workspace to carry out the
 Copilot works within the same permissions you have. It cannot:
 
 - Access data in other organizations you are not a member of
-- Delete features, roadmaps, or other objects (as of current version)
+- **Permanently delete** features, roadmaps, or other objects — it can **archive** them (reversible), but not delete them outright
 - Take actions outside of Lodestone (it is not connected to JIRA, Gong, or other external tools)
 - Access or reference quotes, evaluation scores, or financial models in responses (it reads backlog items and planning objects, not all sub-objects)
 

@@ -87,7 +87,9 @@ Write operations (endpoints that create or update data) follow the same rules as
 - Creating a Feature adds it to the organization's backlog — it is immediately visible in Lodestone
 - Updating a Feature's status follows the same rules as dragging a card in a Release — the status propagates everywhere
 - Creating a Feature does not automatically add it to any Roadmap or Release — you must do that as a separate operation
-- Deleting a Feature is not currently exposed via the API — deletions must be done from the Lodestone UI
+- Deleting a backlog object through `DELETE /api/v1/objects/{objectId}` is deprecated as of September 22, 2026. It remains available during the compatibility period, and no removal date has been announced. Its responses include a `Deprecation` header and a `Link` to the archive operation. Use `POST /api/v1/objects/{objectId}/archive` instead; archive is reversible and preserves the previous status. MCP's `delete_object` tool is also deprecated and returns a migration warning; use `archive_object`.
+
+Delete requests are logged by organization, credential, operating mode, endpoint, and result. Lodestone will review API and MCP usage before announcing any sunset date. Until then, existing delete integrations continue to work.
 
 ---
 

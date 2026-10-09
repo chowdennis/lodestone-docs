@@ -82,6 +82,11 @@ features:
     link: /copilot-01-overview-and-concepts
     linkText: Read docs
 
+  - title: Comms Packages
+    details: Send curated packages of roadmaps, releases, strategies, and more to stakeholders on a schedule.
+    link: /comms-01-overview-and-concepts
+    linkText: Read docs
+
   - title: Integrations
     details: Connect Lodestone to JIRA, Slack, and other tools for two-way sync and workflow automation.
     link: /integrations-01-overview-and-concepts

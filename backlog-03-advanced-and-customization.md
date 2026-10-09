@@ -78,6 +78,23 @@ Status stages are global — they apply to all Features across all Roadmaps and 
 
 ---
 
+## The Archive Status
+
+**Archived** is a platform-level lifecycle state that is distinct from your custom status stages. You cannot rename or remove it in Settings — it is always available as a status option on every object.
+
+When a Feature is archived:
+
+- It disappears from the default Backlog view (hidden, not deleted)
+- All data is preserved: name, description, documents, quotes, evaluation scores, and parent/child relationships remain intact
+- The Feature is removed from active status reporting and sorting
+- It continues to appear in Roadmaps and Releases it was already added to, but is visually marked as archived
+
+To surface archived Features in the Backlog, open the status filter and include **Archived** in your selection. Archived items appear alongside active items when that filter is active.
+
+**Archive vs. Delete:** Archive is reversible — you can restore a Feature at any time by changing its status to any active stage. Deletion is permanent and removes the Feature from every Roadmap, Release, and Strategy it belonged to, along with all associated Documents. When in doubt, archive.
+
+---
+
 ## Feature Tags and Taxonomy
 
 Tags in Lodestone serve a specific structural role beyond simple labeling — they are the mechanism that connects Features to bottom-up Strategy.

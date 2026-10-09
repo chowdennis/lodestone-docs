@@ -81,6 +81,7 @@ export default defineConfig({
       moduleGroup("financial-forecast", "Financial Forecast"),
       moduleGroup("bento-grids", "Bento Grids"),
       moduleGroup("copilot", "Copilot"),
+      moduleGroup("comms", "Comms Packages"),
       moduleGroup("integrations", "Integrations"),
       moduleGroup("settings", "Settings"),
       moduleGroup("api", "API"),

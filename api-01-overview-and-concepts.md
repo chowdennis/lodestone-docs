@@ -1,122 +1,51 @@
 # Lodestone API & MCP — Overview & Concepts
-*What it is, what it enables, and how it fits into your workflow*
 
----
+Lodestone offers two programmable ways to work with platform data: a scoped REST API for integrations and an MCP server for AI clients. They share domain services, but intentionally do not expose identical capabilities. The in-app Copilot is separately bound to the signed-in user and is designed to assist with user-level work; neither the public API nor MCP should be treated as an unrestricted copy of the UI.
 
-## What Is the Lodestone API?
+## REST API
 
-Lodestone exposes a REST API that gives external tools programmatic access to your workspace data. With the API, you can read and write Features, Roadmaps, Releases, Strategies, and more — using any tool or service that can make HTTP requests.
+The versioned API base is `https://app.lodestone.pm/api/v1/`. Its live OpenAPI document is `https://app.lodestone.pm/api/v1/openapi`. Authenticate requests with an organization-scoped API key:
 
-The API uses **API keys** for authentication. You generate a key inside Lodestone, copy it once, and then provide it to the external tool or service that needs access.
-
----
-
-## What the API Enables
-
-The most powerful use case for the Lodestone API is connecting your workspace to an AI assistant — a custom ChatGPT, Claude, or other LLM configuration that can read and act on your Lodestone data using natural language.
-
-For example, you could build or configure a custom AI assistant that can:
-
-- Retrieve your feature backlog and summarize it
-- Create a new Feature from a customer conversation
-- Update a Feature's status based on a message you send
-- List what's in a Release and draft a status update
-- Pull your Roadmap structure and prepare talking points for a meeting
-
-Because the Lodestone API follows the OpenAPI standard, it is compatible with the custom tool/action frameworks in ChatGPT (Custom GPTs), Claude Projects, and similar LLM environments. You can point your AI assistant at the Lodestone API and give it read and write access to your product data — turning it into a Lodestone-aware productivity tool without any code.
-
----
-
-## What the API Covers
-
-The API is organized around the same objects you work with in Lodestone:
-
-| Resource | What you can do |
-|---|---|
-| Features | List, read, create, update, manage tags |
-| Roadmaps (Projects) | List, read, create, update; add and remove Features |
-| Releases | List, read, create, update; manage release plan items and release notes |
-| Strategies | List, read, create, update |
-| Organizations | Read org details, list members, manage status stages |
-| Bento Grids | List, read, create, update |
-
-All endpoints are under `/api/v1/`. An OpenAPI specification is available at `/api/v1/openapi`, which you can import into AI tools, API clients, or any service that accepts an OpenAPI schema.
-
----
-
-## Scopes and Permissions
-
-When you generate an API key, you choose which scopes it is authorized for. Scopes control what the key can read or write:
-
-| Scope | Access |
-|---|---|
-| `features:read` | Read Features and their details |
-| `features:write` | Create and update Features |
-| `projects:read` | Read Roadmaps |
-| `projects:write` | Create and update Roadmaps |
-| `releases:read` | Read Releases |
-| `releases:write` | Create and update Releases |
-| `strategies:read` | Read Strategies |
-| `strategies:write` | Create and update Strategies |
-| `bento-grids:read` | Read Bento Grids |
-| `bento-grids:write` | Create and update Bento Grids |
-| `settings:read` | Read org settings |
-| `settings:write` | Update org settings |
-| `*` | Full access to all scopes |
-
-Choose the minimum scopes needed for the tool you're connecting. A read-only AI assistant for summarizing your backlog only needs `:read` scopes. An assistant that can create Features needs `features:write` as well.
-
----
-
-## MCP Server
-
-In addition to the REST API, Lodestone exposes an **MCP (Model Context Protocol) server** that allows AI agents and LLM environments to connect to Lodestone using the emerging MCP standard.
-
-The MCP server URL for your workspace is shown in **Settings > API & MCP**. You can connect MCP-compatible AI tools (such as Claude Desktop or Claude Code) directly to this URL to give them native Lodestone access — querying, creating, and updating objects using natural language without writing custom API code.
-
-MCP connectivity is authenticated using the same API keys used for REST API access.
-
----
-
-## How API Keys Work
-
-- Each key is associated with a specific organization in Lodestone
-- The full key value is shown **only once** — at the moment of creation. Copy it immediately.
-- Keys do not expire by default, but can be revoked at any time from Settings > API & MCP
-- Only one active key is shown in the main integrations panel at a time, but multiple keys can exist per organization
-
-> **Security note:** Treat your API key like a password. Do not share it publicly, embed it in client-side code, or commit it to a repository. If a key is compromised, revoke it immediately and generate a new one.
-
----
-
-## How Requests Are Authenticated
-
-Include the API key in the `Authorization` header of every request:
-
-```
-Authorization: Bearer YOUR_API_KEY
+```http
+Authorization: Bearer lsk_…
 ```
 
-Requests without a valid key return a `401 Unauthorized` response. Requests with a key that lacks the required scope return a `403 Forbidden` response.
+The API organization is determined by the key; do not supply an `organizationId` query parameter or body field. Select only the scopes an integration needs. Keys are shown once when created and can be revoked under Settings > API & MCP.
 
----
+## MCP
 
-## Rate Limiting
+Connect an MCP-compatible client using the MCP URL shown under **Settings > API & MCP** (currently `https://app.lodestone.pm/mcp`). MCP uses the Lodestone OAuth sign-in flow and acts in the authenticated user's selected organization. It does not use a copied API key as its client credential. In the MCP session, call `list_organizations` and then `set_active_organization` before organization-specific work.
 
-The API enforces rate limits to ensure fair usage. If you exceed the limit, requests return a `429 Too Many Requests` response. Implement appropriate retry logic with exponential backoff in any integration that makes high-frequency requests.
+MCP tools are internal services that call Lodestone APIs with the user's identity and organization context. MCP exposes a curated set of AI-oriented actions, while API keys provide a narrower, explicit integration contract. Tool and endpoint availability can differ by design.
 
----
+## Current Phase 1 API capability areas
 
-## How the API Relates to the Rest of Lodestone
+The live OpenAPI document is authoritative for exact schemas, scopes, and responses. Phase 1 adds:
 
-The API is a read/write mirror of the Lodestone interface. Everything the API can do, you can also do manually through the Lodestone UI. The API adds:
+| Area | API capability |
+|---|---|
+| Object types | List and inspect configured types (`object-types:read`) |
+| Typed identifiers | Resolve a typed ID or historical alias to a canonical object ID (`features:read`) |
+| Relationships | Read parents, children, and ancestor paths (`hierarchy:read`) |
+| Hierarchy | Add/remove parent relationships (`hierarchy:write`) |
+| Goals | List, read, create, update, and bounded downstream analysis (`goals:read`, `goals:write`) |
+| Lifecycle | Reversibly archive and restore objects (`features:write`) |
+| Delete transition | Legacy object DELETE remains temporarily available but is deprecated; archive is the recommended reversible alternative |
 
-- **Automation** — trigger Lodestone actions from external systems or scheduled jobs
-- **Integration** — sync Lodestone data with other tools
-- **AI access** — give an LLM assistant the ability to read and act on your product data
+Scope aliases preserve compatibility for older credentials: `features:read` may satisfy `object-types:read`, `hierarchy:read`, and `goals:read`; `features:write` may satisfy `hierarchy:write` and `goals:write`. Alias use is logged for migration planning. Prefer assigning the specific new scope when rotating credentials; do not assume aliases are permanent.
 
-Changes made via the API appear in Lodestone immediately and are indistinguishable from changes made through the interface.
+Object routes use `/api/v1/objects`, including for configured object types. The collection create request uses `type` to select a configured type; omit it for the default Feature type. Organization context comes from the credential.
 
----
+## Safe identifier and lifecycle practices
 
-*Next: How-tos & Workflows — step-by-step guides for generating API keys and connecting an AI assistant to Lodestone.*
+- Typed identifiers (for example, `FEAT-123`) are resolved through `/api/v1/objects/resolve/{typedId}`. Routes whose parameter is `objectId` expect the canonical UUID.
+- Archive is reversible; restore returns an object to its pre-archive status. Prefer these actions over destructive deletion.
+- Object DELETE is deprecated but remains available during the compatibility period. No removal date has been announced. Deprecation responses link to the archive successor.
+- Goal creation requires an `Idempotency-Key`; use a stable unique key when retrying a create request.
+- Downstream Goal traversal is bounded (default depth 1 and limit 100; maximum depth 10 and limit 500).
+
+## Product exposure model
+
+Use the UI for all functions available to a user manually. The in-app Copilot should be nearly equivalent for work the user can delegate. MCP is a curated, user-authorized AI surface for moving completed work into Lodestone. The external API is the most constrained layer and exposes deliberate integration use cases, not every UI operation. This hierarchy is a product policy, not a promise that the surfaces mirror one another.
+
+Never place API keys in client-side code, public prompts, or source control. Revoke compromised credentials immediately.
