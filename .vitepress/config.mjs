@@ -1,4 +1,5 @@
 import { defineConfig } from "vitepress";
+import llmstxt from "vitepress-plugin-llms";
 
 const pageSuffixes = [
   "01-overview-and-concepts",
@@ -31,6 +32,17 @@ export default defineConfig({
   srcDir: ".",
   outDir: ".vitepress/dist",
   appearance: false,
+
+  vite: {
+    plugins: [
+      llmstxt({
+        domain: "https://docs.lodestone.pm",
+        title: "Lodestone Docs",
+        description:
+          "Product documentation for Lodestone, a product management platform for growth-stage B2B SaaS teams. Lodestone covers the full planning loop: capture customer feedback and market intelligence (Extracts, Competitive Intelligence), prioritize the backlog (including Feature Auctions), build roadmaps, releases, goals and strategy, then present and share plans with stakeholders (Documents, Bento Grids, Comms Packages). It also includes an AI Copilot, integrations, and an API with MCP support.",
+      }),
+    ],
+  },
 
   head: [
     ["link", { rel: "preconnect", href: "https://fonts.googleapis.com" }],
