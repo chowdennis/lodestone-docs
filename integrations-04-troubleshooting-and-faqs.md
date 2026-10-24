@@ -7,11 +7,29 @@
 
 ### Who can connect and manage integrations?
 
-Any workspace member can connect and configure integrations — it is not restricted to admins.
+Only Admins can connect and configure integrations. Builders can view
+integration status but cannot change Settings.
 
 ### Which integrations are currently live?
 
-Four integrations are live: Fireflies, Gong, JIRA, and the Lodestone REST API (via API keys). Fireflies and Gong both support configurable auto-sync.
+Live integrations include Fireflies, Gong, Fathom, Granola, tl;dv, JIRA, Asana, Amplitude, PostHog, and the Lodestone API and MCP. Transcript integrations support configurable auto-sync.
+
+### Why is Usage Analytics still locked after connecting a provider?
+
+The PostHog connection is available before the Usage Analytics room. Connecting
+PostHog does not unlock Usage Analytics yet; the room remains marked Coming
+Soon until the product analytics experience is released.
+
+### Why can't Lodestone connect to PostHog?
+
+Confirm that you entered a Personal API Key beginning with `phx_`, not a
+project API key. The key must include the `project:read` and `insight:read`
+scopes. Also confirm that you selected the correct PostHog Cloud URL:
+`https://us.posthog.com` for US Cloud or `https://eu.posthog.com` for EU Cloud.
+
+If PostHog shows **Needs attention**, select **Check connection** to see the
+latest provider error. Reconnect PostHog if the Personal API Key was revoked,
+its scopes changed, or the selected project is no longer available.
 
 ### Does the JIRA integration support JIRA Server?
 

@@ -50,7 +50,7 @@ The goal is to remove double-entry while keeping product intent and context cent
 
 ## Live Integrations
 
-Lodestone currently has eight live integrations:
+Lodestone currently supports these live integrations:
 
 | Integration | Purpose | Module |
 |---|---|---|
@@ -61,6 +61,8 @@ Lodestone currently has eight live integrations:
 | tl;dv | Transcript ingestion with configurable auto-sync | Extracts |
 | JIRA | Delivery synchronization | Features, Releases |
 | Asana | Delivery synchronization | Backlog |
+| Amplitude | Product usage questions and Discovery evidence | Discovery |
+| PostHog | Product usage questions and Discovery evidence | Discovery |
 | Lodestone API & MCP | Programmatic access and AI agent connectivity | All modules |
 
 Fireflies, Gong, Fathom, Granola, and tl;dv are discovery integrations — they bring signal in. JIRA and Asana are delivery integrations — they keep Backlog item and status data in sync with your engineering workflow. The Lodestone API & MCP enables external tools, automation, and AI assistants (including custom Claude and ChatGPT configurations) to read and write Lodestone data.

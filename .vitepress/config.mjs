@@ -86,6 +86,7 @@ export default defineConfig({
       moduleGroup("releases", "Releases"),
       moduleGroup("goals", "Goals"),
       moduleGroup("strategy", "Strategy"),
+      moduleGroup("discovery", "Discovery"),
       moduleGroup("extracts", "Extracts"),
       moduleGroup("documents", "Documents"),
       moduleGroup("competitive-intel", "Competitive Intelligence"),

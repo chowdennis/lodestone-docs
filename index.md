@@ -52,6 +52,11 @@ features:
     link: /extracts-01-overview-and-concepts
     linkText: Read docs
 
+  - title: Discovery
+    details: Combine customer, usage, and competitive evidence into backlog opportunities.
+    link: /discovery-01-overview-and-concepts
+    linkText: Read docs
+
   - title: Documents
     details: Written artifacts — PRDs, briefs, and specs — generated and refined alongside your features.
     link: /documents-01-overview-and-concepts

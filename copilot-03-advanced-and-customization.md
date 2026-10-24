@@ -51,13 +51,15 @@ In Agentic mode, Copilot can access:
 - Your roadmaps (projects): name, list of features
 - Your releases: name, status, feature count
 - Your strategies: name
+- Discovery trend and Synthesis regeneration actions
 
 It does not currently have access to:
 - Customer quotes attached to features
 - Evaluation scores or RICE/custom field values
 - Financial Forecast models or assumptions
 - Bento Grids or export history
-- Competitive Intelligence reports
+- The full contents of Competitive Intelligence reports in conversational
+  answers
 
 This means Copilot is best used for structural and workflow tasks — creating, organizing, and updating objects — rather than analytical tasks that depend on scores or evidence.
 

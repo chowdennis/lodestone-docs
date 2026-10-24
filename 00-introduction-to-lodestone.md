@@ -49,6 +49,7 @@ Lodestone is organized around core objects that reflect how product work actuall
 
 | Object | What it does |
 |---|---|
+| **Discovery** | Combines customer, usage, and competitive evidence into backlog opportunities |
 | **Extracts** | Raw ideas surfaced from meeting transcripts and competitive reports using AI |
 | **Backlog** | Concrete initiatives a product team may pursue, organized by type (Features, Epics, Bugs, etc.) |
 | **Documents** | Written artifacts that explain and justify Features |

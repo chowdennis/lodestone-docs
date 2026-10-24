@@ -1,5 +1,31 @@
 # Integrations — How-tos & Workflows
-*Step-by-step guides for connecting and configuring Fireflies, Gong, JIRA, and Asana*
+*Step-by-step guides for connecting and configuring Lodestone integrations*
+
+---
+
+## Connecting PostHog
+
+The PostHog integration establishes a secure connection between one Lodestone
+workspace and one PostHog project. Usage Analytics does not use this connection
+yet and remains marked Coming Soon.
+
+1. In PostHog, create a Personal API Key with the `project:read` and
+   `insight:read` scopes.
+2. In Lodestone, go to Settings > Integrations.
+3. Select **Add Integration**, then select **PostHog**.
+4. Enter the Personal API Key.
+5. Keep the US Cloud URL, or enter `https://eu.posthog.com` for EU Cloud.
+6. Select **Test connection**.
+7. Choose one of the projects available to the key, then select **Connect
+   PostHog**.
+
+Lodestone displays the selected project and cloud URL after the connection is
+saved. Select **Check connection** to verify that the key can still access the
+selected project. To change the key or project, select **Reconnect**. To remove
+the connection, select **Disconnect**.
+
+Only Admins can connect, reconnect, or disconnect PostHog. Builders can view
+the connection status.
 
 ---
 
@@ -227,6 +253,20 @@ To disconnect any integration:
 2. Find the integration and select Disconnect.
 
 Disconnecting stops all future syncing but preserves existing data in Lodestone. Features, status updates, and any other data already in Lodestone are not removed.
+
+---
+
+## Connecting Usage Analytics
+
+Amplitude and PostHog provide behavioral evidence to the Discovery module.
+
+1. Go to **Settings > Integrations**.
+2. Find the **Usage Analytics** section.
+3. For Amplitude, enter the API key and secret key. For PostHog, enter the personal API key and project ID.
+4. Select **Connect**.
+5. Open **Discovery > Usage Analytics** and ask a test question.
+
+Credentials are stored securely and are never displayed again after connection. Disconnecting removes the saved credentials and locks the Usage Analytics room unless another provider remains connected.
 
 ---
 

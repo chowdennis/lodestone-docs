@@ -102,6 +102,19 @@ Archiving hides an object from the active Backlog without deleting it. The objec
 
 Copilot does not permanently delete objects — if you ask it to delete something, it will ask if you meant to archive it instead.
 
+### Regenerating Discovery
+
+> "Regenerate my Discovery trends"
+>
+> "Regenerate Synthesis"
+>
+> "Regenerate Synthesis focused on integrations"
+
+Copilot uses the active organization. Trend generation requires at least three
+Extracts. Synthesis requires usable data from at least two supported Discovery
+rooms. A topic is optional and limits the generated opportunities to that
+subject.
+
 ---
 
 ## Chaining Actions in One Conversation
