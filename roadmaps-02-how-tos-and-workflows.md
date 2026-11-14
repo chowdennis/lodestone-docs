@@ -30,12 +30,14 @@ Hierarchy is the heart of a Lodestone Roadmap. It's created entirely through dra
 
 1. Add your items to the list.
 2. Drag an item beneath another item to make it a child.
-3. Continue nesting to create as many levels as you need — there is no limit.
+3. Continue nesting to build out your hierarchy — up to five levels, counting top-level items as the first level. Lodestone doesn't accept a drop that would go deeper than that.
 4. To reorder items within the same level, drag them up or down relative to their siblings.
 
 The sunburst updates in real time as you nest and reorder, so you can see the structure forming as you work.
 
 > **Note:** Drag-and-drop nesting is not immediately obvious the first time. If your sunburst looks flat (everything in one ring), check whether your items need to be nested beneath a parent item.
+
+An item can't be nested beneath itself or beneath one of its own children or grandchildren. If you try, Lodestone leaves the hierarchy as it was and shows a message explaining why (see Troubleshooting & FAQs).
 
 ---
 
@@ -113,7 +115,7 @@ A text-based export of the full Roadmap hierarchy, formatted as a Markdown docum
 ### HTML (shareable link)
 Generates a responsive, server-rendered HTML snapshot of your Roadmap and returns a shareable link. Unlike the other export formats, this does not download a file — it produces a `/share/...` URL you can copy and send to anyone. The recipient can view the Roadmap in a browser without logging in to Lodestone.
 
-To generate an HTML export, click the **Export as HTML** button in the Roadmap toolbar. Once generated, the link is displayed alongside a **Copy Link** button. You can regenerate a new snapshot at any time — each generation produces a new URL.
+To generate an HTML export, click the **Export as HTML** button in the Roadmap toolbar. Once the link is ready, click **Copy last link** to copy it. **Export as HTML** stays available, so you can generate a new snapshot at any time — each generation produces a new URL, and **Copy last link** always copies the most recent one for this Roadmap. Previous links remain valid.
 
 ---
 

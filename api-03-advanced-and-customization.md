@@ -85,7 +85,8 @@ The Lodestone OpenAPI specification (`/api/v1/openapi`) is a standard JSON schem
 Write operations (endpoints that create or update data) follow the same rules as the Lodestone UI:
 
 - Creating a Feature adds it to the organization's backlog — it is immediately visible in Lodestone
-- Updating a Feature's status follows the same rules as dragging a card in a Release — the status propagates everywhere
+- Updating a Feature's status follows the same rules as dragging a card in a Release — the status propagates everywhere. Status accepts the platform statuses or any custom status stage your organization has configured; an invalid value returns `400` with the list of valid values
+- Regenerating Discovery trends (`regenerate_discovery_trends`) and Discovery Synthesis (`regenerate_synthesis`) is available through MCP only — not through the REST API or the in-app Copilot
 - Creating a Feature does not automatically add it to any Roadmap or Release — you must do that as a separate operation
 - Deleting a backlog object through `DELETE /api/v1/objects/{objectId}` is deprecated as of September 22, 2026. It remains available during the compatibility period, and no removal date has been announced. Its responses include a `Deprecation` header and a `Link` to the archive operation. Use `POST /api/v1/objects/{objectId}/archive` instead; archive is reversible and preserves the previous status. MCP's `delete_object` tool is also deprecated and returns a migration warning; use `archive_object`.
 

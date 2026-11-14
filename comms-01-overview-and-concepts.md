@@ -1,9 +1,11 @@
-# Comms Packages — Overview & Concepts
+# Comms — Overview & Concepts
 *What stakeholder communication looks like with a system behind it*
 
 ---
 
 ## What Is a Comms Package?
+
+Comms is in the left-hand navigation as **Comms** and opens the **Comms Package Center**, where you build and manage Comms Packages.
 
 A Comms Package is a curated collection of Lodestone artifacts — roadmaps, releases, strategies, bento grids, and documents — assembled into a single stakeholder communication and delivered by email. You choose what to include, who receives it, and how often it goes out. Lodestone handles the rest.
 

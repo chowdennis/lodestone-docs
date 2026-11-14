@@ -5,14 +5,38 @@
 
 ## Why Is Usage Analytics Locked?
 
-Usage Analytics is coming soon with product analytics platform integrations.
-It remains visible but disabled during this release.
+Usage Analytics unlocks once PostHog is connected and verified. Hover over the
+locked tab to see "Connect and verify PostHog in Settings → Integrations." An
+Admin can connect PostHog from Settings → Integrations. After that, open the
+tab and select **Import funnels** to begin.
+
+## Why Is a Drop-off Missing from the Review Queue?
+
+Check that:
+- You selected **Sync now** after importing the funnel or changing a threshold.
+  Usage Analytics does not sync on its own.
+- The drop-off reaches the funnel's **Global threshold** or the step's own
+  threshold. Lower the threshold to catch smaller drop-offs.
+- You have not dismissed the same transition before. Dismissed items stay
+  suppressed until you select **Remove** on them in the **Dismissed** list.
+- The funnel uses the Steps visualization in PostHog. Other visualizations show
+  **Unsupported visualization** and cannot be imported.
+
+If the import list says "No saved PostHog funnels were found," save at least one
+funnel in your PostHog project first.
+
+## What Happens When I Remove a Funnel?
+
+The funnel stops syncing and moves to **Removed funnels**. Its snapshots and
+review history are kept. To restore it, select **Import funnels** and select the
+funnel again.
 
 ## Why Is Synthesis Locked?
 
-Synthesis requires usable data from at least two supported rooms. Generate at
-least one Extract trend and complete a Competitive Intelligence report. Usage
-Analytics is not required.
+Synthesis brings together data from the other Discovery rooms — Extracts,
+Competitive Intel, and Usage Analytics. If it's locked, give it more to work
+with: add Extracts, run a Competitive Intel report, or connect PostHog. The
+Synthesis page shows which rooms are ready.
 
 ## Does Regenerating Synthesis Delete Earlier Results?
 
@@ -42,7 +66,18 @@ Admins and Builders can view and work in Discovery. Organization access is enfor
 
 ## Why Can I Not See Discovery?
 
-Discovery may not be enabled for your organization yet. Contact your Lodestone administrator if you expect access.
+Discovery is available to all organizations, but your Lodestone administrator
+can turn it off for an organization. When it is off, the **Discovery** item is
+missing from the left-hand navigation, Extracts and Competitive Intel are
+unavailable too, and links to any Discovery page show a "Not Found" page.
+Contact your Lodestone administrator if you expect access.
+
+## Where Did Extracts and Intel Go?
+
+They moved into Discovery. Select **Discovery** in the left-hand navigation; the
+Extracts room opens first. Use the tabs at the top to switch to Usage
+Analytics, Competitive Intel, or Synthesis. Your existing Extracts and reports
+are unchanged.
 
 ---
 

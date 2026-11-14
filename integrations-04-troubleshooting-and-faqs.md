@@ -12,7 +12,7 @@ integration status but cannot change Settings.
 
 ### Which integrations are currently live?
 
-Live integrations include Fireflies, Gong, Fathom, Granola, tl;dv, JIRA, Asana, Amplitude, PostHog, and the Lodestone API and MCP. Transcript integrations support configurable auto-sync.
+Live integrations include Fireflies, Gong, Fathom, Granola, tl;dv, Zendesk, Freshdesk, Salesforce, JIRA, Asana, Amplitude, PostHog, and the Lodestone API and MCP. Transcript integrations and Zendesk support configurable auto-sync. Freshdesk syncs on demand.
 
 ### Why is Usage Analytics still locked after connecting a provider?
 
@@ -54,6 +54,26 @@ Yes. Unlinking from the Feature Detail page stops future sync between the two ob
 ### What happens to my data if I disconnect an integration?
 
 Disconnecting stops future syncing but preserves all existing data in Lodestone. Features, status history, and any previously imported transcripts are not removed.
+
+### Does Zendesk analyze every ticket on every sync?
+
+No. Each ticket is analyzed once. Later syncs skip tickets Lodestone has already analyzed and report them as skipped. Only public support conversations are analyzed.
+
+### Does Zendesk sync anything back to Zendesk?
+
+No. Lodestone only reads tickets. Feature suggestions stay in Extract until you review them and add them to the Backlog.
+
+### Does Freshdesk sync automatically?
+
+No. Select **Sync Tickets** on the Freshdesk card in Settings > Integrations whenever you want new Extracts. Each sync checks tickets updated in the last 30 days and skips tickets that haven't changed since they were last analyzed.
+
+### Why did a Freshdesk ticket produce no Extracts?
+
+Lodestone only creates Extracts from actionable customer feature asks in public ticket conversations. The sync summary counts tickets like this as "without eligible feature asks". Private notes are not analyzed.
+
+### Does Salesforce sync on a schedule?
+
+Salesforce has no sync settings. Once connected, the Salesforce card shows **Connected** and the connection date.
 
 ### Should I use Automatic Sync, Webhooks, or both for JIRA?
 
@@ -101,9 +121,45 @@ For Gong:
 - Check that the accounts you selected during setup include the user whose calls you're looking for
 - To change which accounts are included, update the Gong configuration in Settings > Integrations
 
+### JIRA webhooks stopped working and JIRA shows rejected deliveries
+
+Each organization now has its own JIRA webhook URL, and Lodestone rejects deliveries that aren't signed with your organization's webhook secret. Webhooks set up with the older shared Lodestone URL, or without a secret, no longer deliver updates. To fix this, go to Settings > Integrations, select **Disable** under the JIRA integration's **Real-time Webhooks**, then select **Enable Webhooks**. If Lodestone asks for manual setup, update the webhook in JIRA under **⚙ Settings → System → WebHooks** with the new URL and secret it shows.
+
+### I lost the JIRA webhook secret
+
+Lodestone shows the secret only once. Select **Disable** and then **Enable Webhooks** to get a new secret, then paste it into the webhook's **Secret** field in JIRA.
+
 ### Webhooks stopped working after a JIRA configuration change
 
 JIRA webhooks can become inactive if the JIRA project configuration changes — for example, if the project is renamed, moved, or if webhook permissions are updated. Check your JIRA webhook settings to confirm the webhook is still active and pointing to the correct Lodestone endpoint. Reconnecting the integration from Settings > Integrations often resolves this.
+
+### Zendesk didn't connect after I signed in
+
+If the Zendesk card doesn't appear after you approve access, check that the subdomain, Client ID, and Client Secret match your Zendesk OAuth client, and that the client's redirect URL is registered in Zendesk. Then select **Add Integration** and connect Zendesk again.
+
+### Freshdesk won't connect
+
+Lodestone shows the reason under the connection form:
+
+| Message | What to do |
+|---|---|
+| "Freshdesk rejected the API key." | Copy the API key again from your Freshdesk profile settings and re-enter it. |
+| "Enter a Freshdesk subdomain or HTTPS Freshdesk domain without ports, paths, or credentials." | Enter just the subdomain (`company`) or the domain (`company.freshdesk.com`). |
+| "The Freshdesk account does not permit this operation." | Use an API key from a Freshdesk user who can view tickets. |
+| "Unable to complete the Freshdesk request. Check the domain and try again." | Check the domain for typos. |
+| "Freshdesk rate limit reached. Try again later." | Wait a few minutes, then try again. |
+
+### A Freshdesk sync stopped partway
+
+If the sync is interrupted — for example, because you left the page — Lodestone shows "Sync stopped. N Extracts created so far. Retry Sync Tickets; unchanged tickets will be skipped." Select **Sync Tickets** again and keep the page open until it finishes. Extracts already created are kept, and unchanged tickets are skipped.
+
+### Salesforce didn't connect after I signed in
+
+Settings > Integrations shows "Failed to connect Salesforce:" followed by a reason. Check that the Client ID and Client Secret match the Consumer Key and Consumer Secret of your Connected App, and that the Connected App has the required OAuth scopes and callback URL. Then select **Add Integration** and connect Salesforce again. If you see "Client ID and Client Secret are required", fill in both fields before selecting **Connect**.
+
+### Some Zendesk tickets failed during sync
+
+Lodestone lists the failed tickets after the sync. Select **Sync** on the Zendesk card to retry them; tickets that were already analyzed are skipped.
 
 ### Status updates are appearing in Lodestone with a delay
 

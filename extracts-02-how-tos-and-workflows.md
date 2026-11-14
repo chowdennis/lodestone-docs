@@ -7,10 +7,11 @@
 
 The simplest way to get a transcript into Lodestone is to upload it directly.
 
-1. Navigate to the Extracts module from the left-hand navigation.
-2. Select the option to upload a transcript.
-3. Upload your transcript file.
-4. Submit. Lodestone's AI will analyze the transcript and generate Extracts.
+1. Select **Discovery** in the left-hand navigation. The **Extracts** room opens.
+2. Select the **All Extracts** tab.
+3. Select the option to upload a transcript.
+4. Upload your transcript file.
+5. Submit. Lodestone's AI will analyze the transcript and generate Extracts.
 
 A processing indicator is shown while analysis is in progress. Processing time varies depending on the length of the transcript. There is no notification when Extracts are ready — you'll need to return to the Extracts module and check manually.
 
@@ -25,7 +26,7 @@ If your team uses Fireflies or Gong, you can import transcripts directly into th
 ### Importing from Fireflies
 
 1. Ensure the Fireflies integration is connected in Settings > Integrations.
-2. Navigate to the Extracts module.
+2. Open **Discovery > Extracts** and select the **All Extracts** tab.
 3. Select the option to import from Fireflies.
 4. Choose the meeting you want to analyze from your Fireflies library — any meeting in your Fireflies instance is accessible.
 5. Confirm the import. Lodestone will pull the transcript and begin analysis.
@@ -33,7 +34,7 @@ If your team uses Fireflies or Gong, you can import transcripts directly into th
 ### Importing from Gong
 
 1. Ensure the Gong integration is connected in Settings > Integrations. During initial setup, you'll be prompted to select which Gong accounts to pull transcripts from — typically your front-line customer-facing colleagues such as AEs, CSMs, and SDRs.
-2. Navigate to the Extracts module.
+2. Open **Discovery > Extracts** and select the **All Extracts** tab.
 3. Select the option to import from Gong.
 4. Choose the call you want to analyze from the available meetings.
 5. Confirm the import. Lodestone will pull the transcript and begin analysis.
@@ -44,24 +45,70 @@ See the Integrations module guide for full setup instructions for both integrati
 
 ---
 
+## Navigating the Extracts Room
+
+The Extracts room has three tabs:
+
+| Tab | What it shows |
+|---|---|
+| **Trends** | AI-generated clusters of related Extracts. This tab opens by default. |
+| **Search** | A dedicated search across all your Extracts. |
+| **All Extracts** | The full Extract list, where you upload or import transcripts and review individual Extracts. |
+
+A summary bar above the tabs shows your total Extracts, how many arrived this week, the number of trends, how many goals are linked to trends (when your organization has goals), and a breakdown by source.
+
+---
+
 ## Filtering and Searching Extracts
 
-The Extracts module has a **keyword filter** and a **live search** bar to help you focus on what matters.
+The Extracts room has a **Keyword Filter** and search to help you focus on what matters.
 
-### Keyword filter
-You can define a set of keywords that the AI uses as semantic emphasis during analysis — topics you care about most, like "pricing", "enterprise", or "onboarding". Keywords are saved to your browser and persist across sessions. Add keywords before uploading a transcript to guide extraction, or use them to filter the results in your review queue.
+### Keyword Filter
+The **Keyword Filter** sits on the **All Extracts** tab. Add the topics you care about most, like "pricing", "enterprise", or "onboarding", before you upload or import a transcript. When keywords are set, the AI only extracts features that mention those terms. Keywords apply to all future extractions and are saved in your browser, so they persist across sessions on the same device.
 
-To add a keyword: type it into the keyword input field and press Enter.
+The Keyword Filter shapes what the AI extracts. It does not filter Extracts that already exist.
+
+To add a keyword: type it into the **Add keyword** field and press Enter or type a comma.
 To remove a keyword: click the × on any keyword chip.
 
-### Live search
-The search bar filters your current Extract list in real time by Feature name, description, or quote text. Use it to find a specific idea or narrow a large batch of Extracts without scrolling through all of them.
+### Search
+Search matches Feature names, descriptions, quote text, and speaker names as you type.
+
+- On the **Search** tab, type into **Search feature names, descriptions, and quotes…** to search all your Extracts. Each result shows its source badge and an **Add to Backlog** action.
+- On the **All Extracts** tab, the **Search extracted features…** bar narrows the list in place, so you can act on a smaller batch without scrolling.
+
+---
+
+## Working with Trends
+
+Trends group related Extracts into themes so you can see which problems come up across many conversations.
+
+1. Open **Discovery > Extracts**. The **Trends** tab opens.
+2. Select **Generate Trends**. You need at least three Extracts that are not yet in a trend. If you have fewer, the tab shows **Not enough data yet** with a link to **All Extracts**.
+3. Expand a trend to see its Extracts and their quotes.
+4. Select **+ Backlog** on any Extract inside a trend to add it to the Backlog. The trend name is added to the new Feature as a tag.
+
+Extracts that do not belong to any trend appear in the **Ungrouped** panel, labeled "Not yet assigned to a trend." Select **Regenerate Trends** to cluster new Extracts and rebuild your trends.
+
+### Insights Digest
+Once trends exist, select **Insights** to generate an **Insights Digest**: an AI-written summary of your trends, how much evidence supports each one, and which goals they link to. Select **Dismiss** to close the digest.
+
+---
+
+## Aligning Trends to Goals
+
+When your organization has goals in Goals & Objectives, you can link each trend to the goals it supports.
+
+- **Manually:** Expand a trend. Under **Goals**, select a goal to link it. Linked goals show a checkmark. Select it again to unlink it.
+- **With AI:** Select **Infer Goal Alignment** at the top of the Trends tab. The AI matches each trend to relevant strategic goals. Review the matches and adjust any that are wrong.
+
+The summary bar shows how many goals are linked to your trends.
 
 ---
 
 ## Reviewing Extracts
 
-Once a transcript has been analyzed, the generated Extracts appear in your review queue. Each Extract shows a suggested Feature Name, Description, and any associated quotes pulled from the conversation. A **source badge** indicates where the Extract came from (Gong, Fireflies, Manual, or Intel Report).
+Once a transcript has been analyzed, the generated Extracts appear in your review queue. Each Extract shows a suggested Feature Name, Description, and any associated quotes pulled from the conversation. A **source badge** indicates where the Extract came from (for example Gong, Fireflies, Manual, or Intel Report).
 
 Quotes may also display **company name**, **speaker name**, and **revenue information** when that data is available from the source. To remove an individual quote from an Extract, click the delete icon on the quote — deletion is permanent.
 

@@ -29,9 +29,9 @@ No. Report content is read-only. If a report doesn't reflect what you were looki
 
 You are redirected to the Extracts module. The report content is analyzed by AI, and any feature ideas, problems, or opportunities found in the analysis appear as extract cards in your review queue. These extracts carry an **Intel Report** source badge. From there you review and decide which ideas to add to your backlog.
 
-### Can I schedule reports less frequently than biweekly?
+### Can I schedule reports less frequently than every two weeks?
 
-Not currently. The available scheduling options are Weekly and Biweekly. For less frequent monitoring, you can turn off automatic scheduling and generate reports manually as needed.
+Not currently. The available scheduling options are Weekly and Every 2 weeks. For less frequent monitoring, you can turn off automatic scheduling and generate reports manually as needed.
 
 ### Is the industry description the same as the Organization Description in Settings?
 
@@ -40,6 +40,14 @@ No. These are separate inputs. The Organization Description (in Settings > Organ
 ### Can reports be shared with people outside Lodestone?
 
 Reports can be downloaded as PDFs, which can then be shared by any means (email, Slack, etc.). There is no shareable link or in-app sharing option.
+
+### Will I be notified when a report is ready?
+
+Yes. Each time a report finishes — manual or scheduled — Lodestone sends a "Your Competitive Intelligence Report is ready" email with a link to the report. You can also check the reports list for new reports at any time.
+
+### Where did Intel go in the navigation?
+
+Competitive Intelligence is now the **Competitive Intel** room inside **Discovery**. Select **Discovery** in the left-hand navigation, then select the **Competitive Intel** tab. If **Discovery** is missing from your navigation, Discovery is not enabled for your organization, and links to Competitive Intel show a "Not Found" page. Contact your Lodestone administrator if you expect access.
 
 ---
 
@@ -68,6 +76,7 @@ A few things to check:
 ### Automatic reports aren't being generated
 
 Check that:
+- Someone has clicked **Save Settings** in **Intelligence Settings**. Automatic reports start only after the settings are saved, even if the default Weekly and Monday values are what you want. The **Next scheduled:** date can appear before the settings are saved, so save them once to be sure.
 - A report schedule has been configured in the Competitive Intelligence settings (frequency and day are set)
 - Your competitor list is not empty
 - The report day you selected has actually passed since the schedule was set — if you set a Wednesday schedule on a Thursday, the first automatic report won't generate until next Wednesday

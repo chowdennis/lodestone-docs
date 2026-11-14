@@ -1,11 +1,11 @@
-# Feature Auctions — Overview & Concepts
+# Buy-A-Feature — Overview & Concepts
 *What they are, why they matter, and how they fit into Lodestone*
 
 ---
 
-## What Is a Feature Auction?
+## What Is Buy-A-Feature?
 
-A Feature Auction is a virtual implementation of the classic Buy-A-Feature prioritization game. Each participant — called a buyer — is given a fixed amount of fictitious currency and invited to spend it on the Features they care about most. Because no buyer has enough currency to purchase everything, they're forced to make tradeoffs and prioritize.
+Buy-A-Feature (feature auctions) is in the left-hand navigation as **Buy-A-Feature**. Each session you run is a Feature Auction: a virtual implementation of the classic Buy-A-Feature prioritization game. Each participant — called a buyer — is given a fixed amount of fictitious currency and invited to spend it on the Features they care about most. Because no buyer has enough currency to purchase everything, they're forced to make tradeoffs and prioritize.
 
 The goal isn't to produce a definitive ranked list. It's to surface perspective, generate empathy, and open up conversations about priority that might otherwise never happen.
 

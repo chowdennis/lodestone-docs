@@ -19,7 +19,7 @@ Yes. A Feature is a shared object — it can be added to as many Roadmaps as nee
 
 ### Is there a limit to how many levels I can nest in the sunburst?
 
-No. You can nest as deeply as you need — the sunburst adds rings as you go. In practice, three levels is the most common structure; more than four can make the chart harder to read.
+Yes. A Roadmap supports up to five levels, counting top-level items as the first level — so the sunburst can have up to five rings. If you drop an item onto a parent that is already at the deepest level, nothing happens. In practice, three levels is the most common structure; more than four can make the chart harder to read.
 
 ### Can I reorder items within the same hierarchy level?
 
@@ -74,6 +74,16 @@ Drag-and-drop nesting can take a moment to get used to. A few tips:
 - Watch for the indent indicator that shows where the item will land
 - If it goes to the wrong level, simply drag it again to reposition
 - Items can be reordered and renested as many times as needed
+
+### I see "Couldn't nest this item" or "Couldn't move this item"
+
+Lodestone shows one of these messages when a drag-and-drop would break the Roadmap's hierarchy. Your Roadmap stays exactly as it was before the drop.
+
+| Message | What it means |
+|---|---|
+| "Parent cannot become a child of itself or any of its children." | You dropped an item onto one of its own children or grandchildren (or into the gap just below one of them). An item can't sit beneath itself. Move the child out first, then nest the items the way you want. |
+| "Roadmap items can only be nested under items in the same roadmap." | The item you dropped onto belongs to a different Roadmap. Refresh the page and try again. |
+| "This roadmap's hierarchy contains a loop, so items can't be moved until it is repaired." | Some items in this Roadmap were nested beneath their own descendants before Lodestone started blocking this. Contact Lodestone support to have the Roadmap repaired. |
 
 ### A parent item disappeared from my Feature backlog
 

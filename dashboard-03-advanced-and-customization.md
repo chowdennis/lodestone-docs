@@ -1,4 +1,4 @@
-# Dashboard — Advanced & Customization
+# Home — Advanced & Customization
 *Understanding each column in depth and using the Dashboard as a daily workflow tool*
 
 ---

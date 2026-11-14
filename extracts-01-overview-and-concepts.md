@@ -70,6 +70,14 @@ This separation keeps discovery clean and distinct from planning.
 
 ---
 
+## Extracts in Discovery
+
+Extracts is one of the rooms in **Discovery**, alongside Usage Analytics, Competitive Intel, and Synthesis. Select **Discovery** in the left-hand navigation to open it; the Extracts room opens first.
+
+Inside the room, **Trends** groups related Extracts into themes, so you can spot problems that come up across many conversations. You can link each trend to the goals it supports. Trends, Competitive Intel reports, and Usage Analytics data feed Synthesis, which suggests cross-room opportunities for your backlog. See the Discovery guide for how the rooms work together.
+
+---
+
 ## Source Badges
 
 Each Extract displays a **source badge** indicating where it came from. This makes it easy to see at a glance whether an idea was surfaced from a customer call, a sales conversation, or a competitive analysis:
@@ -79,6 +87,8 @@ Each Extract displays a **source badge** indicating where it came from. This mak
 | Gong | Transcript imported from a Gong call |
 | Fireflies | Transcript imported from a Fireflies meeting |
 | Manual | Transcript uploaded directly by a team member |
+| Zendesk | Support ticket synced from Zendesk |
+| Freshdesk | Support ticket synced from Freshdesk |
 | Intel Report | Extracted from a Competitive Intelligence report |
 
 Source context is preserved when an Extract is promoted to a Feature — the source information carries over into the Feature's quote library.
@@ -87,9 +97,9 @@ Source context is preserved when an Extract is promoted to a Feature — the sou
 
 ## Supported Inputs
 
-Extracts works with **meeting transcripts in text format** and **Competitive Intelligence reports**. Audio and video files are out of scope — these are handled upstream by recording platforms like Fireflies or Gong, which produce transcripts that are then brought into Lodestone.
+Extracts works with **meeting transcripts in text format**, **Zendesk and Freshdesk support tickets**, and **Competitive Intelligence reports**. Audio and video files are out of scope — these are handled upstream by recording platforms like Fireflies or Gong, which produce transcripts that are then brought into Lodestone.
 
-Transcripts can be uploaded manually, imported directly via the Fireflies or Gong integrations, or fed from a completed Competitive Intelligence report via the Extract Features from Report action in the Intel module.
+Transcripts can be uploaded manually, imported directly via the Fireflies or Gong integrations, or fed from a completed Competitive Intelligence report via the Extract Features from Report action in Competitive Intel. Support tickets arrive through the Zendesk and Freshdesk integrations.
 
 ---
 

@@ -30,19 +30,24 @@ That level of specificity produces meaningfully better Document output than "We 
 
 *Admin only.*
 
-Archiving an organization removes access for all Builder members. Admins retain access and can unarchive at any time.
+Archiving an organization takes it out of everyday use. An archived organization no longer appears in the organization list for any member — Admins included. Its data is kept, and it can be restored at any time.
 
 ### To archive
 1. Go to Settings > Organization.
-2. Select the Archive option.
-3. Confirm. Builders immediately lose access to the workspace.
+2. Click **Archive Organization**.
+3. Confirm. Lodestone archives the organization and takes you to the **Archived Organizations** page.
+
+### Archived Organizations
+
+**Archived Organizations** is in the lower section of the left-hand navigation, below the main modules. It lists the archived organizations you created, with each one's name and description. Click an organization's name to open it.
 
 ### To unarchive
-1. Log in as an Admin.
-2. Go to Settings > Organization.
-3. Select Unarchive. Builder access is restored immediately.
+1. Open **Archived Organizations** from the left-hand navigation.
+2. Click **Unarchive** next to the organization.
 
-> **Use case:** Archiving is useful when a workspace needs to be temporarily suspended — for example, during a team restructure or when transitioning between product phases.
+The organization reappears in every member's organization list, and Lodestone opens its Roadmaps page. You need the Admin role in the organization to unarchive it.
+
+> **Use case:** Archiving is useful when a workspace needs to be set aside — for example, after a product line is retired or during a team restructure — without deleting its history.
 
 ---
 
@@ -158,7 +163,7 @@ Integration setup and configuration is covered in detail in the Integrations mod
 1. Go to Settings > Integrations.
 2. Find the integration you want to connect or configure.
 
-Currently available: Fireflies, Gong (Admin only to connect), and JIRA.
+Currently available: Fireflies, Gong, Fathom, Granola, tl;dv, Zendesk, Freshdesk, Salesforce, JIRA, Asana, Amplitude, PostHog, and the Lodestone API & MCP. Only Admins can connect, configure, or disconnect integrations; Builders can view their status.
 
 ---
 

@@ -5,7 +5,7 @@
 
 ## What Is Competitive Intelligence?
 
-The Competitive Intelligence module (labeled **Intel** in the navigation) is Lodestone's built-in system for tracking your competitors and generating AI-powered market insight reports. It keeps you and your team informed about the competitive landscape without requiring manual research.
+The Competitive Intelligence module (the **Competitive Intel** room inside **Discovery** in the navigation) is Lodestone's built-in system for tracking your competitors and generating AI-powered market insight reports. It keeps you and your team informed about the competitive landscape without requiring manual research.
 
 Instead of periodically Googling your competitors or relying on sales to surface competitive signals, Competitive Intelligence delivers structured, AI-generated reports on a schedule you define — covering competitor activity, market positioning, and emerging trends in your space.
 
@@ -40,7 +40,9 @@ Reports are generated on demand or on a recurring schedule. When you generate a 
 Your industry description is the context the AI uses to frame competitive analysis. A specific, accurate description produces more relevant output. It is set in the Competitive Intelligence settings and is separate from the Organization Description used by Documents.
 
 ### Report Schedule
-Reports can be generated automatically on a weekly or biweekly basis, on a day of the week you choose. This keeps your competitive picture current without requiring manual triggering.
+Reports can be generated automatically on a weekly or every-two-weeks basis, on a day of the week you choose. This keeps your competitive picture current without requiring manual triggering.
+
+Automatic reports start only after someone saves the Competitive Intelligence settings. Until then, you can still generate reports manually at any time. When a report finishes, whether you ran it manually or it ran on schedule, Lodestone sends a "report ready" email with a link to it.
 
 ---
 
@@ -54,6 +56,8 @@ This closes the loop between market intelligence and product planning:
 
 Extracts surfaced from competitive intelligence reports carry an **Intel Report** source badge, distinguishing them from transcript-sourced ideas.
 
+A banner at the top of Competitive Intel points you to the **Extracts module** for extracting customer insights from transcripts. Select the × to dismiss it. Once dismissed, it stays hidden for everyone in your organization.
+
 ---
 
 ## How Competitive Intelligence Relates to the Rest of Lodestone
@@ -63,6 +67,7 @@ Extracts surfaced from competitive intelligence reports carry an **Intel Report*
 | Extracts | Completed reports can be fed to Extracts for AI analysis, surfacing feature ideas with an Intel Report source badge. |
 | Features | Intel-sourced Extracts, when accepted, become Features in the backlog — just like transcript-sourced ones. |
 | Settings | Industry description and report schedule are configured in the Competitive Intelligence settings panel. |
+| Discovery | Competitive Intel is one of the Discovery rooms. Completed reports are evidence for Synthesis, which combines them with Extract trends and Usage Analytics to suggest backlog opportunities. |
 
 ---
 

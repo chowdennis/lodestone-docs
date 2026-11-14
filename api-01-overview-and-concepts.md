@@ -12,11 +12,13 @@ Authorization: Bearer lsk_…
 
 The API organization is determined by the key; do not supply an `organizationId` query parameter or body field. Select only the scopes an integration needs. Keys are shown once when created and can be revoked under Settings > API & MCP.
 
+A key can never do more than the person who created it. Lodestone checks the creator's current role in the organization on every request: a key created by a Builder cannot hold scopes Builders lack (such as `settings:write`), a key loses those scopes if its creator is changed from Admin to Builder, and a key stops working entirely if its creator is removed from the organization. The same rule applies to MCP access.
+
 ## MCP
 
-Connect an MCP-compatible client using the MCP URL shown under **Settings > API & MCP** (currently `https://app.lodestone.pm/mcp`). MCP uses the Lodestone OAuth sign-in flow and acts in the authenticated user's selected organization. It does not use a copied API key as its client credential. In the MCP session, call `list_organizations` and then `set_active_organization` before organization-specific work.
+Connect an MCP-compatible client using the MCP URL shown under **Settings > API & MCP** (currently `https://app.lodestone.pm/mcp`). MCP uses the Lodestone OAuth sign-in flow and acts in the authenticated user's selected organization. It does not use a copied API key as its client credential. In your first MCP session, call `list_organizations` and then `set_active_organization` before organization-specific work. Lodestone remembers the active organization across sessions, so later sessions continue in the same organization until you choose another one.
 
-MCP tools are internal services that call Lodestone APIs with the user's identity and organization context. MCP exposes a curated set of AI-oriented actions, while API keys provide a narrower, explicit integration contract. Tool and endpoint availability can differ by design.
+MCP tools are internal services that call Lodestone APIs with the user's identity and organization context. MCP exposes a curated set of AI-oriented actions, while API keys provide a narrower, explicit integration contract. Tool and endpoint availability can differ by design. For example, MCP includes Discovery tools that are not available in the REST API or the in-app Copilot: `regenerate_discovery_trends` rebuilds Discovery trends from your ungrouped Extracts (it needs at least three Extracts), and `regenerate_synthesis` generates a new Discovery Synthesis, optionally focused on a topic you name.
 
 ## Current Phase 1 API capability areas
 

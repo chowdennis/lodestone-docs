@@ -7,6 +7,8 @@
 3. Copy and securely store the full key when it is displayed; it cannot be retrieved later.
 4. Revoke a key from the same settings page when it is no longer needed or may be compromised. Rotate by creating a replacement with the required scopes, updating the integration, then revoking the old key.
 
+Only the key's creator or an Admin of the organization can revoke a key; anyone else receives `403`. You can only select scopes your own role allows — a request for scopes above your role is refused. Keys an integration depends on should belong to someone who will stay in the organization with the right role, because a key follows its creator's current access.
+
 ## Inspect the live API contract
 
 The OpenAPI document is available at `https://app.lodestone.pm/api/v1/openapi`. Import it into an API client or compatible action configuration. Check the live document for current operations, required scopes, parameters, and response envelopes before building an integration.
@@ -61,9 +63,21 @@ For impact analysis, call `GET /goals/{goalId}/downstream`. Optional `include` v
 
 Archive an object with `POST /objects/{objectId}/archive` and restore it with `POST /objects/{objectId}/restore` (`features:write`). Archive is reversible and restore returns the prior status. Object `DELETE /objects/{objectId}` remains during a compatibility period but is deprecated. There is no announced removal date; use archive for new integrations.
 
+## Update an object's status
+
+Set `status` with `PATCH /objects/{objectId}` (`features:write`), or with the `update_object` tool in MCP. Status accepts the platform statuses (`NOT_STARTED`, `IN_PROGRESS`, `COMPLETED`, `ARCHIVED`) or the name of any custom status stage configured for your organization. Matching ignores capitalization and surrounding spaces. An unrecognized value returns `400` with the list of valid values. In MCP, call `list_status_stages` to see your organization's custom stage names.
+
 ## Connect an MCP client
 
-Use the MCP connection URL shown in **Settings > API & MCP** and complete Lodestone's OAuth sign-in flow in the MCP client. Do not paste an API key into the MCP client as its authentication mechanism. In a new session call `list_organizations`, then `set_active_organization`, and use the exposed tools for the desired task. The MCP tool catalog is intentionally curated and need not match the REST API endpoint catalog.
+Use the MCP connection URL shown in **Settings > API & MCP** and complete Lodestone's OAuth sign-in flow in the MCP client. Do not paste an API key into the MCP client as its authentication mechanism. The first time you connect, call `list_organizations`, then `set_active_organization`, and use the exposed tools for the desired task. Lodestone remembers your active organization across sessions; call `set_active_organization` again only when you want to switch. The MCP tool catalog is intentionally curated and need not match the REST API endpoint catalog.
+
+## Refresh Discovery from an MCP client
+
+Discovery trends and Synthesis can be regenerated only through MCP — not through the REST API or the in-app Copilot. With the right organization active:
+
+1. Call `regenerate_discovery_trends` to rebuild trends from your ungrouped Extracts. At least three Extracts are required.
+2. Call `regenerate_synthesis` to generate a new Discovery Synthesis from your available sources. Optionally pass a topic to focus the results.
+3. Open **Discovery** in Lodestone to review the results.
 
 ## Retry and operational guidance
 

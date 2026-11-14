@@ -24,7 +24,8 @@ Understanding which system owns which data is the foundation of any integration 
 ### Lives in external systems
 - Developer tickets and delivery tasks (JIRA)
 - Call recordings and transcripts (Fireflies, Gong)
-- CRM activity, support tickets, and customer data (Salesforce, Zendesk, etc.)
+- Support tickets (Zendesk, Freshdesk)
+- CRM data (Salesforce)
 
 Lodestone integrates with these systems but doesn't absorb them. Each tool remains the source of truth for its own domain.
 
@@ -37,7 +38,7 @@ Integrations move data in two directions:
 ### Into Lodestone
 - Meeting transcripts → Extracts module (Fireflies, Gong)
 - Feature status updates from delivery tools (JIRA)
-- In the future: customer quotes, problems and opportunities from CRM and support systems
+- Feature suggestions from public support conversations → Extracts module (Zendesk, Freshdesk)
 
 ### Out of Lodestone
 - New Features created in Lodestone → JIRA issues
@@ -61,11 +62,14 @@ Lodestone currently supports these live integrations:
 | tl;dv | Transcript ingestion with configurable auto-sync | Extracts |
 | JIRA | Delivery synchronization | Features, Releases |
 | Asana | Delivery synchronization | Backlog |
+| Zendesk | Feature suggestions from support tickets with configurable auto-sync | Extracts |
+| Freshdesk | Feature suggestions from support tickets, synced on demand | Extracts |
+| Salesforce | Connects your Salesforce org to Lodestone | — |
 | Amplitude | Product usage questions and Discovery evidence | Discovery |
 | PostHog | Product usage questions and Discovery evidence | Discovery |
 | Lodestone API & MCP | Programmatic access and AI agent connectivity | All modules |
 
-Fireflies, Gong, Fathom, Granola, and tl;dv are discovery integrations — they bring signal in. JIRA and Asana are delivery integrations — they keep Backlog item and status data in sync with your engineering workflow. The Lodestone API & MCP enables external tools, automation, and AI assistants (including custom Claude and ChatGPT configurations) to read and write Lodestone data.
+Fireflies, Gong, Fathom, Granola, tl;dv, Zendesk, and Freshdesk are discovery integrations — they bring signal in. Salesforce is a CRM integration — it connects your Salesforce org. JIRA and Asana are delivery integrations — they keep Backlog item and status data in sync with your engineering workflow. The Lodestone API & MCP enables external tools, automation, and AI assistants (including custom Claude and ChatGPT configurations) to read and write Lodestone data.
 
 All five transcript integrations support **automatic sync** — Lodestone can pull new transcripts and meeting notes on a configurable schedule (every 12 hours, 24 hours, or weekly) rather than requiring a manual import each time.
 
@@ -76,20 +80,13 @@ In addition to transcript ingestion, the Gong integration enriches extracted fea
 
 ## Who Can Manage Integrations
 
-Any workspace member can connect and configure integrations — it is not restricted to admins. Integration settings are found in Settings > Integrations.
+Only Admins can connect, configure, and disconnect integrations. Builders can see which integrations are connected and their status, but integration settings appear greyed out with an Admin-required notice. Integration settings are found in Settings > Integrations.
 
 ---
 
 ## Planned Integrations
 
 Lodestone is actively expanding its integration surface. Integrations in progress or planned include:
-
-### CRM and support systems
-- Salesforce
-- Zendesk
-- Freshdesk
-
-These will expand transcript ingestion and customer signal into Extracts, with the ability to attach customer metadata (company name, contact, ARR/MRR) to ideas surfaced from conversations.
 
 ### Delivery and ticketing systems
 - Azure DevOps
@@ -98,4 +95,4 @@ These will bring the same delivery synchronization currently available with JIRA
 
 ---
 
-*Next: How-tos & Workflows — step-by-step guides for connecting Fireflies, Gong, JIRA, and Asana.*
+*Next: How-tos & Workflows — step-by-step guides for connecting transcript, support, CRM, delivery, and analytics integrations.*

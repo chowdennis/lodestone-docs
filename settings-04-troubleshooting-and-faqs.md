@@ -7,11 +7,11 @@
 
 ### Who can access Settings?
 
-Both Admins and Builders can access Settings, but they have different permissions. Builders cannot update the organization name, description, or logo; assign or change member roles; or connect the Gong integration. Admins can do everything.
+Both Admins and Builders can access Settings, but they have different permissions. Builders cannot update the organization name, description, or logo; assign or change member roles; or connect, configure, or disconnect integrations. Admins can do everything.
 
 ### What's the difference between Admin and Builder?
 
-Admins have full access to all platform features and Settings. Builders have full access to all planning modules (Features, Roadmaps, Releases, Strategy, Documents, Auctions, Extracts) but cannot change organization-level identity, manage roles, or connect Gong.
+Admins have full access to all platform features and Settings. Builders have full access to all planning modules (Features, Roadmaps, Releases, Strategy, Documents, Auctions, Extracts) but cannot change organization-level identity, manage roles, or connect and configure integrations.
 
 ### Can I change a member's role after they've joined?
 
@@ -23,7 +23,7 @@ Yes. Lodestone enforces a minimum of one Admin per workspace. You cannot remove 
 
 ### What happens when an organization is archived?
 
-Builders immediately lose access to the workspace. Admins retain access and can unarchive at any time from Settings > Organization, which immediately restores Builder access.
+It disappears from the organization list for every member, Admins included. Nothing is deleted. To restore it, open **Archived Organizations** from the left-hand navigation and click **Unarchive**. Only Admins of the organization can unarchive it.
 
 ### Are Settings changes global or per-user?
 
@@ -95,13 +95,15 @@ This is a safeguard — there must always be at least one Admin. To remove the c
 
 Creating, renaming, and deleting object types in Settings > Taxonomy is restricted to Admins. Builders can assign types to items and change an item's type from the Backlog, but they cannot modify the type list itself. Have an Admin make the change from Settings > Taxonomy.
 
-### A Builder is trying to connect the Gong integration but can't
+### A Builder is trying to connect an integration but can't
 
-Connecting Gong is restricted to Admins. Have an Admin connect the integration from Settings > Integrations. Once connected, Builders can use the Gong import in the Extracts module.
+Connecting, configuring, and disconnecting integrations is restricted to Admins. Builders see integration settings greyed out with an Admin-required notice, and the **Add Integration** button does not appear for them. Have an Admin connect the integration from Settings > Integrations. Once connected, Builders can use it — for example, the Gong import in the Extracts module.
 
-### The Organization has been archived and Builders have lost access
+### My organization disappeared from the organization list
 
-An Admin needs to log in and unarchive from Settings > Organization. Builder access is restored immediately upon unarchiving.
+It has probably been archived. Archived organizations are hidden from every member's organization list. To restore it, open **Archived Organizations** from the left-hand navigation and click **Unarchive**.
+
+The **Archived Organizations** page only lists organizations you created, and unarchiving requires the Admin role in that organization. If you didn't create the organization, ask the person who did to unarchive it.
 
 ---
 

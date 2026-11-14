@@ -101,7 +101,7 @@ A text-based export of the Release, formatted as a Markdown document. Useful for
 ### HTML (shareable link)
 Generates a responsive, server-rendered HTML snapshot of your Release board and returns a shareable link. Like Roadmap HTML exports, this produces a `/share/...` URL rather than downloading a file — anyone with the link can view the Release in a browser without logging in to Lodestone.
 
-To generate, click the **Export as HTML** button in the Release toolbar. Each generation produces a new URL; previous links remain valid.
+To generate, click the **Export as HTML** button in the Release toolbar, then click **Copy last link** to copy the link. Each generation produces a new URL, and **Copy last link** always copies the most recent one for this Release; previous links remain valid.
 
 Both the **Actual** and **Forecast** views can be exported — make sure you're in the correct mode before exporting.
 

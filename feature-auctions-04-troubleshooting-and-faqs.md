@@ -1,4 +1,4 @@
-# Feature Auctions — Troubleshooting & FAQs
+# Buy-A-Feature — Troubleshooting & FAQs
 *Common issues, edge cases, and answers to frequent questions*
 
 ---

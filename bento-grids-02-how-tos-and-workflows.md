@@ -52,7 +52,7 @@ Uploads the grid directly to your connected Google account and opens it as a Goo
 ### HTML (shareable link)
 Generates a responsive, server-rendered HTML snapshot of the Bento Grid and returns a shareable link. Like the Roadmap and Release HTML exports, this produces a `/share/...` URL rather than downloading a file — anyone with the link can view the grid in a browser without logging in to Lodestone.
 
-Click the **Export as HTML** option in the grid toolbar to generate. Each generation produces a new URL; previous links remain valid.
+Click the **Export as HTML** option in the grid toolbar to generate, then click **Copy last link** to copy the link. Each generation produces a new URL, and **Copy last link** always copies the most recent one for this grid; previous links remain valid.
 
 ---
 

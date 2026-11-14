@@ -1,4 +1,4 @@
-# Comms Packages — Advanced Features & Customization
+# Comms — Advanced Features & Customization
 *Snapshots, artifact ordering, cadence strategy, and designing effective packages*
 
 ---

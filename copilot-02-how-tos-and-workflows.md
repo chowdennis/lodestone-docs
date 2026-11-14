@@ -102,18 +102,16 @@ Archiving hides an object from the active Backlog without deleting it. The objec
 
 Copilot does not permanently delete objects — if you ask it to delete something, it will ask if you meant to archive it instead.
 
-### Regenerating Discovery
+### Regenerating Discovery Trends and Synthesis
 
-> "Regenerate my Discovery trends"
->
-> "Regenerate Synthesis"
->
-> "Regenerate Synthesis focused on integrations"
+The in-app Copilot cannot regenerate Discovery trends or Synthesis. To do this
+from an AI assistant, connect it to Lodestone through MCP, which can regenerate
+trends and Synthesis for your organization. See the Lodestone API & MCP guide
+for setup and the available actions.
 
-Copilot uses the active organization. Trend generation requires at least three
-Extracts. Synthesis requires usable data from at least two supported Discovery
-rooms. A topic is optional and limits the generated opportunities to that
-subject.
+To regenerate them inside Lodestone, open **Discovery > Extracts** and select
+**Regenerate Trends**, or open **Discovery > Synthesis** and select
+**Generate Synthesis**.
 
 ---
 

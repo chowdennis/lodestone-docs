@@ -1,4 +1,4 @@
-# Dashboard — How-tos & Workflows
+# Home — How-tos & Workflows
 *Reading and navigating the Dashboard effectively*
 
 ---

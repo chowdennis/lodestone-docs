@@ -72,7 +72,9 @@ These support go-to-market, stakeholder communication, and external announcement
 
 Documents live on the Feature Detail page, which you access by clicking a Feature name in the backlog. From there you can generate, edit, export, and revisit any Document associated with that Feature.
 
-Documents are living artifacts — they're meant to be updated as a Feature evolves, not written once and forgotten. That said, if you choose to regenerate a Document with AI, be aware that regeneration immediately overwrites the existing content with no warning and no recovery path. If you've made edits worth keeping, copy them before regenerating.
+Documents are living artifacts — they're meant to be updated as a Feature evolves, not written once and forgotten. That said, if you choose to regenerate a whole Document with AI, be aware that regeneration immediately overwrites the existing content with no warning and no recovery path. If you've made edits worth keeping, copy them before regenerating.
+
+To refresh only part of a Document, select the passage and use **Regenerate Selection** instead. Lodestone rewrites just the selected text and leaves the rest of the Document as it is.
 
 ## The Rich Text Editor
 

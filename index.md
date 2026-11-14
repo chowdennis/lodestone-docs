@@ -17,8 +17,8 @@ hero:
       link: /backlog-01-overview-and-concepts
 
 features:
-  - title: Dashboard
-    details: The Command Deck — your live workspace overview organized by the full product lifecycle.
+  - title: Home
+    details: The Command Deck (Dashboard) — your live workspace overview organized by the full product lifecycle.
     link: /dashboard-01-overview-and-concepts
     linkText: Read docs
 
@@ -42,7 +42,7 @@ features:
     link: /strategy-01-overview-and-concepts
     linkText: Read docs
 
-  - title: Goals
+  - title: Goals & Objectives
     details: Define OKR-style objectives and link them to features and roadmap items.
     link: /goals-01-overview-and-concepts
     linkText: Read docs
@@ -67,8 +67,8 @@ features:
     link: /competitive-intel-01-overview-and-concepts
     linkText: Read docs
 
-  - title: Feature Auctions
-    details: Stakeholder bidding sessions that surface true priorities through structured debate.
+  - title: Buy-A-Feature
+    details: Feature auctions — stakeholder bidding sessions that surface true priorities through structured debate.
     link: /feature-auctions-01-overview-and-concepts
     linkText: Read docs
 
@@ -87,13 +87,18 @@ features:
     link: /copilot-01-overview-and-concepts
     linkText: Read docs
 
-  - title: Comms Packages
-    details: Send curated packages of roadmaps, releases, strategies, and more to stakeholders on a schedule.
+  - title: Comms
+    details: Comms Packages — send curated packages of roadmaps, releases, strategies, and more to stakeholders on a schedule.
     link: /comms-01-overview-and-concepts
     linkText: Read docs
 
+  - title: ARC
+    details: Anticipated Reactions Coach — simulate how stakeholder personas will react to a plan before you present it.
+    link: /arc-01-overview-and-concepts
+    linkText: Read docs
+
   - title: Integrations
-    details: Connect Lodestone to JIRA, Slack, and other tools for two-way sync and workflow automation.
+    details: Sync delivery work with JIRA and Asana, bring in customer signal from Fireflies, Gong, Fathom, Granola, tl;dv, Zendesk, and Freshdesk, and connect Salesforce, Amplitude, and PostHog.
     link: /integrations-01-overview-and-concepts
     linkText: Read docs
 

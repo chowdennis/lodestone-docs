@@ -5,7 +5,7 @@
 
 ## Choosing Your Report Frequency
 
-Lodestone supports two automatic report frequencies: **Weekly** and **Biweekly**.
+Lodestone supports two automatic report frequencies: **Weekly** and **Every 2 weeks** (biweekly).
 
 | Frequency | Best for |
 |---|---|

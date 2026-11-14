@@ -51,7 +51,26 @@ There is no publish or approval step — edits are saved as you work.
 
 If you've updated a Feature Description and want to refresh a Document's content, you can regenerate it.
 
-> **Warning:** Regenerating a Document immediately overwrites the existing content with no warning prompt and no way to recover the previous version. If you've made edits you want to keep, copy them elsewhere before regenerating.
+> **Warning:** Regenerating a Document immediately overwrites the existing content with no warning prompt and no way to recover the previous version. If you've made edits you want to keep, copy them elsewhere before regenerating. To change only part of a Document, use **Regenerate Selection** (below).
+
+---
+
+## Regenerating a Selected Passage
+
+When only part of a Document needs work — a weak paragraph, a vague list of requirements, an off-tone sentence — you can regenerate just that part and keep everything else.
+
+1. Open the Document in the editor.
+2. Select the text you want to rewrite.
+3. Click **Regenerate Selection** in the action bar at the bottom of the editor, next to **Generate Draft**.
+4. Wait while the button shows **Regenerating...**. The editor is read-only until the new text is in place.
+
+Lodestone rewrites the selected passage to fit the text around it, keeps its formatting (headings, lists, bold), and saves the Document right away. The rest of the Document doesn't change.
+
+**Regenerate Selection** is available only while text is selected. It works on every Document type and announcement except Release Notes.
+
+> **Tip:** The rewrite is a substantial rework, not a light rephrase. If you only want a small wording change, edit the text directly.
+
+If the rewrite fails, Lodestone shows "Could not regenerate the selected text. Please try again." and leaves your Document unchanged.
 
 ---
 
@@ -79,11 +98,11 @@ Markdown exports are useful for pasting into Notion, Confluence, GitHub, or any 
 
 1. Open the Feature Detail page.
 2. Find the Document you want to export.
-3. Click the **Export** button and select **HTML**.
-4. Lodestone generates a responsive HTML snapshot and returns a shareable `/share/...` link.
-5. Copy the link and share it with anyone — the recipient can view the document in a browser without logging in to Lodestone.
+3. Click the **Export** button and select **Export as HTML**.
+4. Lodestone generates a responsive HTML snapshot and creates a shareable `/share/...` link.
+5. Click **Copy last link** to copy the link, then share it with anyone — the recipient can view the document in a browser without logging in to Lodestone.
 
-Unlike PDF and Markdown, the HTML export does not download a file — it produces a URL. Each time you click HTML export, a new snapshot is generated and a new URL is returned. Previous links remain valid.
+Unlike PDF and Markdown, the HTML export does not download a file — it produces a URL. **Export as HTML** is always available: each time you click it, Lodestone generates a new snapshot with a new URL, and **Copy last link** copies the most recent one for that Document. Previous links remain valid.
 
 ---
 

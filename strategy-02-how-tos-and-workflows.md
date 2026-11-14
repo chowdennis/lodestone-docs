@@ -126,7 +126,7 @@ Click the Markdown export button (`.md`) in the export toolbar to download the S
 
 ### HTML (shareable link)
 
-Click **Export as HTML** in the export toolbar to generate a responsive, server-rendered HTML snapshot of your Strategy and receive a shareable `/share/...` URL. Anyone with the link can view the Strategy in a browser without logging in to Lodestone. Each generation produces a new URL.
+Click **Export as HTML** in the export toolbar to generate a responsive, server-rendered HTML snapshot of your Strategy and receive a shareable `/share/...` URL. Once the link is ready, click **Copy last link** to copy it. Anyone with the link can view the Strategy in a browser without logging in to Lodestone. Each generation produces a new URL, and **Copy last link** always copies the most recent one for this Strategy.
 
 ---
 

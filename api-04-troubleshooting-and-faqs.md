@@ -10,9 +10,21 @@ Check that the request includes `Authorization: Bearer <API key>`, the key is ac
 
 The credential is authenticated but lacks the operation's scope. Check the live OpenAPI document and key settings. Rotate to a credential with the appropriate least-privilege scope; existing keys may use temporary `features:read` / `features:write` compatibility aliases for some newer scopes. Alias usage is logged and should not be treated as a permanent contract.
 
+A `403` can also come from the key's creator: a key never has more access than its creator's current role. Revoking a key also returns `403` unless you created it or are an Admin of the organization.
+
+### My API key lost access or scopes after a role change
+
+Lodestone checks each key against its creator's current role on every request. If the creator was changed from Admin to Builder, the key loses scopes Builders cannot hold (such as `settings:write`). If the creator was removed from the organization, the key stops working. Create a replacement key from an account with the access the integration needs, update the integration, then revoke the old key.
+
 ### MCP cannot access the intended organization
 
-MCP uses Lodestone OAuth user sign-in, not an API key copied into the client. Call `list_organizations` and then `set_active_organization` for the organization to use in the session.
+MCP uses Lodestone OAuth user sign-in, not an API key copied into the client. Call `list_organizations` and then `set_active_organization` for the organization to use. The selection is remembered across sessions, so MCP keeps using that organization until you change it.
+
+If you are no longer a member of the saved organization, MCP returns an error instead of switching to another organization. Call `list_organizations` and choose a new one with `set_active_organization`.
+
+### My status update was rejected
+
+Status must be a platform status or a custom status stage configured for your organization. The error response lists the valid values. In MCP, call `list_status_stages` to see them.
 
 ## Identifiers, routes, and payloads
 

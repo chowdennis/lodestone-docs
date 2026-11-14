@@ -113,6 +113,23 @@ See the FAQ above on AI-generated documents. The most effective fix is improving
 
 No. Dismissing an Extract permanently deletes it — there is no undo or recovery path. If the idea was important, you'll need to create it manually as a Feature in the Backlog.
 
+### My CSV or Excel import failed
+
+An import either adds every row or adds nothing. When something goes wrong, Lodestone shows an **Import failed** message that says what to fix. Correct the file and import it again; nothing from the failed attempt was added.
+
+| Message | What to do |
+|---|---|
+| "Row 4 has no feature name in the selected column. Nothing was imported." | Fill in the feature name on the listed rows, or check that you mapped the right column. Lodestone lists up to five row numbers. |
+| "Row N: … Nothing was imported." | Lodestone couldn't save that row. Check the row named in the message and try again. |
+| "The file is larger than 5 MB." | Split the file or remove columns you don't need. |
+| "Older .xls files aren't supported. Save it as .xlsx or .csv in Excel and try again." | Re-save the workbook in a newer format. |
+| "The file needs a header row and at least one row of data." | Make sure the first row holds column names and at least one Feature follows it. |
+| "The CSV file couldn't be read." / "The Excel file couldn't be read." | The file may be damaged or not a real CSV or Excel file. Export it again from your spreadsheet tool. |
+
+Row numbers match the row numbers you see in Excel or Google Sheets, with the header as row 1.
+
+If your file has more than 2,000 rows, Lodestone doesn't fail the import. It warns you and imports only the first 2,000 rows.
+
 ### The Type column isn't showing in my Backlog
 
 If the Type column is not visible, check that your organization has completed Taxonomy setup in Settings > Taxonomy. The column appears once at least one type has been configured. If types are configured but the column is still missing, try a hard refresh (Cmd+Shift+R or Ctrl+Shift+R).

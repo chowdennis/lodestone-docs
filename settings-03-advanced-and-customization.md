@@ -88,7 +88,7 @@ The built-in frameworks (RICE, ICE, WSJF, etc.) cover most prioritization needs,
 With only two roles, role assignment is straightforward — but a few patterns are worth considering:
 
 ### Default to Builder
-Unless someone specifically needs to change org-level settings or connect the Gong integration, Builder is the right default. It gives full access to all planning modules without the risk of accidental org-level changes.
+Unless someone specifically needs to change org-level settings or connect and configure integrations, Builder is the right default. It gives full access to all planning modules without the risk of accidental org-level changes.
 
 ### Keep Admins to a small group
 Admins can change the Organization Description, reassign roles, and archive the organization. Limit Admin access to people who actively manage the workspace — typically the PM lead, product ops, or whoever owns the Lodestone setup.
@@ -125,7 +125,7 @@ A quick reference for understanding the ripple effects of Settings changes:
 | Status Stage deleted | Feature backlog, Releases — affected Features move to default stage |
 | Evaluation Framework changed | Feature backlog display, Feature Detail pages |
 | Strategy Default changed | Default selection when creating a new Strategy |
-| Integration connected / disconnected | Extracts (Fireflies, Gong), Feature sync (JIRA) |
+| Integration connected / disconnected | Extracts (transcript integrations, Zendesk, Freshdesk), Feature sync (JIRA, Asana), Discovery (Amplitude, PostHog) |
 
 ---
 

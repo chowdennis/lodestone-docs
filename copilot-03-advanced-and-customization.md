@@ -48,18 +48,21 @@ Copilot is subject to rate limiting per user to ensure platform stability for al
 
 In Agentic mode, Copilot can access:
 - Your backlog items (features): name, key, status, description
+- Your configured object types (for example Feature, Epic, Bug)
+- Parent and child relationships between objects
+- Your goals: name, description, and the objects, roadmaps, releases, and strategies linked to them
 - Your roadmaps (projects): name, list of features
 - Your releases: name, status, feature count
 - Your strategies: name
-- Discovery trend and Synthesis regeneration actions
 
 It does not currently have access to:
 - Customer quotes attached to features
 - Evaluation scores or RICE/custom field values
 - Financial Forecast models or assumptions
 - Bento Grids or export history
-- The full contents of Competitive Intelligence reports in conversational
-  answers
+- Discovery: Extracts, trends, Usage Analytics, Synthesis, or Competitive Intelligence reports
+
+Copilot cannot regenerate Discovery trends or Synthesis. These actions are available to AI assistants connected through MCP. See the Lodestone API & MCP guide.
 
 This means Copilot is best used for structural and workflow tasks — creating, organizing, and updating objects — rather than analytical tasks that depend on scores or evidence.
 

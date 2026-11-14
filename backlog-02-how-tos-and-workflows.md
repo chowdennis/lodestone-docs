@@ -27,19 +27,25 @@ When you accept an Extract — an AI-identified idea surfaced from a meeting tra
 
 ---
 
-## Importing Features from CSV
+## Importing Features from CSV or Excel
 
-If you have a list of Features in a spreadsheet, you can import them directly into the Backlog using a CSV file.
+If you have a list of Features in a spreadsheet, you can import them directly into the Backlog from a CSV file or an Excel workbook (.xlsx).
 
 1. Navigate to the Backlog from the left-hand navigation.
-2. Select the import option from the Backlog toolbar.
-3. Upload your CSV file.
-4. In the field mapping step, match each column in your CSV to the corresponding Lodestone field — Name, Description, Status, or evaluation inputs.
-5. Confirm the mapping. Features are added to your backlog immediately.
+2. Open the **Import/Export** menu in the Backlog toolbar and select **Import from CSV / Excel**.
+3. Choose your .csv or .xlsx file. For an Excel workbook, Lodestone reads the first worksheet.
+4. In the **Map Columns** dialog, choose which column holds the Feature Name and which holds the Description. Each must be a different column. Columns without a header appear as Column A, Column B, and so on.
+5. Confirm the mapping. Lodestone adds the Features to your backlog and shows how many it imported.
 
-> **Tip:** The only required mapping is Feature Name. Description is optional but recommended — Features imported with a description are ready for AI document generation without additional editing.
+The first row of the file is treated as the header row. Files can be up to 5 MB, and Lodestone imports up to 2,000 rows from a single file. If your file has more rows, Lodestone warns you and imports only the first 2,000.
 
-> **Note:** CSV import creates new Features only — it does not update existing ones. Importing a file with a name that already exists in your backlog will create a duplicate.
+An import is all or nothing. If any row can't be imported, for example a row with no feature name, Lodestone tells you which row and imports nothing, so you can fix the file and try again.
+
+> **Tip:** Feature Name and Description are both required, and they're the only two fields an import fills in. Set status, evaluation scores, and other fields on the Features after you import them. Imported Features with a good description are ready for AI document generation without extra editing.
+
+> **Note:** Older Excel files (.xls) aren't supported. Open the file in Excel and save it as .xlsx or .csv first.
+
+> **Note:** Import creates new Features only. It does not update existing ones. Importing a file with a name that already exists in your backlog creates a duplicate.
 
 ---
 

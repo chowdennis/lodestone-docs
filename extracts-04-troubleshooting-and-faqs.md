@@ -7,11 +7,11 @@
 
 ### What file format does my transcript need to be in?
 
-Transcripts must be uploaded as files — there is no paste field. Audio and video files are not supported; these need to be transcribed first by a recording platform (such as Fireflies or Gong) before being brought into Lodestone. Competitive Intelligence reports can also be sent to Extracts using the Extract Features from Report action in the Intel module — no file upload required for those.
+Transcripts must be uploaded as files — there is no paste field. Audio and video files are not supported; these need to be transcribed first by a recording platform (such as Fireflies or Gong) before being brought into Lodestone. Competitive Intelligence reports can also be sent to Extracts using the Extract Features from Report action in Competitive Intel — no file upload required for those.
 
 ### How long does analysis take after I upload a transcript?
 
-Processing time varies depending on the length of the transcript. A processing indicator is shown while analysis is in progress. There is no notification when Extracts are ready — you'll need to return to the Extracts module and check manually.
+Processing time varies depending on the length of the transcript. A processing indicator is shown while analysis is in progress. There is no notification when Extracts are ready — you'll need to return to **Discovery > Extracts** and check manually.
 
 ### Can I edit an Extract before promoting it to my backlog?
 
@@ -48,6 +48,35 @@ A few things to check:
 - Make sure the transcript is in a supported file format
 - Check that the transcript contains substantive content — very short or sparse transcripts may not produce Extracts
 - Check the processing indicator — if it's still showing, analysis is still in progress. Refresh the page once it has completed.
+- Check the **Keyword Filter** on the **All Extracts** tab. When keywords are set, the AI only extracts features that mention those terms. Remove keywords that are too narrow and try again.
+- If you saw an **Analysis failed** or **Analysis partly complete** message, see the next section.
+
+### What do the analysis messages mean?
+
+When analysis finishes, Lodestone shows one of these messages:
+
+| Message | What it means |
+|---|---|
+| **Analysis complete!** | Analysis finished and lists how many features it found. |
+| **No features found** | The AI read the transcript but found no product ideas. Try a different file or check the content. If you use the Keyword Filter, check that your keywords are not too narrow. |
+| **Analysis partly complete** | Long transcripts are analyzed in sections. Some sections could not be analyzed, but the features found in the others are kept. The message says how many sections failed and why. |
+| **Analysis failed** | No section could be analyzed. The message gives the reason (see below). |
+
+Common reasons shown with **Analysis partly complete** or **Analysis failed**:
+
+| Reason | What to do |
+|---|---|
+| "The AI service is busy. Please wait a minute and try again." | Wait a minute, then upload the transcript again. |
+| "The AI's answer was too long and got cut off. Please try again." | Try again. If it keeps happening, split the transcript into smaller files. |
+| "The AI's reply couldn't be read as feature suggestions." | Try again. This is usually temporary. |
+| "This part of the transcript is too long for the AI to read. Try a shorter file." | Split the transcript into smaller files. |
+| "Content too long. Maximum 500,000 characters allowed." | The transcript exceeds the size limit. Split it into smaller files. |
+| "The AI service has reached its usage limit. Please contact support." | Contact Lodestone support. Retrying does not help. |
+| "The AI model used for extraction is unavailable. Please contact support." | Contact Lodestone support. |
+| "The AI service rejected our credentials. Please contact support." | Contact Lodestone support. |
+| "Something went wrong while analyzing the transcript." or "The AI service returned an error. Please try again." | Try again. If it persists, contact support. |
+
+Lodestone retries temporary problems automatically before showing a message. Problems that retrying cannot fix, like a usage limit, stop the analysis straight away.
 
 ### My Extracts don't reflect what was actually discussed in the meeting
 
@@ -58,6 +87,12 @@ It's also worth remembering that the AI surfaces ideas based on what appears in 
 ### I accidentally dismissed an Extract I wanted to keep
 
 There is no recovery path. Dismissed Extracts are permanently deleted. You'll need to create the Feature manually from the backlog. Going forward, take a moment to read each Extract carefully before dismissing — the action is irreversible.
+
+### I can't see Extracts in the navigation
+
+Extracts now lives inside **Discovery**. Select **Discovery** in the left-hand navigation; the Extracts room opens first. There is no longer a separate Extracts item in the navigation.
+
+If **Discovery** is missing from your navigation, Discovery is not enabled for your organization. Extracts, Competitive Intel, Usage Analytics, and Synthesis are all unavailable, and links to them show a "Not Found" page. Contact your Lodestone administrator if you expect access.
 
 ### Fireflies or Gong transcripts aren't appearing in the import list
 

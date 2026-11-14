@@ -59,6 +59,7 @@ Lodestone is organized around core objects that reflect how product work actuall
 | **Competitive Intelligence** | AI-generated competitor tracking and market analysis |
 | **Financial Forecast** | Financial modeling (NPV, ROI, IRR) for individual Features |
 | **Bento Grids** | Visual release summaries designed for sharing with stakeholders and customer-facing teams |
+| **ARC** | Simulates how key stakeholders are likely to react to a plan or document before you present it |
 
 This stack is **not prescriptive**. Users may start at any point depending on their needs. A PM might begin by uploading a customer call transcript, or they might start by sketching out a roadmap. Lodestone accommodates both.
 
@@ -114,13 +115,21 @@ A few principles shape how Lodestone behaves across every module:
 
 ---
 
-## The Dashboard
+## Home
 
-When you log in to Lodestone, the Dashboard is the first thing you see. Called the **Command Deck**, it organizes recent workspace activity into five columns — Collecting Data, Processing Data, Making Plans, Aligning Plans, and Executing Plans — reflecting the full product lifecycle at a glance.
+When you log in to Lodestone, **Home** (also called the Dashboard) is the first thing you see. Called the **Command Deck**, it organizes recent workspace activity into five columns — Collecting Data, Processing Data, Making Plans, Aligning Plans, and Executing Plans — reflecting the full product lifecycle at a glance.
 
 New items (objects created or updated since your last visit) are highlighted automatically. The columns can be reordered by drag-and-drop to match your workflow.
 
-See the Dashboard module documentation for full details.
+See the Home module documentation for full details.
+
+---
+
+## ARC
+
+ARC (Anticipated Reactions Coach), in the left-hand navigation, lets you rehearse a stakeholder review before it happens. You describe your stakeholders as personas, then run a simulation against a feature document, roadmap, release, bento grid, or strategy. Each persona responds with the concerns they're likely to raise and suggested edits to address them.
+
+See the ARC module documentation for full details.
 
 ---
 
@@ -145,4 +154,4 @@ If you're new to Lodestone, start with the Overview & Concepts page for whicheve
 
 ---
 
-*This documentation covers the current Lodestone platform, updated to reflect all modules including Competitive Intelligence, Financial Forecast, Bento Grids, and the Lodestone API.*
+*This documentation covers the current Lodestone platform, updated to reflect all modules including Competitive Intelligence, Financial Forecast, Bento Grids, ARC, and the Lodestone API.*

@@ -1,4 +1,4 @@
-# Feature Auctions — How-tos & Workflows
+# Buy-A-Feature — How-tos & Workflows
 *Step-by-step guides for the most common Feature Auction workflows*
 
 ---
@@ -9,7 +9,7 @@ Any workspace member can create a Feature Auction. The creation flow has five st
 
 ### Step 1: Auction Details
 
-1. Navigate to the Feature Auctions module.
+1. Navigate to **Buy-A-Feature** from the left-hand navigation.
 2. Click to create a new auction.
 3. Enter the following:
    - **Auction Name** (required)

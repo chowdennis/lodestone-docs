@@ -1,4 +1,4 @@
-# Comms Packages — Troubleshooting & FAQs
+# Comms — Troubleshooting & FAQs
 
 ---
 

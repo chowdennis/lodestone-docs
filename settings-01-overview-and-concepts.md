@@ -21,7 +21,7 @@ Settings is organized into four sections:
 | Team | Member invitations, role assignments, and access management |
 | Taxonomy | Custom object type definitions, prefixes, top-tier type, and parent/child type constraints |
 | Modules | Strategy defaults, evaluation frameworks, feature status stages, and financial forecast defaults — organized into sub-tabs (Strategy, Features, Financial Forecast) |
-| Integrations | Connections to Fireflies, Gong, and JIRA |
+| Integrations | Connections to Fireflies, Gong, Fathom, Granola, tl;dv, Zendesk, Freshdesk, Salesforce, JIRA, Asana, Amplitude, PostHog, and the Lodestone API & MCP |
 
 ---
 
@@ -33,11 +33,11 @@ Lodestone has two roles: **Admin** and **Builder**. Admins can do everything in 
 |---|---|---|
 | Update organization name, description, and logo | ✓ | ✗ |
 | Assign or change member roles | ✓ | ✗ |
-| Connect the Gong integration | ✓ | ✗ |
+| Connect, configure, or disconnect integrations | ✓ | ✗ |
 | Create, rename, or delete object types (Taxonomy) | ✓ | ✗ |
 | Configure status stages, evaluation criteria, strategy defaults | ✓ | ✓ |
 | Assign types to Backlog items | ✓ | ✓ |
-| Connect Fireflies and JIRA integrations | ✓ | ✓ |
+| View connected integrations and their status | ✓ | ✓ |
 | Invite and remove team members | ✓ | ✓ |
 
 There must always be at least one Admin in a workspace — the last Admin cannot be removed or demoted.

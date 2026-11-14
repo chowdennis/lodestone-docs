@@ -1,4 +1,4 @@
-# Feature Auctions — Advanced Features & Customization
+# Buy-A-Feature — Advanced Features & Customization
 *Wallet strategy, pricing design, and getting the most from your auctions*
 
 ---

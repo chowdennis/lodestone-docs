@@ -1,4 +1,4 @@
-# Dashboard — Troubleshooting & FAQs
+# Home — Troubleshooting & FAQs
 *Common questions about the Dashboard*
 
 ---

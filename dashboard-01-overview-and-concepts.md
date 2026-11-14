@@ -1,11 +1,11 @@
-# Dashboard — Overview & Concepts
+# Home — Overview & Concepts
 *What the Dashboard shows, how it's organized, and why it's designed this way*
 
 ---
 
-## What Is the Dashboard?
+## What Is Home?
 
-The Dashboard is the first thing you see when you log into Lodestone. It gives you a live view of what is happening across your workspace — organized not by module, but by the stage of product work each item represents.
+Home (also called the Dashboard) is the first thing you see when you log into Lodestone, and it's the **Home** item at the top of the left-hand navigation. It gives you a live view of what is happening across your workspace — organized not by module, but by the stage of product work each item represents.
 
 It is called the **Command Deck**: a five-column view of the full product lifecycle, from raw ideas to shipped releases. Each column represents a distinct phase of the PM's job, and every recent object in your workspace lands in one of those columns.
 

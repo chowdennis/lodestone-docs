@@ -1,11 +1,11 @@
-# Comms Packages — How-tos & Workflows
+# Comms — How-tos & Workflows
 *Step-by-step guides for creating packages, managing schedules, and working with recipient groups*
 
 ---
 
 ## Creating a Package
 
-1. Navigate to **Comms Package Center** from the left-hand navigation.
+1. Navigate to **Comms** from the left-hand navigation. The **Comms Package Center** opens.
 2. Click **New package**.
 3. Work through the five-step form:
 

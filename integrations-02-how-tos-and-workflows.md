@@ -138,6 +138,108 @@ After connecting, you can configure Lodestone to pull new Gong transcripts autom
 
 ---
 
+## Connecting Zendesk
+
+The Zendesk integration analyzes public support conversations in your Zendesk tickets and turns them into feature suggestions in Extract. You review each suggestion in Extract before adding it to the Backlog. Lodestone only reads tickets — it never changes anything in Zendesk.
+
+Before you start, a Zendesk admin creates an OAuth client in Zendesk Admin Center:
+
+- Set the redirect URL to `https://app.lodestone.pm/integrations/zendesk/callback`.
+- Keep the client's identifier and secret on hand.
+
+When you connect, Lodestone asks Zendesk for read-only access to tickets (the `tickets:read` scope).
+
+1. In Lodestone, go to Settings > Integrations.
+2. Select **Add Integration**, then select **Zendesk** under **Customer Support**.
+3. Enter your **Zendesk Subdomain**. For `your-company.zendesk.com`, enter `your-company`.
+4. Enter the **Zendesk Client ID** and **Zendesk Client Secret** from your OAuth client.
+5. Select **Connect**, then sign in to Zendesk and approve read access to tickets.
+
+Lodestone returns you to Settings > Integrations, where the Zendesk card shows the connection.
+
+### Syncing Zendesk tickets
+
+Select **Sync** on the Zendesk card to analyze tickets now. When the sync finishes, Lodestone shows how many tickets it analyzed, how many suggestions it added to Extract, and how many previously analyzed tickets it skipped. Each ticket is analyzed only once. Select **Review suggestions in Extract** to review the results.
+
+If some tickets fail, Lodestone lists the errors. Select **Sync** again to retry them.
+
+### Configuring Zendesk auto-sync
+
+1. On the Zendesk card, select **Settings**.
+2. Turn on **Auto Sync**.
+3. Choose how often to sync under **Sync every**: 1 hour, 4 hours, 8 hours, 12 hours, 24 hours, or 7 days. The default is 24 hours.
+
+The card shows when Zendesk last synced and when the next sync is due. To change the subdomain or OAuth client, select **Update connection** in the card's settings.
+
+Disconnecting Zendesk does not delete tickets in Zendesk or suggestions already in Extract.
+
+Only Admins can connect, configure, or disconnect Zendesk.
+
+---
+
+## Connecting Freshdesk
+
+The Freshdesk integration turns customer support conversations in your Freshdesk tickets into Extracts. Lodestone only reads tickets — it never changes anything in Freshdesk.
+
+Before you start, copy your API key from your Freshdesk profile settings.
+
+1. In Lodestone, go to Settings > Integrations.
+2. Select **Add Integration**, then select **Freshdesk** under **CRM**.
+3. Enter your **Freshdesk domain** — your subdomain or full domain, such as `company.freshdesk.com`.
+4. Enter your **API key**.
+5. Select **Test Connection** to check the details. Lodestone shows "Connection test passed." when they work.
+6. Select **Save**. Lodestone checks the connection again before saving.
+
+The API key is not displayed again after you save. The Freshdesk card shows **Connected** and your Freshdesk domain.
+
+### Syncing Freshdesk tickets
+
+Freshdesk syncs on demand. There is no automatic sync schedule.
+
+1. On the Freshdesk card, select **Sync Tickets**.
+2. Keep the page open until the sync finishes. Lodestone checks tickets updated in the last 30 days.
+3. Lodestone shows a running summary: Extracts created, tickets unchanged, tickets without eligible feature asks, and tickets that failed.
+4. Select **View Extracts** to review the results in Extract.
+
+Only public ticket conversations are analyzed. Tickets that haven't changed since the last sync are skipped, so you can sync again at any time without creating duplicates.
+
+### Disconnecting Freshdesk
+
+Select **Disconnect** on the Freshdesk card. Lodestone removes the saved connection and stops syncing. Extracts already created from Freshdesk tickets stay in Lodestone, and nothing in Freshdesk changes.
+
+Only Admins can connect, sync, or disconnect Freshdesk.
+
+---
+
+## Connecting Salesforce
+
+The Salesforce integration connects your Salesforce org to Lodestone through a Salesforce Connected App.
+
+Before you start, a Salesforce admin sets up the Connected App:
+
+1. Log in to Salesforce and open **Setup**.
+2. Create or open the Connected App used for Lodestone.
+3. Enable OAuth settings and set the callback URL to `https://app.lodestone.pm/integrations/salesforce/callback`.
+4. Add the OAuth scopes **Manage user data via APIs (api)** and **Perform requests at any time (refresh_token, offline_access)**.
+5. Copy the **Consumer Key** and **Consumer Secret**.
+
+Then connect in Lodestone:
+
+1. Go to Settings > Integrations.
+2. Select **Add Integration**, then select **Salesforce** under **CRM**.
+3. Enter the Consumer Key as the **Salesforce Client ID** and the Consumer Secret as the **Salesforce Client Secret**.
+4. Select **Connect**, then sign in to Salesforce and approve access.
+
+Lodestone returns you to Settings > Integrations, where the Salesforce card shows **Connected** and the date you connected. Salesforce has no sync settings to configure.
+
+### Disconnecting Salesforce
+
+Select **Disconnect** on the Salesforce card. Lodestone removes the saved connection. Nothing in Salesforce changes.
+
+Only Admins can connect or disconnect Salesforce.
+
+---
+
 ## Connecting JIRA
 
 The JIRA integration keeps Features and delivery status in sync between Lodestone and JIRA Cloud. It operates at the Feature level — Lodestone Features map to JIRA issues at a level you define (Epic, Story, Task, or Subtask).
@@ -159,7 +261,7 @@ After activating, configure how data flows between systems using three controls:
 Enables interval-based polling. Lodestone checks JIRA for updates at a frequency you define (e.g. every hour). Recommended as a baseline for all teams.
 
 **Webhooks**
-Enables real-time bidirectional updates. Changes in Lodestone immediately update JIRA, and changes in JIRA immediately update Lodestone — no polling delay. Recommended for teams that need immediate status accuracy.
+Enables real-time bidirectional updates. Changes in Lodestone immediately update JIRA, and changes in JIRA immediately update Lodestone — no polling delay. Recommended for teams that need immediate status accuracy. See *Setting up JIRA webhooks* below.
 
 **Status Mapping**
 Defines how JIRA issue statuses correspond to Lodestone Feature status stages. Because JIRA and Lodestone may use different terminology, you must map them manually. Example:
@@ -171,6 +273,22 @@ Defines how JIRA issue statuses correspond to Lodestone Feature status stages. B
 | Done, Closed | Completed |
 
 Status mappings can be edited at any time. Getting this right is critical — incorrect mapping means Release boards and Roadmaps will reflect inaccurate delivery progress.
+
+### Setting up JIRA webhooks
+
+Each Lodestone organization has its own webhook URL, and Lodestone accepts only webhook deliveries signed with your organization's webhook secret.
+
+1. In Settings > Integrations, find **Real-time Webhooks** on the JIRA integration.
+2. Select **Enable Webhooks**.
+
+If your JIRA account has admin access, Lodestone registers the webhook in JIRA for you. If not, Lodestone shows **Manual webhook setup required** with a webhook URL and a secret. A JIRA admin then completes the setup in JIRA:
+
+1. In JIRA, go to **⚙ Settings → System → WebHooks** and create a webhook.
+2. Paste the webhook URL Lodestone showed.
+3. Paste the secret into the webhook's **Secret** field.
+4. Select the **Issue: Created** and **Issue: Updated** events, then save.
+
+> **Note:** Lodestone shows the secret only once. If you lose it, select **Disable** and then **Enable Webhooks** again to get a new secret, and update the webhook's **Secret** field in JIRA.
 
 ### Step 3: Connect multiple JIRA projects (if needed)
 

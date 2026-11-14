@@ -5,18 +5,19 @@
 
 ## What Is Discovery?
 
-Discovery is the workspace for gathering and combining evidence before deciding what to build. It contains four connected rooms:
+Discovery is the workspace for gathering and combining evidence before deciding what to build. Select **Discovery** in the left-hand navigation to open it. Extracts and Competitive Intel, which used to have their own navigation items, now live here as rooms. Discovery contains four connected rooms, shown as tabs:
 
 | Room | Signal |
 |---|---|
 | **Extracts** | Ideas and quotes from customer conversations and reports |
-| **Usage Analytics** | Behavioral evidence from product analytics integrations (coming soon) |
+| **Usage Analytics** | Funnel drop-offs from saved funnels in your connected PostHog project |
 | **Competitive Intel** | Competitor activity and market reports |
 | **Synthesis** | AI-generated opportunities supported by multiple rooms |
 
-Usage Analytics remains visible as a preview but is not available yet.
-Synthesis does not require Usage Analytics; it becomes available when at least
-two supported rooms contain usable data.
+Usage Analytics unlocks once PostHog is connected and verified in Settings →
+Integrations. Until then, its tab shows a lock. Synthesis brings together data
+from the other Discovery rooms, so add Extracts, run a Competitive Intel report,
+or connect PostHog before you generate it.
 
 ## Discovery Creates Features
 
@@ -38,8 +39,10 @@ Synthesis flags opportunities whose names already match a Backlog item or an opp
 
 ## Roles
 
-Admins and Builders can use Discovery. Usage Analytics remains unavailable
-until supported product analytics integrations are released.
+Admins and Builders can use every Discovery room, including importing funnels,
+syncing, and reviewing drop-offs in Usage Analytics. Connecting PostHog happens
+in Settings → Integrations, where Settings permissions apply: Builders cannot
+change integration settings.
 
 ---
 

@@ -23,19 +23,27 @@ No. Documents are attached to the Feature they were created for and cannot be re
 
 ### Who can see Documents?
 
-Documents are internal by default. They are only visible to members of your Lodestone workspace. They become shareable externally when exported as PDFs or PPTs, but they are never published or exposed automatically.
+Documents are internal by default. They are only visible to members of your Lodestone workspace. They become shareable externally when exported as PDFs, PPTs, or HTML links, but they are never published or exposed automatically.
 
 ### Can I export Documents in formats other than PDF?
 
-All Documents can be exported as PDF. The Opportunity Canvas also supports export as a single PowerPoint slide. No other export formats are currently available.
+Yes. All Documents can be exported as PDF, Markdown (.md), or HTML (a shareable link). The Opportunity Canvas also supports export as a single PowerPoint slide.
 
 ### Will regenerating a Document overwrite my edits?
 
-Yes, immediately and without a warning prompt. Regenerating replaces the entire existing Document with a new AI-generated version — there is no version history and no way to recover the previous content. If you've made edits you want to keep, copy them somewhere safe before regenerating.
+Regenerating the whole Document does — immediately and without a warning prompt. It replaces the entire existing Document with a new AI-generated version, and there is no version history and no way to recover the previous content. If you've made edits you want to keep, copy them somewhere safe before regenerating.
+
+**Regenerate Selection** doesn't. It rewrites only the text you select and leaves the rest of the Document, including your edits, untouched.
+
+### Can I regenerate just one paragraph or section?
+
+Yes. Select the text in the editor and click **Regenerate Selection** in the action bar at the bottom. Lodestone rewrites only that passage, matches it to the surrounding text, keeps its formatting, and saves the Document. The button is available only while text is selected, and works on every Document type except Release Notes.
+
+If you see "Could not regenerate the selected text. Please try again.", nothing in your Document has changed. Try again, or select a slightly different passage.
 
 ### Can I share a Document directly from Lodestone without exporting it?
 
-No. Export is the only way to share a Document externally. All Documents can be exported as PDF, and the Opportunity Canvas can also be exported as a PowerPoint slide. There is no shareable link or in-app sharing option.
+Yes, with the HTML export. Click **Export**, then **Export as HTML**, and use **Copy last link** to copy a `/share/...` link. Anyone with the link can view the Document in a browser without logging in. The link shows a snapshot of the Document at the time you exported it; it does not update as you edit. You can also share a Document as a PDF or Markdown file, and the Opportunity Canvas as a PowerPoint slide.
 
 ---
 
@@ -55,6 +63,8 @@ If both inputs are strong and output is still off, try a different document type
 The most common cause is a missing Feature Description. Lodestone requires both a Feature Name and a Feature Description to generate a Document. If the Description field is empty, fill it in before trying again.
 
 Also make sure you don't navigate away while generation is in progress — if you leave the page before generation completes, you'll return to a blank document.
+
+If generation starts but then stops partway, Lodestone shows **Generation Error: The server stopped responding before the draft finished. Please try again.** This appears when no new text has arrived for 30 seconds. Click **Reset Generator** to clear the error, then generate again. The same applies to announcements.
 
 ### My Opportunity Canvas isn't appearing in the Roadmap PPT export appendix
 
