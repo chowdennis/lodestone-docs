@@ -30,6 +30,8 @@ export default defineConfig({
   title: "Lodestone Docs",
   description: "Product documentation for Lodestone",
   srcDir: ".",
+  // Repo files that are not docs pages: the kb update routine and its guides.
+  srcExclude: ["routine/**", "CLAUDE.md", "README.md", ".claude/**"],
   outDir: ".vitepress/dist",
   appearance: false,
 

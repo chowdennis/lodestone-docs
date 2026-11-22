@@ -4,3 +4,6 @@ node_modules/
 # VitePress build output
 .vitepress/dist/
 .vitepress/cache/
+
+# kb update routine drafts
+routine/out/
