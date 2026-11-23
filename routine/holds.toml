@@ -1,0 +1,13 @@
+# Shipped work that must not be announced or documented yet.
+#
+# The kb update routine leaves out any PR listed here, and any item whose text
+# mentions a keyword, and reports it under "Left out: on hold". Remove an entry
+# (or say "announce #<pr>") once it is live for customers; the routine then
+# drafts a standalone changelog entry and the KB changes for it.
+
+[[hold]]
+key = "amplitude"
+prs = [777]
+keywords = ["Amplitude"]
+reason = "The Amplitude integration shipped in release #791 but is not live for customers yet."
+added = "2026-11-22"

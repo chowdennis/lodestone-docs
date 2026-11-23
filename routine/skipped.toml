@@ -1,0 +1,8 @@
+# Production releases that were reviewed and deliberately got no changelog entry,
+# so they never come back as pending. Written by routine/scripts/record-skip.mjs
+# when you say go; edit by hand only to undo a skip.
+#
+# [[skip]]
+# release_pr = 123
+# reason = "Nothing to announce: CI and infrastructure only."
+# recorded = "2026-11-22"
