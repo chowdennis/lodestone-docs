@@ -20,6 +20,7 @@ Scripts are in `routine/scripts/` (Node, no dependencies; run from the repo root
 
 - `git switch main && git pull --rebase` in this repo. Stop if the working tree has changes you didn't make; ask.
 - Check the PostHog MCP: look for PostHog tools (such as feature-flag listing). If they're missing or ask for an API key, use the manual fallback in Step 2. Don't ask for or create a key.
+- **Production PostHog project: "Lodestone APP", ID `31407`.** It is the only project the flag check reads. The organization also has "Lodestone MKG" (99165) and "Lodestone - Staging" (504111); never read flags from them, and never use whatever project happens to be active without checking. Run `project-get` and confirm it returns ID `31407` and name "Lodestone APP"; if not, `switch-project` to `31407` and check again. If the switch fails or the ID or name differs, stop and use the manual fallback in Step 2.
 
 ## Step 1: find pending releases
 
@@ -34,7 +35,7 @@ A pending item marked "not a PR merge" can't be handled automatically: show it a
 `node routine/scripts/release.mjs --pr <N>` writes `routine/out/<date>-pr<N>/dossier.md` and `release.json`. Read the dossier, then open the code where a PR description is thin. Contributors (Ash, Tarun and others) describe customer-facing changes in their PR descriptions; they have no access to this repo. The app clone is at `~/.cache/lodestone-kb-update/lodestone-app`; read files at the release SHA with `git show <sha>:<path>`.
 
 **Feature flags.** For every flag in the dossier, get its production state:
-- PostHog MCP connected: look the flag up in the production project. It is **on** only if it's active with a 100% rollout and no property filters. Anything else (inactive, partial rollout, filtered to some orgs or users) counts as **off**.
+- PostHog MCP connected: look the flag up in project `31407` ("Lodestone APP", confirmed in Step 0) and nowhere else. A flag missing from 31407 counts as **off**, even if another project has it. When reporting a flag's state, name the project ID it came from. It is **on** only if it's active with a 100% rollout and no property filters. Anything else (inactive, partial rollout, filtered to some orgs or users) counts as **off**.
 - No MCP, or it wants an API key: list the flags and ask the user to confirm each one's production state. Don't guess and don't continue the release until they answer.
 - Items behind an off flag are left out, reason "behind <flag description>, off in production". Don't name the flag in customer text.
 

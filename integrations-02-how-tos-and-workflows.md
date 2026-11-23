@@ -6,8 +6,8 @@
 ## Connecting PostHog
 
 The PostHog integration establishes a secure connection between one Lodestone
-workspace and one PostHog project. Usage Analytics does not use this connection
-yet and remains marked Coming Soon.
+workspace and one PostHog project. Usage Analytics in Discovery imports its
+funnels through this connection.
 
 1. In PostHog, create a Personal API Key with the `project:read` and
    `insight:read` scopes.
@@ -26,6 +26,37 @@ the connection, select **Disconnect**.
 
 Only Admins can connect, reconnect, or disconnect PostHog. Builders can view
 the connection status.
+
+---
+
+## Connecting Amplitude
+
+The Amplitude integration connects one Amplitude project to your Lodestone
+workspace.
+
+1. In Amplitude, find your API Key and Secret Key under Organization settings
+   > Projects > your project.
+2. In Lodestone, go to Settings > Integrations.
+3. Select **Add Integration**, then select **Amplitude** under **Product
+   Analytics**.
+4. Enter the **API Key** and **Secret Key**. **Project ID** is optional.
+5. Select **Connect**.
+
+Lodestone checks the keys before saving them. If Amplitude rejects them, you
+see an error and nothing is saved. Once connected, Amplitude appears in your
+connected integrations with a **Connected** status. Select **Disconnect** to
+remove it.
+
+What connecting Amplitude does today:
+
+- **Synthesis:** when Synthesis includes usage data, it uses your Amplitude
+  project's active user count for the last 30 days. Synthesis includes usage
+  data only once you have synced at least one funnel in Usage Analytics.
+- **Usage Analytics:** connecting Amplitude does not unlock Usage Analytics and
+  does not import Amplitude funnels. Usage Analytics works with PostHog only.
+  See [Connecting Usage Analytics](#connecting-usage-analytics).
+
+Only Admins can connect or disconnect Amplitude.
 
 ---
 
@@ -376,15 +407,26 @@ Disconnecting stops all future syncing but preserves existing data in Lodestone.
 
 ## Connecting Usage Analytics
 
-Amplitude and PostHog provide behavioral evidence to the Discovery module.
+Usage Analytics in Discovery reads saved funnels from your PostHog project.
+There is no separate Usage Analytics setting: you connect it by connecting
+PostHog. Connecting Amplitude does not unlock Usage Analytics.
 
-1. Go to **Settings > Integrations**.
-2. Find the **Usage Analytics** section.
-3. For Amplitude, enter the API key and secret key. For PostHog, enter the personal API key and project ID.
-4. Select **Connect**.
-5. Open **Discovery > Usage Analytics** and ask a test question.
+1. Connect PostHog as described in [Connecting PostHog](#connecting-posthog):
+   **Settings > Integrations**, **Add Integration**, then **PostHog** under
+   **Product Analytics**.
+2. Check that the PostHog card shows **Connected**. If it shows **Needs
+   attention**, select **Check connection** or **Reconnect**.
+3. Open **Discovery > Usage Analytics**. The room unlocks once the connection
+   is **Connected**.
+4. Select **Import funnels** and choose the saved PostHog funnels you want to
+   track.
 
-Credentials are stored securely and are never displayed again after connection. Disconnecting removes the saved credentials and locks the Usage Analytics room unless another provider remains connected.
+The Personal API Key is stored securely and is never displayed again after
+connection. If you disconnect PostHog, or the connection needs attention, the
+Usage Analytics room locks again until PostHog is reconnected.
+
+Only Admins can connect PostHog. See the Discovery guide for reviewing funnel
+drop-offs once funnels are imported.
 
 ---
 

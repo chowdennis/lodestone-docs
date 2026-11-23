@@ -14,11 +14,15 @@ integration status but cannot change Settings.
 
 Live integrations include Fireflies, Gong, Fathom, Granola, tl;dv, Zendesk, Freshdesk, Salesforce, JIRA, Asana, Amplitude, PostHog, and the Lodestone API and MCP. Transcript integrations and Zendesk support configurable auto-sync. Freshdesk syncs on demand.
 
-### Why is Usage Analytics still locked after connecting a provider?
+### Why is Usage Analytics still locked after connecting PostHog?
 
-The PostHog connection is available before the Usage Analytics room. Connecting
-PostHog does not unlock Usage Analytics yet; the room remains marked Coming
-Soon until the product analytics experience is released.
+Usage Analytics unlocks only while the PostHog card in Settings > Integrations
+shows **Connected**. If it shows **Needs attention**, select **Check
+connection** to see the provider error, then **Reconnect** if the key was
+revoked, its scopes changed, or the project is no longer available.
+
+Connecting Amplitude does not unlock Usage Analytics. Only a connected PostHog
+project does.
 
 ### Why can't Lodestone connect to PostHog?
 

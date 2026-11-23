@@ -65,8 +65,8 @@ Lodestone currently supports these live integrations:
 | Zendesk | Feature suggestions from support tickets with configurable auto-sync | Extracts |
 | Freshdesk | Feature suggestions from support tickets, synced on demand | Extracts |
 | Salesforce | Connects your Salesforce org to Lodestone | — |
-| Amplitude | Product usage questions and Discovery evidence | Discovery |
-| PostHog | Product usage questions and Discovery evidence | Discovery |
+| Amplitude | Active user counts for Synthesis; does not unlock Usage Analytics | Discovery |
+| PostHog | Funnel drop-offs for Usage Analytics | Discovery |
 | Lodestone API & MCP | Programmatic access and AI agent connectivity | All modules |
 
 Fireflies, Gong, Fathom, Granola, tl;dv, Zendesk, and Freshdesk are discovery integrations — they bring signal in. Salesforce is a CRM integration — it connects your Salesforce org. JIRA and Asana are delivery integrations — they keep Backlog item and status data in sync with your engineering workflow. The Lodestone API & MCP enables external tools, automation, and AI assistants (including custom Claude and ChatGPT configurations) to read and write Lodestone data.
