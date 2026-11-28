@@ -48,4 +48,5 @@ The one set of audience and tone rules for everything customers read about the p
 
 - File naming and structure: `<module>-<nn>-<type>.md`, four files per module (`01-overview-and-concepts`, `02-how-tos-and-workflows`, `03-advanced-and-customization`, `04-troubleshooting-and-faqs`), each module listed in `.vitepress/config.mjs` with `moduleGroup("<module>", "<Label>")`.
 - Edit only the affected sections; don't rewrite sections that are still accurate.
+- Keep every existing image and video line (anything pointing to docs-media.lodestone.pm) exactly as it is and where it is, even when rewriting the text around it. If a change makes a picture out of date, list it under 'Media to reshoot' instead of removing it.
 - Always document: a new module or feature area, a new field, a new action, changed behavior, a new integration, a new role permission or restriction, anything removed or renamed that users would look up.

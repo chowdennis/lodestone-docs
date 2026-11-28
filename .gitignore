@@ -7,3 +7,27 @@ node_modules/
 
 # kb update routine drafts
 routine/out/
+
+# Media (screenshots, clips) lives in the R2 bucket lodestone-docs-media,
+# served from docs-media.lodestone.pm, never in this repo.
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.webp
+*.mp4
+*.webm
+*.mov
+*.PNG
+*.JPG
+*.JPEG
+*.GIF
+*.WEBP
+*.MP4
+*.WEBM
+*.MOV
+# Exceptions: site logos the build needs.
+!/public/logo-dark.png
+!/public/logo-light.png
+!/.vitepress/public/logo-dark.png
+!/.vitepress/public/logo-light.png
