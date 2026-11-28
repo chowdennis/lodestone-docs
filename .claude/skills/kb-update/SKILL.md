@@ -69,6 +69,7 @@ Write for PMs: headline first, then New / Improved / Fixed, one `- **Lead.** Sen
    Reason: <one sentence: what changed in the app>
    ```
 6. **Draft the edits** in the working tree of this repo (uncommitted), editing only affected sections. Uncertain behavior gets `> ⚠️ **[NEEDS REVIEW]** <reason>`. A new module gets all four files, `01` ending with `*Next: How-tos & Workflows — ...*`, plus its sidebar entry.
+7. **Keep media.** Keep every existing image and video line (anything pointing to docs-media.lodestone.pm) exactly as it is and where it is, even when rewriting the text around it. If a change makes a picture out of date, list it under 'Media to reshoot' instead of removing it.
 
 ## Step 4: show everything, then wait
 
@@ -77,6 +78,7 @@ Show, per release, oldest first:
 - **New integration or new feature area:** called out separately at the top, or "none".
 - **Changelog entry:** the rendered MDX, verbatim.
 - **KB changes:** the change list, then `git diff` of the drafted edits (summarize very long new files and offer the full text).
+- **Media:** every image or video line (docs-media.lodestone.pm) the drafted edits changed or removed, with file and the old and new line, or "none". Then **Media to reshoot:** each picture or clip the changes made out of date (file, media URL, what's now wrong), or "none".
 - **Left out, and why:** every PR or item not announced, with its reason (internal-only, flag off, on hold, needs your answer).
 - **Nothing to announce** releases: say so plainly, with the one-line reason; on go they're recorded in `routine/skipped.toml`.
 

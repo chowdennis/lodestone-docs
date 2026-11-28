@@ -170,3 +170,35 @@
 .vp-doc div[class*="language-"] {
   border-radius: 8px;
 }
+
+/* ------------------------------------------------------------------ */
+/* Screenshots and clips (hosted on docs-media.lodestone.pm)           */
+/* ------------------------------------------------------------------ */
+/* The frame uses the site's own divider and background colours, so it  */
+/* follows whichever palette is active. The shadow is plain black at    */
+/* low strength, which reads as soft on light backgrounds and as a      */
+/* faint lift on the dark one, where the border does most of the work.  */
+
+:root {
+  --ls-media-radius: 8px;
+  --ls-media-border: 1px solid var(--vp-c-divider);
+  --ls-media-shadow: 0 1px 2px rgba(0, 0, 0, 0.16),
+    0 6px 20px rgba(0, 0, 0, 0.22);
+}
+
+.vp-doc img,
+.vp-doc video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1.5rem 0;
+  border: var(--ls-media-border);
+  border-radius: var(--ls-media-radius);
+  box-shadow: var(--ls-media-shadow);
+  background: var(--vp-c-bg-soft);
+}
+
+/* Clips fill the text column. */
+.vp-doc video {
+  width: 100%;
+}
